@@ -1,7 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { map, Observable } from 'rxjs';
+import { Stream } from '../utils/stream';
 import { StreamData } from '../utils/stream-data';
+
 
 @Injectable({
   providedIn: 'root'
@@ -13,12 +15,10 @@ export class StreamService {
 
   }
 
-  getStreamsAll(): Observable<StreamData> {
-    return this.http.get<StreamData>(`/streams`);
-  }
-
-  getStreamByGameId(id: number): Observable<StreamData> {
-    return this.http.get<StreamData>(`/streams?game_id=${id}`);
+  getStreamByGameId(id: number): Observable<Stream[]> {
+    return this.http.get<StreamData>(`/streams?game_id=${id}`).pipe(
+      map(response=>response.data)
+    );
   }
 
 }
