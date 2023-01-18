@@ -1,14 +1,17 @@
-import { NgModule } from '@angular/core';
+import { NgModule} from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { GamesRoutingModule } from './games-routing.module';
-
+import { TopGamesComponent } from './feature/top-games/top-games.component';
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    TopGamesComponent
+  ],
   imports: [
     CommonModule,
     GamesRoutingModule
   ]
 })
-export class GamesModule { }
+export class GamesModule {
+
+}
