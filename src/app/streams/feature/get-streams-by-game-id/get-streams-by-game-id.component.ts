@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { StreamService } from '../../data-access/stream.service';
+import { Stream } from '../../utils/stream';
 import { StreamData } from '../../utils/stream-data';
 
 @Component({
@@ -11,7 +12,7 @@ import { StreamData } from '../../utils/stream-data';
 })
 export class GetStreamsByGameIdComponent {
     
-  streamData$?: Observable<StreamData>;
+  streamData$?: Observable<Stream[]>;
 
   constructor(private route:ActivatedRoute,private streamService:StreamService){
 
