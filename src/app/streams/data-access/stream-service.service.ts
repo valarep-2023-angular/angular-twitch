@@ -13,7 +13,11 @@ export class StreamServiceService {
   }
 
 getStreamsAll(): Observable<StreamData> {
-  return this.http.get<StreamData>('https://api.twitch.tv/helix/streams');
+  return this.http.get<StreamData>(`https://api.twitch.tv/helix/streams`);
+}
+
+getStreamByGameId(id: number): Observable<StreamData> {
+  return this.http.get<StreamData>(`https://api.twitch.tv/helix/streams?game_id=${id}`);
 }
 
 }
