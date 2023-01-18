@@ -1,4 +1,3 @@
-
 export interface Stream {    
     id: number,
     user_id: number,
@@ -15,5 +14,4 @@ export interface Stream {
     thumbnail_url: string,
     tag_ids: string[],
     is_mature: boolean
-
 }
