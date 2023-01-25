@@ -1,4 +1,7 @@
-<pre>
-    {{  streamData$ | async | json }}
-
-</pre>
+<ng-container *ngIf="(streamData$ | async) as streamData">
+    <div class="video-grid">
+    <ng-container *ngFor="let sd of streamData">
+            <img [src]="sd.thumbnail_url | resize:500:205" alt="image">
+        </ng-container>
+    </div>
+</ng-container>
