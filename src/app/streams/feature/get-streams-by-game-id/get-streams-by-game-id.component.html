@@ -1,7 +1,16 @@
 <ng-container *ngIf="(streamData$ | async) as streamData">
-    <div class="video-grid">
-    <ng-container *ngFor="let sd of streamData">
-            <img [src]="sd.thumbnail_url | resize:500:205" alt="image">
-        </ng-container>
+    <div class="container">
+        <div class="stream-list">
+            <ng-container *ngFor="let sd of streamData">
+                <div class="stream-card">
+                    <img [src]="sd.thumbnail_url | resize:1920:1080" alt="Stream Thumbnail">
+                    <div class="stream-info">
+                        <h3>{{ sd.title }}</h3>
+                        <p>{{ sd.user_name }}</p>
+                        <p>{{ sd.viewer_count }} vue</p>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
     </div>
 </ng-container>
