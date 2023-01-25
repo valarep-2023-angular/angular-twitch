@@ -4,12 +4,12 @@ import { Observable } from 'rxjs';
 import { StreamService } from '../../data-access/stream.service';
 import { Stream } from '../../utils/stream';
 import { StreamData } from '../../utils/stream-data';
-
 @Component({
   selector: 'app-get-streams-by-game-id',
   templateUrl: './get-streams-by-game-id.component.html',
   styleUrls: ['./get-streams-by-game-id.component.scss']
 })
+
 export class GetStreamsByGameIdComponent {
     
   streamData$?: Observable<Stream[]>;
