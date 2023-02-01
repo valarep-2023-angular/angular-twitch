@@ -14,11 +14,16 @@ export class StreamService {
   constructor(private http: HttpClient) {
 
   }
+  getStreamByGameId(id: number): Observable<StreamData> {
+    return this.http.get<StreamData>(`/streams?game_id=${id}`);
+  }
 
-  getStreamByGameId(id: number): Observable<Stream[]> {
-    return this.http.get<StreamData>(`/streams?game_id=${id}`).pipe(
-      map(response=>response.data)
-    );
+  getStreamByGameIdAfter(id: number,pagination: any): Observable<StreamData> {
+    return this.http.get<StreamData>(`/streams?game_id=${id}&after=${pagination}`);
+  }
+  
+  getStreamByGameIdBefore(id: number,pagination: any): Observable<StreamData> {
+    return this.http.get<StreamData>(`/streams?game_id=${id}&before=${pagination}`);
   }
 
 }
