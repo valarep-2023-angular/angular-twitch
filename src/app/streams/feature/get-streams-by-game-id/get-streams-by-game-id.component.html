@@ -1,7 +1,7 @@
 <ng-container *ngIf="(streamData$ | async) as streamData">
     <div class="container">
         <div class="stream-list">
-            <ng-container *ngFor="let sd of streamData">
+            <ng-container *ngFor="let sd of streamData.data">
                 <div class="stream-card">
                     <img [src]="sd.thumbnail_url | resize:1920:1080" alt="Stream Thumbnail">
                     <div class="stream-info">
@@ -12,5 +12,9 @@
                 </div>
             </ng-container>
         </div>
+    </div>
+    <div class="group-button">
+        <button class="button" (click)="before(streamData.pagination.cursor )">Precedent</button>
+        <button class="button" (click)="after(streamData.pagination.cursor )">Suivant</button>
     </div>
 </ng-container>
