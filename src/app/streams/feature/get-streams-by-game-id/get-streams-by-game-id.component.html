@@ -1,7 +1,7 @@
 <ng-container *ngIf="(streamData$ | async) as streamData">
     <app-stream-card [streams]="streamData.data"></app-stream-card>
-    <div class="group-button">
-        <button class="button" (click)="before(streamData.pagination.cursor )">Precedent</button>
-        <button class="button" (click)="after(streamData.pagination.cursor )">Suivant</button>
-    </div>
+    <app-pagination 
+    (before)="before(streamData.pagination.cursor)"
+     (after)="after(streamData.pagination.cursor)">
+    </app-pagination>
 </ng-container>
