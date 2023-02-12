@@ -1,27 +1,4 @@
-.container {
-  width: 80%;
-  margin: 0 auto;
 
-  .stream-list {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .stream-card {
-    width: 30%;
-    margin: 10px;
-    box-sizing: border-box;
-
-    img {
-      width: 100%;
-    }
-
-    .stream-info {
-      padding: 10px;
-    }
-  }
-
-}
 .group-button{
   margin: 0 auto;
   width: 40%;

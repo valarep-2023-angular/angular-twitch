@@ -1,18 +1,5 @@
 <ng-container *ngIf="(streamData$ | async) as streamData">
-    <div class="container">
-        <div class="stream-list">
-            <ng-container *ngFor="let stream of streamData.data">
-                <div class="stream-card">
-                    <img [src]="stream.thumbnail_url | resize:1920:1080" alt="Stream Thumbnail">
-                    <div class="stream-info">
-                        <h3>{{ stream.title }}</h3>
-                        <p>{{ stream.user_name }}</p>
-                        <p>{{ stream.viewer_count }} vue</p>
-                    </div>
-                </div>
-            </ng-container>
-        </div>
-    </div>
+    <app-stream-card [streams]="streamData.data"></app-stream-card>
     <div class="group-button">
         <button class="button" (click)="before(streamData.pagination.cursor )">Precedent</button>
         <button class="button" (click)="after(streamData.pagination.cursor )">Suivant</button>
