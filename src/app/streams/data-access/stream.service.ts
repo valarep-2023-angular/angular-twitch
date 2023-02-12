@@ -18,11 +18,11 @@ export class StreamService {
     return this.http.get<StreamData>(`/streams?game_id=${id}`);
   }
 
-  getStreamByGameIdAfter(id: number,pagination: any): Observable<StreamData> {
+  getStreamByGameIdAfter(id: number,pagination: string): Observable<StreamData> {
     return this.http.get<StreamData>(`/streams?game_id=${id}&after=${pagination}`);
   }
   
-  getStreamByGameIdBefore(id: number,pagination: any): Observable<StreamData> {
+  getStreamByGameIdBefore(id: number,pagination: string): Observable<StreamData> {
     return this.http.get<StreamData>(`/streams?game_id=${id}&before=${pagination}`);
   }
 
