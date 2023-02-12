@@ -17,25 +17,22 @@ export class GetStreamsByGameIdComponent {
 
   }
   ngOnInit(): void {
-    this.streamData$ =this.route.params.pipe(
-          switchMap(params =>this.streamService.getStreamByGameId(params["gameId"])
-        ));
-
+    this.streamData$ = this.route.params.pipe(
+      switchMap(params => this.streamService.getStreamByGameId(params["gameId"])
+      ));
   }
 
   before(cursor: string): void {
-    this.streamData$ =this.route.params.pipe(
-      switchMap(params =>this.streamService.getStreamByGameIdBefore(params["gameId"],cursor)
-    ));
+    this.streamData$ = this.route.params.pipe(
+      switchMap(params => this.streamService.getStreamByGameIdBefore(params["gameId"], cursor)
+      ));
   }
 
   after(cursor: string): void {
-    this.streamData$ =this.route.params.pipe(
-      switchMap(params =>this.streamService.getStreamByGameIdAfter(params["gameId"],cursor)
-    ));
+    this.streamData$ = this.route.params.pipe(
+      switchMap(params => this.streamService.getStreamByGameIdAfter(params["gameId"], cursor)
+      ));
   }
-
-
 }
 
 
