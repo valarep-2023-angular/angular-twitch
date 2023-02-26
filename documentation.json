@@ -1,0 +1,2224 @@
+{
+    "pipes": [
+        {
+            "name": "ResizePipe",
+            "id": "pipe-ResizePipe-2c20e41773b9c0319af1f824af166d6fa7bf1a931eb280eb83dc110d8624ab272f37b438ff6420a3c183c97dc23e308b99a5866d8ceca48e2b49af7b9d399a7f",
+            "file": "src/app/streams/feature/get-streams-by-game-id/change-width-height.pipe.ts",
+            "type": "pipe",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "description": "",
+            "rawdescription": "\n",
+            "properties": [],
+            "methods": [
+                {
+                    "name": "transform",
+                    "args": [
+                        {
+                            "name": "url",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        },
+                        {
+                            "name": "width",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        },
+                        {
+                            "name": "height",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "string",
+                    "typeParameters": [],
+                    "line": 7,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "url",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        },
+                        {
+                            "name": "width",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        },
+                        {
+                            "name": "height",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "ngname": "resize",
+            "sourceCode": "import { Pipe, PipeTransform } from '@angular/core';\r\n\r\n@Pipe({\r\n    name: 'resize'\r\n})\r\nexport class ResizePipe implements PipeTransform {\r\n    transform(url: string, width: number, height: number): string {\r\n        url = url.replace(\"{width}\", width.toString());\r\n        url = url.replace(\"{height}\", height.toString());\r\n        return url;\r\n    }\r\n}\r\n"
+        }
+    ],
+    "interfaces": [
+        {
+            "name": "Stream",
+            "id": "interface-Stream-e880f7b40dbecf74c492adf796b3510553b14f25212bd1bbebbc5f68261e1e5d2cfe9cbf1494994ff05f88b0470abe35aaa5de2c66ad93581fd1da744bd50d3f",
+            "file": "src/app/streams/utils/stream.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "export interface Stream {    \r\n    id: number,\r\n    user_id: number,\r\n    user_login: string,\r\n    user_name: string,\r\n    game_id: number,\r\n    game_name: string,\r\n    type: string,\r\n    title: string,\r\n    tags: string[],\r\n    viewer_count: number,\r\n    started_at: Date,\r\n    language: string,\r\n    thumbnail_url: string,\r\n    tag_ids: string[],\r\n    is_mature: boolean\r\n}",
+            "properties": [
+                {
+                    "name": "game_id",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 6
+                },
+                {
+                    "name": "game_name",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 7
+                },
+                {
+                    "name": "id",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 2
+                },
+                {
+                    "name": "is_mature",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "boolean",
+                    "optional": false,
+                    "description": "",
+                    "line": 16
+                },
+                {
+                    "name": "language",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 13
+                },
+                {
+                    "name": "started_at",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Date",
+                    "optional": false,
+                    "description": "",
+                    "line": 12
+                },
+                {
+                    "name": "tag_ids",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 15
+                },
+                {
+                    "name": "tags",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 10
+                },
+                {
+                    "name": "thumbnail_url",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 14
+                },
+                {
+                    "name": "title",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 9
+                },
+                {
+                    "name": "type",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 8
+                },
+                {
+                    "name": "user_id",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 3
+                },
+                {
+                    "name": "user_login",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 4
+                },
+                {
+                    "name": "user_name",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 5
+                },
+                {
+                    "name": "viewer_count",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 11
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 165,
+            "methods": []
+        },
+        {
+            "name": "StreamData",
+            "id": "interface-StreamData-e3a5b1ad9f533be4b6f014372a3b3f8c80245f4facaf3ac5a1430fee7a80a043e845d2864241619a4d85c832943f42dd5a3b534ec7fd44f8ce8815ccf2af1f64",
+            "file": "src/app/streams/utils/stream-data.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "import { Stream } from \"./stream\";\r\n\r\nexport interface StreamData{\r\n    data:Stream[]\r\n    pagination:{\r\n        cursor:string\r\n    }\r\n}",
+            "properties": [
+                {
+                    "name": "data",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Stream[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 4
+                },
+                {
+                    "name": "pagination",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "literal type",
+                    "optional": false,
+                    "description": "",
+                    "line": 5
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 165,
+            "methods": []
+        },
+        {
+            "name": "TwitchResponseDto",
+            "id": "interface-TwitchResponseDto-a7f01d1620573efc52d07ad3778f8e59a29ee537f1367afbddbbd0185de9bd19c50cc1e96aa021e852aa5c2062e83fc5de6adc0b48e8fd53aded4a05b8684679",
+            "file": "src/app/api/data-access/twitch-response.dto.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "export interface TwitchResponseDto<T> {\r\n  data: T[];\r\n  pagination: { cursor: string };\r\n}\r\n",
+            "properties": [
+                {
+                    "name": "data",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "T[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 2
+                },
+                {
+                    "name": "pagination",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "literal type",
+                    "optional": false,
+                    "description": "",
+                    "line": 3
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 165,
+            "methods": []
+        }
+    ],
+    "injectables": [
+        {
+            "name": "AuthService",
+            "id": "injectable-AuthService-d7092c230349e87fc98c6feb965c9d9d504a0d80f39a579f34f1a6e3d71df812ba23f2104ec412b6c3e3fc7d3de14829ccf3e5656a179625d51ffd5521f5f195",
+            "file": "src/app/auth/data-access/auth.service.ts",
+            "properties": [],
+            "methods": [
+                {
+                    "name": "extractTokenFromUrlParams",
+                    "args": [
+                        {
+                            "name": "accessTokenParams",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "string",
+                    "typeParameters": [],
+                    "line": 12,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "accessTokenParams",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "getToken",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "string",
+                    "typeParameters": [],
+                    "line": 21,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "redirectToAuthenticationPage",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 8,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "saveToken",
+                    "args": [
+                        {
+                            "name": "token",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 17,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "token",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "description": "",
+            "rawdescription": "\n",
+            "sourceCode": "import {Injectable} from '@angular/core';\r\nimport {environment} from '../../../environments/environment';\r\n\r\n@Injectable({\r\n  providedIn: 'root'\r\n})\r\nexport class AuthService {\r\n  redirectToAuthenticationPage(): void {\r\n    window.location.href = environment.api.authLink;\r\n  }\r\n\r\n  extractTokenFromUrlParams(accessTokenParams: string): string {\r\n    const accessTokenString = accessTokenParams.split('&')[0];\r\n    return accessTokenString.replace('access_token=', '');\r\n  }\r\n\r\n  saveToken(token: string): void {\r\n    localStorage.setItem('token', token);\r\n  }\r\n\r\n  getToken(): string {\r\n    return localStorage.getItem('token') ?? '';\r\n  }\r\n}\r\n",
+            "type": "injectable"
+        },
+        {
+            "name": "StreamService",
+            "id": "injectable-StreamService-84e453c9b7ea43b41951a36b6180a7002b3f112d6e056f02a84839a3fe7eff72b9d50b3901cc7b2db33b0e9f7b6aefb4a6d05ee34c7c728ad905fa6a9c00680c",
+            "file": "src/app/streams/data-access/stream.service.ts",
+            "properties": [],
+            "methods": [
+                {
+                    "name": "getStreamByGameId",
+                    "args": [
+                        {
+                            "name": "id",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "Observable<StreamData>",
+                    "typeParameters": [],
+                    "line": 17,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "id",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "getStreamByGameIdAfter",
+                    "args": [
+                        {
+                            "name": "id",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        },
+                        {
+                            "name": "pagination",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "Observable<StreamData>",
+                    "typeParameters": [],
+                    "line": 21,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "id",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        },
+                        {
+                            "name": "pagination",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "getStreamByGameIdBefore",
+                    "args": [
+                        {
+                            "name": "id",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        },
+                        {
+                            "name": "pagination",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "Observable<StreamData>",
+                    "typeParameters": [],
+                    "line": 25,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "id",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        },
+                        {
+                            "name": "pagination",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "description": "",
+            "rawdescription": "\n",
+            "sourceCode": "import { HttpClient } from '@angular/common/http';\r\nimport { Injectable } from '@angular/core';\r\nimport { map, Observable } from 'rxjs';\r\nimport { Stream } from '../utils/stream';\r\nimport { StreamData } from '../utils/stream-data';\r\n\r\n\r\n@Injectable({\r\n  providedIn: 'root'\r\n})\r\n\r\nexport class StreamService {\r\n\r\n  constructor(private http: HttpClient) {\r\n\r\n  }\r\n  getStreamByGameId(id: number): Observable<StreamData> {\r\n    return this.http.get<StreamData>(`/streams?game_id=${id}`);\r\n  }\r\n\r\n  getStreamByGameIdAfter(id: number,pagination: string): Observable<StreamData> {\r\n    return this.http.get<StreamData>(`/streams?game_id=${id}&after=${pagination}`);\r\n  }\r\n  \r\n  getStreamByGameIdBefore(id: number,pagination: string): Observable<StreamData> {\r\n    return this.http.get<StreamData>(`/streams?game_id=${id}&before=${pagination}`);\r\n  }\r\n\r\n}\r\n",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "http",
+                        "type": "HttpClient",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 12,
+                "jsdoctags": [
+                    {
+                        "name": "http",
+                        "type": "HttpClient",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "type": "injectable"
+        },
+        {
+            "name": "TwitchService",
+            "id": "injectable-TwitchService-b5c37c276f6a445e832dcc81d6c046e593bd5797290b2dc3c8e7db5fc0e5dbce679a76cfb376656170f3e72d26417487c36f2546c80885a6255b4be12364ab6a",
+            "file": "src/app/api/data-access/twitch.service.ts",
+            "properties": [],
+            "methods": [
+                {
+                    "name": "getAll",
+                    "args": [
+                        {
+                            "name": "apiPath",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "Observable<T[]>",
+                    "typeParameters": [
+                        "T"
+                    ],
+                    "line": 15,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "apiPath",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "getOne",
+                    "args": [
+                        {
+                            "name": "apiPath",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "Observable<T>",
+                    "typeParameters": [
+                        "T"
+                    ],
+                    "line": 19,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "apiPath",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "description": "",
+            "rawdescription": "\n",
+            "sourceCode": "import {Injectable} from '@angular/core';\r\nimport {HttpClient} from '@angular/common/http';\r\nimport {TwitchResponseDto} from './twitch-response.dto';\r\nimport {pluck} from 'rxjs/operators';\r\nimport {Observable} from 'rxjs';\r\n\r\n@Injectable({\r\n  providedIn: 'root',\r\n})\r\nexport class TwitchService {\r\n\r\n  constructor(private readonly http: HttpClient) {\r\n  }\r\n\r\n  getAll<T>(apiPath: string): Observable<T[]> {\r\n    return this.http.get<TwitchResponseDto<T>>(apiPath).pipe(pluck('data'));\r\n  }\r\n\r\n  getOne<T>(apiPath: string): Observable<T> {\r\n    return this.http.get<TwitchResponseDto<T>>(apiPath).pipe(pluck('data', 0));\r\n  }\r\n\r\n}\r\n\r\n",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "http",
+                        "type": "HttpClient",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 10,
+                "jsdoctags": [
+                    {
+                        "name": "http",
+                        "type": "HttpClient",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "type": "injectable"
+        }
+    ],
+    "guards": [
+        {
+            "name": "AuthGuard",
+            "id": "injectable-AuthGuard-df1f8b680bef04ef730b7157e98e3dcc829fd0c6fad7e7a2a9f8a45d407772bfef1f0371fbd4a251f877f8b9c691359423364a13dc237feca39a8a5f703954ba",
+            "file": "src/app/auth/utils/auth.guard.ts",
+            "properties": [],
+            "methods": [
+                {
+                    "name": "canActivate",
+                    "args": [
+                        {
+                            "name": "route",
+                            "type": "ActivatedRouteSnapshot",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        },
+                        {
+                            "name": "state",
+                            "type": "RouterStateSnapshot",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "Observable | Promise | boolean | UrlTree",
+                    "typeParameters": [],
+                    "line": 10,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "route",
+                            "type": "ActivatedRouteSnapshot",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        },
+                        {
+                            "name": "state",
+                            "type": "RouterStateSnapshot",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "description": "",
+            "rawdescription": "\n",
+            "sourceCode": "import {Injectable} from '@angular/core';\r\nimport {ActivatedRouteSnapshot, CanActivate, RouterStateSnapshot, UrlTree} from '@angular/router';\r\nimport {Observable} from 'rxjs';\r\nimport {environment} from \"../../../environments/environment\";\r\n\r\n@Injectable({\r\n  providedIn: 'root'\r\n})\r\nexport class AuthGuard implements CanActivate {\r\n  canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {\r\n    // Basic auth guard\r\n      if (localStorage.getItem('token')) {\r\n        return true;\r\n      } else {\r\n        window.location.href = environment.api.authLink;\r\n        return false;\r\n      }\r\n  }\r\n}\r\n",
+            "type": "guard"
+        }
+    ],
+    "interceptors": [
+        {
+            "name": "ApiInterceptor",
+            "id": "injectable-ApiInterceptor-8f1a6b7b9deb43d354f1eb9c72301021fc4bb2c8638ccf82272df482b409de947764cedbe0b58f1e39816086a0bb68839093b8d06f4bc12821362f8550b30881",
+            "file": "src/app/api/utils/api.interceptor.ts",
+            "properties": [],
+            "methods": [
+                {
+                    "name": "intercept",
+                    "args": [
+                        {
+                            "name": "request",
+                            "type": "HttpRequest<any>",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        },
+                        {
+                            "name": "next",
+                            "type": "HttpHandler",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "Observable<HttpEvent<any>>",
+                    "typeParameters": [],
+                    "line": 13,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "request",
+                            "type": "HttpRequest<any>",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        },
+                        {
+                            "name": "next",
+                            "type": "HttpHandler",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "description": "",
+            "rawdescription": "\n",
+            "sourceCode": "import {HttpEvent, HttpHandler, HttpInterceptor, HttpRequest} from '@angular/common/http';\r\nimport {Observable} from 'rxjs';\r\nimport {environment} from '../../../environments/environment';\r\nimport {AuthService} from '../../auth/data-access/auth.service';\r\nimport {Injectable} from '@angular/core';\r\n\r\n@Injectable()\r\nexport class ApiInterceptor implements HttpInterceptor {\r\n\r\n  constructor(private authService: AuthService) {\r\n  }\r\n\r\n  intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {\r\n\r\n    const token = this.authService.getToken();\r\n\r\n    const cloneReq = request.clone({\r\n      headers: request.headers\r\n        .set('Client-ID', environment.api.clientId)\r\n        .set('Authorization', `Bearer ${token}`),\r\n      url: environment.api.baseUrl + request.url\r\n    });\r\n\r\n    return next.handle(cloneReq);\r\n  }\r\n}\r\n",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "authService",
+                        "type": "AuthService",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 8,
+                "jsdoctags": [
+                    {
+                        "name": "authService",
+                        "type": "AuthService",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "type": "interceptor"
+        }
+    ],
+    "classes": [],
+    "directives": [],
+    "components": [
+        {
+            "name": "AppComponent",
+            "id": "component-AppComponent-0735cd149627069536e56ebb3bbc8e9ee798cf953bf2ea65dad543b6f848e2010153767d4c3231520075e7ff81538f956ee9bd485c88ebec116e6302c09097b2",
+            "file": "src/app/app.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-root",
+            "styleUrls": [
+                "./app.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./app.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "title",
+                    "defaultValue": "'angular-twitch'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 9
+                }
+            ],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-root',\r\n  templateUrl: './app.component.html',\r\n  styleUrls: ['./app.component.scss']\r\n})\r\nexport class AppComponent {\r\n  title = 'angular-twitch';\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./app.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<router-outlet></router-outlet>\r\n"
+        },
+        {
+            "name": "AuthorizeComponent",
+            "id": "component-AuthorizeComponent-47a7f2bee5f0a01433a6e5ccefdbe7ff36f1fb71b9f668f18bf958fdd0f2980942878e23c62815ee9c05b1141b5d4afadfb82881444f33124a59a868c9e34c1f",
+            "file": "src/app/auth/feature/authorize/authorize.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-authorize",
+            "styleUrls": [
+                "./authorize.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./authorize.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "subscription",
+                    "defaultValue": "null",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Subscription | null",
+                    "optional": false,
+                    "description": "",
+                    "line": 13,
+                    "modifierKind": [
+                        121
+                    ]
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "ngOnDestroy",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 30,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 18,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "unsubscribe",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 34,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import {Component, OnDestroy, OnInit} from '@angular/core';\r\nimport {ActivatedRoute, Router} from '@angular/router';\r\nimport {AuthService} from '../../data-access/auth.service';\r\nimport {Subscription} from 'rxjs';\r\n\r\n@Component({\r\n  selector: 'app-authorize',\r\n  templateUrl: './authorize.component.html',\r\n  styleUrls: ['./authorize.component.scss']\r\n})\r\nexport class AuthorizeComponent implements OnInit, OnDestroy {\r\n\r\n  private subscription: Subscription | null = null;\r\n\r\n  constructor(private route: ActivatedRoute, private router: Router, private authService: AuthService) {\r\n  }\r\n\r\n  ngOnInit(): void {\r\n    this.subscription = this.route.fragment.subscribe((urlParams) => {\r\n      if (urlParams) {\r\n        const token = this.authService.extractTokenFromUrlParams(urlParams);\r\n        this.authService.saveToken(token);\r\n        this.router.navigateByUrl('games').then(this.unsubscribe);\r\n      } else {\r\n        this.authService.redirectToAuthenticationPage();\r\n      }\r\n    });\r\n  }\r\n\r\n  ngOnDestroy(): void {\r\n    this.unsubscribe();\r\n  }\r\n\r\n  unsubscribe(): void {\r\n    if (this.subscription) {\r\n      this.subscription.unsubscribe();\r\n    }\r\n  }\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./authorize.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "route",
+                        "type": "ActivatedRoute",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    },
+                    {
+                        "name": "router",
+                        "type": "Router",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    },
+                    {
+                        "name": "authService",
+                        "type": "AuthService",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 13,
+                "jsdoctags": [
+                    {
+                        "name": "route",
+                        "type": "ActivatedRoute",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "router",
+                        "type": "Router",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "authService",
+                        "type": "AuthService",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "implements": [
+                "OnInit",
+                "OnDestroy"
+            ],
+            "templateData": "<p></p>\r\n"
+        },
+        {
+            "name": "ButtonComponent",
+            "id": "component-ButtonComponent-bc6c0c901930fd26afb956b0636a556ac1682346f7da36834a5cab3c093037d505b7f19e6026e946832c80d778c8f905642f061cdcf53344d7c5cca41da87355",
+            "file": "src/app/shared/ui/button/button.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-button",
+            "styleUrls": [
+                "./button.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./button.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-button',\n  templateUrl: './button.component.html',\n  styleUrls: ['./button.component.scss']\n})\nexport class ButtonComponent {\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./button.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<button type=\"button\" class=\"ml-3 inline-flex items-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2\">\n  Publish\n</button>\n"
+        },
+        {
+            "name": "GetStreamsByGameIdComponent",
+            "id": "component-GetStreamsByGameIdComponent-f38921403254d8b3c4ec8e1733516d9ea41054f4391e014ea774abddcdfa1188dfd807cc730660a4826e98a470a74b74dd413f394fc2797732274cd30d5e53f6",
+            "file": "src/app/streams/feature/get-streams-by-game-id/get-streams-by-game-id.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-get-streams-by-game-id",
+            "styleUrls": [
+                "./get-streams-by-game-id.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./get-streams-by-game-id.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "streamData$",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Observable<StreamData>",
+                    "optional": true,
+                    "description": "",
+                    "line": 14
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "after",
+                    "args": [
+                        {
+                            "name": "cursor",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 31,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "cursor",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "before",
+                    "args": [
+                        {
+                            "name": "cursor",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 25,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "cursor",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 19,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\r\nimport { ActivatedRoute } from '@angular/router';\r\nimport { Observable, switchMap } from 'rxjs';\r\nimport { StreamService } from '../../data-access/stream.service';\r\nimport { StreamData } from '../../utils/stream-data';\r\n@Component({\r\n  selector: 'app-get-streams-by-game-id',\r\n  templateUrl: './get-streams-by-game-id.component.html',\r\n  styleUrls: ['./get-streams-by-game-id.component.scss']\r\n})\r\n\r\nexport class GetStreamsByGameIdComponent {\r\n\r\n  streamData$?: Observable<StreamData>;\r\n\r\n  constructor(private route: ActivatedRoute, private streamService: StreamService) {\r\n\r\n  }\r\n  ngOnInit(): void {\r\n    this.streamData$ = this.route.params.pipe(\r\n      switchMap(params => this.streamService.getStreamByGameId(params[\"gameId\"])\r\n      ));\r\n  }\r\n\r\n  before(cursor: string): void {\r\n    this.streamData$ = this.route.params.pipe(\r\n      switchMap(params => this.streamService.getStreamByGameIdBefore(params[\"gameId\"], cursor)\r\n      ));\r\n  }\r\n\r\n  after(cursor: string): void {\r\n    this.streamData$ = this.route.params.pipe(\r\n      switchMap(params => this.streamService.getStreamByGameIdAfter(params[\"gameId\"], cursor)\r\n      ));\r\n  }\r\n}\r\n\r\n\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "\r\n",
+                    "styleUrl": "./get-streams-by-game-id.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "route",
+                        "type": "ActivatedRoute",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    },
+                    {
+                        "name": "streamService",
+                        "type": "StreamService",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 14,
+                "jsdoctags": [
+                    {
+                        "name": "route",
+                        "type": "ActivatedRoute",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "streamService",
+                        "type": "StreamService",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "templateData": "<ng-container *ngIf=\"(streamData$ | async) as streamData\">\r\n    <app-stream-card [streams]=\"streamData.data\"></app-stream-card>\r\n    <app-pagination \r\n    (before)=\"before(streamData.pagination.cursor)\"\r\n     (after)=\"after(streamData.pagination.cursor)\">\r\n    </app-pagination>\r\n</ng-container>"
+        },
+        {
+            "name": "PaginationComponent",
+            "id": "component-PaginationComponent-3d2c2618521541cbcc8aac90946aa7999c1b14085aeff05bb610ad93f432cfbff1d17c32405cbd5eb92be06c004d9386759c96cee2ff6e5b4fed6de58ee7fb53",
+            "file": "src/app/streams/ui/pagination/pagination.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-pagination",
+            "styleUrls": [
+                "./pagination.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./pagination.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [
+                {
+                    "name": "after",
+                    "defaultValue": "new EventEmitter<void>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 16,
+                    "type": "EventEmitter"
+                },
+                {
+                    "name": "before",
+                    "defaultValue": "new EventEmitter<void>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 15,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "afterData",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 27,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "beforeData",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 23,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { outputAst } from '@angular/compiler';\r\nimport { Component, EventEmitter, Output } from '@angular/core';\r\nimport { ActivatedRoute } from '@angular/router';\r\nimport { Observable, switchMap } from 'rxjs';\r\nimport { StreamService } from '../../data-access/stream.service';\r\nimport { StreamData } from '../../utils/stream-data';\r\n\r\n@Component({\r\n  selector: 'app-pagination',\r\n  templateUrl: './pagination.component.html',\r\n  styleUrls: ['./pagination.component.scss']\r\n})\r\nexport class PaginationComponent {\r\n\r\n  @Output() before = new EventEmitter<void>();\r\n  @Output() after = new EventEmitter<void>();\r\n\r\n\r\n  constructor(private route: ActivatedRoute, private streamService: StreamService) {\r\n\r\n  }\r\n\r\n  beforeData(): void {\r\n    this.before.emit();\r\n  }\r\n\r\n  afterData(): void {\r\n    this.after.emit();\r\n  }\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".group-button {\r\n    margin: 0 auto;\r\n    width: 40%;\r\n    display: flex;\r\n    flex-direction: row;\r\n    justify-content: space-around;\r\n\r\n    .button {\r\n        width: 30%;\r\n    }\r\n}",
+                    "styleUrl": "./pagination.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "route",
+                        "type": "ActivatedRoute",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    },
+                    {
+                        "name": "streamService",
+                        "type": "StreamService",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 16,
+                "jsdoctags": [
+                    {
+                        "name": "route",
+                        "type": "ActivatedRoute",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "streamService",
+                        "type": "StreamService",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "templateData": "<div class=\"group-button\">\r\n    <button class=\"button\" (click)=\"beforeData()\">Precedent</button>\r\n    <button class=\"button\" (click)=\"afterData()\">Suivant</button>\r\n</div>"
+        },
+        {
+            "name": "StreamCardComponent",
+            "id": "component-StreamCardComponent-190386e607ff3f731b5276a36608ef8903f62550912cc8a6f4bd4ad966a98c40919da11f71924ccbf0747fcea47355e64952ba7004fff8c24774e83ec366603b",
+            "file": "src/app/streams/ui/stream-card/stream-card.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-stream-card",
+            "styleUrls": [
+                "./stream-card.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./stream-card.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "streams",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 11,
+                    "type": "Stream[]",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\r\nimport { Stream } from '../../utils/stream';\r\n\r\n@Component({\r\n  selector: 'app-stream-card',\r\n  templateUrl: './stream-card.component.html',\r\n  styleUrls: ['./stream-card.component.scss']\r\n})\r\nexport class StreamCardComponent {\r\n\r\n  @Input() streams!:Stream[];\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".container {\r\n    width: 80%;\r\n    margin: 0 auto;\r\n\r\n    .stream-list {\r\n        display: flex;\r\n        flex-wrap: wrap;\r\n    }\r\n\r\n    .stream-card {\r\n        width: 30%;\r\n        margin: 10px;\r\n        box-sizing: border-box;\r\n\r\n        img {\r\n            width: 100%;\r\n        }\r\n\r\n        .stream-info {\r\n            padding: 10px;\r\n        }\r\n    }\r\n\r\n}",
+                    "styleUrl": "./stream-card.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<div class=\"container\">\r\n    <div class=\"stream-list\">\r\n        <ng-container *ngFor=\"let stream of streams\">\r\n            <div class=\"stream-card\">\r\n                <img [src]=\"stream.thumbnail_url | resize:1920:1080\" alt=\"Stream Thumbnail\">\r\n                <div class=\"stream-info\">\r\n                    <h3>{{ stream.title }}</h3>\r\n                    <p>{{ stream.user_name }}</p>\r\n                    <p>{{ stream.viewer_count }} vue</p>\r\n                </div>\r\n            </div>\r\n        </ng-container>\r\n    </div>\r\n</div>"
+        }
+    ],
+    "modules": [
+        {
+            "name": "AppModule",
+            "id": "module-AppModule-5093d908797bfce98c7fd282a0ee063cfc0746f3d9ce2aded39b851aaed504a1348d2624c88ce19f0922343af4e77addf253e55694e5ab78577692b431f5142b",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/app.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\n\r\nimport { AppRoutingModule } from './app-routing.module';\r\nimport { AppComponent } from './app.component';\r\nimport {HTTP_INTERCEPTORS, HttpClientModule} from \"@angular/common/http\";\r\nimport {ApiInterceptor} from \"./api/utils/api.interceptor\";\r\n\r\n@NgModule({\r\n  declarations: [\r\n    AppComponent\r\n  ],\r\n  imports: [\r\n    BrowserModule,\r\n    HttpClientModule,\r\n    AppRoutingModule\r\n  ],\r\n  providers: [\r\n    {provide: HTTP_INTERCEPTORS, useClass: ApiInterceptor, multi: true},\r\n  ],\r\n  bootstrap: [AppComponent]\r\n})\r\nexport class AppModule { }\r\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": [
+                        {
+                            "name": "ApiInterceptor"
+                        }
+                    ]
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "AppComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": [
+                        {
+                            "name": "AppRoutingModule"
+                        }
+                    ]
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": [
+                        {
+                            "name": "AppComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "AppRoutingModule",
+            "id": "module-AppRoutingModule-4b7b586b16b8db323b6095858a9bdfdfb12fb2d703031b6aa0fdf7177884dd559bc923d0cad4e41fd4579249cf80d81f461ffea56cbdd314ed6d17c2f024525d",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/app-routing.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { RouterModule, Routes } from '@angular/router';\r\nimport {AuthGuard} from \"./auth/utils/auth.guard\";\r\n\r\nconst routes: Routes = [\r\n  {path: '', pathMatch: 'full', redirectTo: 'games'},\r\n  {path: 'auth', loadChildren: () => \"import('./auth/auth.module').then(m => m.AuthModule)\"},\r\n  {path: 'games', loadChildren: () => \"import('./games/games.module').then(m => m.GamesModule)\", canActivate: [AuthGuard]},\r\n  {path: 'streams', loadChildren: () => \"import('./streams/streams.module').then(m => m.StreamsModule)\", canActivate: [AuthGuard]},\r\n  {path: '**', pathMatch: 'full', redirectTo: 'games'},\r\n];\r\n\r\n@NgModule({\r\n  imports: [RouterModule.forRoot(routes)],\r\n  exports: [RouterModule]\r\n})\r\nexport class AppRoutingModule { }\r\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": []
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "AuthModule",
+            "id": "module-AuthModule-aea4950d614b20a6dd26f7febbdeb0ce4feba372102a49202555c97e51ef363c8ae5c5129739946a3e2750ce7c68ba7d575d845ccf463f8ad2d35ff82c389faf",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/auth/auth.module.ts",
+            "methods": [],
+            "sourceCode": "import {NgModule} from '@angular/core';\r\nimport {CommonModule} from '@angular/common';\r\n\r\nimport {AuthRoutingModule} from './auth-routing.module';\r\nimport {AuthorizeComponent} from './feature/authorize/authorize.component';\r\n\r\n@NgModule({\r\n  declarations: [AuthorizeComponent],\r\n  imports: [\r\n    CommonModule,\r\n    AuthRoutingModule\r\n  ],\r\n  providers: []\r\n})\r\nexport class AuthModule {\r\n}\r\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "AuthorizeComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": [
+                        {
+                            "name": "AuthRoutingModule"
+                        }
+                    ]
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "AuthRoutingModule",
+            "id": "module-AuthRoutingModule-02ee1deedc58c230dd74144d1c2916c9ce1954591adbd5405fd36f953b9298c77fc1817d7e6c6d22bd1d469b6f7ed827137a801206b29965a1cd80a63c12426e",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/auth/auth-routing.module.ts",
+            "methods": [],
+            "sourceCode": "import {NgModule} from '@angular/core';\r\nimport {RouterModule, Routes} from '@angular/router';\r\nimport {AuthorizeComponent} from './feature/authorize/authorize.component';\r\n\r\nconst routes: Routes = [\r\n  {path: 'authorize', component: AuthorizeComponent},\r\n];\r\n\r\n@NgModule({\r\n  imports: [RouterModule.forChild(routes)],\r\n  exports: [RouterModule]\r\n})\r\nexport class AuthRoutingModule {\r\n}\r\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": []
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "GamesModule",
+            "id": "module-GamesModule-2934d22546acd5d29f058babdb8deabf7a63e468bd057a0759eec2eb867deedcbaf80a0ad736e38a4cae82f004a902a1c6a9c40c00001f446b521d515a85199b",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/games/games.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\n\r\nimport { GamesRoutingModule } from './games-routing.module';\r\n\r\n\r\n@NgModule({\r\n  declarations: [],\r\n  imports: [\r\n    CommonModule,\r\n    GamesRoutingModule\r\n  ]\r\n})\r\nexport class GamesModule { }\r\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": []
+                },
+                {
+                    "type": "imports",
+                    "elements": [
+                        {
+                            "name": "GamesRoutingModule"
+                        }
+                    ]
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "GamesRoutingModule",
+            "id": "module-GamesRoutingModule-5b1b27c498a7061f010c59e67371fe142f4201d95f5fa4233141d82654347aecac54202d14e2b1afb13062c249ab3ce5835d6c5b31e2caa99dad0dd4be40e89d",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/games/games-routing.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { RouterModule, Routes } from '@angular/router';\r\n\r\nconst routes: Routes = [];\r\n\r\n@NgModule({\r\n  imports: [RouterModule.forChild(routes)],\r\n  exports: [RouterModule]\r\n})\r\nexport class GamesRoutingModule { }\r\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": []
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "SharedModule",
+            "id": "module-SharedModule-5530624457055e12c3ec8148c7cfd419b8c053858562d09796df18fc61df03efd9c7f6be1f0a51d2860f6faa4e99a56e4f63788e6a22d03534f7c8121e71853e",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/shared/shared.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { ButtonComponent } from './ui/button/button.component';\n\n@NgModule({\n  declarations: [\n    ButtonComponent\n  ],\n  imports: [\n    CommonModule\n  ],\n  exports: [\n    ButtonComponent\n  ]\n})\nexport class SharedModule { }\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "ButtonComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": [
+                        {
+                            "name": "ButtonComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "StreamsModule",
+            "id": "module-StreamsModule-46c394190e4ce09b40c4f482dd5e5de11c7517caf7f9c8bee9f058e0404d0fa93ccbfb0cbb318953a0ea4c6d8294df76073ca5101e9bdd8b7b23bf82403bed14",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/streams/streams.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\n\r\nimport { StreamsRoutingModule } from './streams-routing.module';\r\nimport { GetStreamsByGameIdComponent } from './feature/get-streams-by-game-id/get-streams-by-game-id.component';\r\nimport { ResizePipe } from './feature/get-streams-by-game-id/change-width-height.pipe';\r\nimport { StreamCardComponent } from './ui/stream-card/stream-card.component';\r\nimport { PaginationComponent } from './ui/pagination/pagination.component';\r\n\r\n\r\n@NgModule({\r\n  declarations: [\r\n    GetStreamsByGameIdComponent,\r\n    ResizePipe,\r\n    StreamCardComponent,\r\n    PaginationComponent\r\n  ],\r\n  imports: [\r\n    CommonModule,\r\n    StreamsRoutingModule\r\n  ],\r\n  providers: [ResizePipe]\r\n})\r\nexport class StreamsModule { }\r\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "GetStreamsByGameIdComponent"
+                        },
+                        {
+                            "name": "PaginationComponent"
+                        },
+                        {
+                            "name": "ResizePipe"
+                        },
+                        {
+                            "name": "StreamCardComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": [
+                        {
+                            "name": "StreamsRoutingModule"
+                        }
+                    ]
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "StreamsRoutingModule",
+            "id": "module-StreamsRoutingModule-ec3a1714bf503d1c5286965aac292a7480c4ffe3cc32a7f6c6c6287ea38669bd64c036f851de53f9158ad2ed6dd658f9d6fc0ae7908d9e927ea4308ae10d0eb5",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/streams/streams-routing.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { RouterModule, Routes } from '@angular/router';\r\nimport { GetStreamsByGameIdComponent } from './feature/get-streams-by-game-id/get-streams-by-game-id.component';\r\n\r\nconst routes: Routes = [\r\n  {path: ':gameId',component:GetStreamsByGameIdComponent},\r\n\r\n];\r\n\r\n@NgModule({\r\n  imports: [RouterModule.forChild(routes)],\r\n  exports: [RouterModule]\r\n})\r\nexport class StreamsRoutingModule { }\r\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": []
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        }
+    ],
+    "miscellaneous": {
+        "variables": [
+            {
+                "name": "apiConfig",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/environments/environment.prod.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\r\n  clientId: 'efrmnqokv2zxydq5aqco0p3i0tqpg4',\r\n  authUrl: 'https://id.twitch.tv/oauth2/authorize',\r\n  redirectUrl: 'http://localhost:4200/auth/authorize',\r\n  baseUrl: 'https://api.twitch.tv/helix',\r\n}"
+            },
+            {
+                "name": "apiConfig",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/environments/environment.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\r\n  clientId: 'efrmnqokv2zxydq5aqco0p3i0tqpg4',\r\n  authUrl: 'https://id.twitch.tv/oauth2/authorize',\r\n  redirectUrl: 'http://localhost:4200/auth/authorize',\r\n  baseUrl: 'https://api.twitch.tv/helix',\r\n}"
+            },
+            {
+                "name": "environment",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/environments/environment.prod.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\r\n  production: true,\r\n  api: {...apiConfig, ...oAuthConfig},\r\n  twitch: {\r\n    videoPlayerUrl: 'http://player.twitch.tv/?parent=localhost&channel=',\r\n    videoClipUrl: 'https://clips.twitch.tv/embed?parent=localhost&clip=',\r\n    videoVideoUrl: 'https://videos.twitch.tv/embed?parent=localhost&video=',\r\n    chatRoomUrl: 'https://www.twitch.tv/embed/[USERNAME]/chat',\r\n  }\r\n}"
+            },
+            {
+                "name": "environment",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/environments/environment.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\r\n  production: true,\r\n  api: {...apiConfig, ...oAuthConfig},\r\n  twitch: {\r\n    videoPlayerUrl: 'http://player.twitch.tv/?parent=localhost&channel=',\r\n    videoClipUrl: 'https://clips.twitch.tv/embed?parent=localhost&clip=',\r\n    videoVideoUrl: 'https://videos.twitch.tv/embed?parent=localhost&video=',\r\n    chatRoomUrl: 'https://www.twitch.tv/embed/[USERNAME]/chat',\r\n  }\r\n}"
+            },
+            {
+                "name": "oAuthConfig",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/environments/environment.prod.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\r\n  authLink: `${apiConfig.authUrl}?client_id=${apiConfig.clientId}&response_type=token&redirect_uri=${apiConfig.redirectUrl}`\r\n}"
+            },
+            {
+                "name": "oAuthConfig",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/environments/environment.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\r\n  authLink: `${apiConfig.authUrl}?client_id=${apiConfig.clientId}&response_type=token&redirect_uri=${apiConfig.redirectUrl}`\r\n}"
+            },
+            {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/shared/ui/button/button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/shared/ui/button/button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "(args) => ({\r\n  props: args,\r\n})"
+            }
+        ],
+        "functions": [],
+        "typealiases": [],
+        "enumerations": [],
+        "groupedVariables": {
+            "src/environments/environment.prod.ts": [
+                {
+                    "name": "apiConfig",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/environments/environment.prod.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\r\n  clientId: 'efrmnqokv2zxydq5aqco0p3i0tqpg4',\r\n  authUrl: 'https://id.twitch.tv/oauth2/authorize',\r\n  redirectUrl: 'http://localhost:4200/auth/authorize',\r\n  baseUrl: 'https://api.twitch.tv/helix',\r\n}"
+                },
+                {
+                    "name": "environment",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/environments/environment.prod.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\r\n  production: true,\r\n  api: {...apiConfig, ...oAuthConfig},\r\n  twitch: {\r\n    videoPlayerUrl: 'http://player.twitch.tv/?parent=localhost&channel=',\r\n    videoClipUrl: 'https://clips.twitch.tv/embed?parent=localhost&clip=',\r\n    videoVideoUrl: 'https://videos.twitch.tv/embed?parent=localhost&video=',\r\n    chatRoomUrl: 'https://www.twitch.tv/embed/[USERNAME]/chat',\r\n  }\r\n}"
+                },
+                {
+                    "name": "oAuthConfig",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/environments/environment.prod.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\r\n  authLink: `${apiConfig.authUrl}?client_id=${apiConfig.clientId}&response_type=token&redirect_uri=${apiConfig.redirectUrl}`\r\n}"
+                }
+            ],
+            "src/environments/environment.ts": [
+                {
+                    "name": "apiConfig",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/environments/environment.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\r\n  clientId: 'efrmnqokv2zxydq5aqco0p3i0tqpg4',\r\n  authUrl: 'https://id.twitch.tv/oauth2/authorize',\r\n  redirectUrl: 'http://localhost:4200/auth/authorize',\r\n  baseUrl: 'https://api.twitch.tv/helix',\r\n}"
+                },
+                {
+                    "name": "environment",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/environments/environment.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\r\n  production: true,\r\n  api: {...apiConfig, ...oAuthConfig},\r\n  twitch: {\r\n    videoPlayerUrl: 'http://player.twitch.tv/?parent=localhost&channel=',\r\n    videoClipUrl: 'https://clips.twitch.tv/embed?parent=localhost&clip=',\r\n    videoVideoUrl: 'https://videos.twitch.tv/embed?parent=localhost&video=',\r\n    chatRoomUrl: 'https://www.twitch.tv/embed/[USERNAME]/chat',\r\n  }\r\n}"
+                },
+                {
+                    "name": "oAuthConfig",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/environments/environment.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\r\n  authLink: `${apiConfig.authUrl}?client_id=${apiConfig.clientId}&response_type=token&redirect_uri=${apiConfig.redirectUrl}`\r\n}"
+                }
+            ],
+            "src/app/shared/ui/button/button.stories.ts": [
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/shared/ui/button/button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/shared/ui/button/button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "(args) => ({\r\n  props: args,\r\n})"
+                }
+            ]
+        },
+        "groupedFunctions": {},
+        "groupedEnumerations": {},
+        "groupedTypeAliases": {}
+    },
+    "routes": {
+        "name": "<root>",
+        "kind": "module",
+        "className": "AppModule",
+        "children": [
+            {
+                "name": "routes",
+                "filename": "src/app/app-routing.module.ts",
+                "module": "AppRoutingModule",
+                "children": [
+                    {
+                        "path": "",
+                        "pathMatch": "full",
+                        "redirectTo": "games"
+                    },
+                    {
+                        "path": "auth",
+                        "loadChildren": "./auth/auth.module#AuthModule",
+                        "children": [
+                            {
+                                "kind": "module",
+                                "children": [
+                                    {
+                                        "name": "routes",
+                                        "filename": "src/app/auth/auth-routing.module.ts",
+                                        "module": "AuthRoutingModule",
+                                        "children": [
+                                            {
+                                                "path": "authorize",
+                                                "component": "AuthorizeComponent"
+                                            }
+                                        ],
+                                        "kind": "module"
+                                    }
+                                ],
+                                "module": "AuthModule"
+                            }
+                        ]
+                    },
+                    {
+                        "path": "games",
+                        "loadChildren": "./games/games.module#GamesModule",
+                        "canActivate": [
+                            "AuthGuard"
+                        ],
+                        "children": [
+                            {
+                                "kind": "module",
+                                "children": [
+                                    {
+                                        "name": "routes",
+                                        "filename": "src/app/games/games-routing.module.ts",
+                                        "module": "GamesRoutingModule",
+                                        "children": [],
+                                        "kind": "module"
+                                    }
+                                ],
+                                "module": "GamesModule"
+                            }
+                        ]
+                    },
+                    {
+                        "path": "streams",
+                        "loadChildren": "./streams/streams.module#StreamsModule",
+                        "canActivate": [
+                            "AuthGuard"
+                        ],
+                        "children": [
+                            {
+                                "kind": "module",
+                                "children": [
+                                    {
+                                        "name": "routes",
+                                        "filename": "src/app/streams/streams-routing.module.ts",
+                                        "module": "StreamsRoutingModule",
+                                        "children": [
+                                            {
+                                                "path": ":gameId",
+                                                "component": "GetStreamsByGameIdComponent"
+                                            }
+                                        ],
+                                        "kind": "module"
+                                    }
+                                ],
+                                "module": "StreamsModule"
+                            }
+                        ]
+                    },
+                    {
+                        "path": "**",
+                        "pathMatch": "full",
+                        "redirectTo": "games"
+                    }
+                ],
+                "kind": "module"
+            }
+        ]
+    },
+    "coverage": {
+        "count": 0,
+        "status": "low",
+        "files": [
+            {
+                "filePath": "src/app/api/data-access/twitch-response.dto.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "TwitchResponseDto",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/api/data-access/twitch.service.ts",
+                "type": "injectable",
+                "linktype": "injectable",
+                "name": "TwitchService",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/api/utils/api.interceptor.ts",
+                "type": "interceptor",
+                "linktype": "interceptor",
+                "name": "ApiInterceptor",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/app.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "AppComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/auth/data-access/auth.service.ts",
+                "type": "injectable",
+                "linktype": "injectable",
+                "name": "AuthService",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/auth/feature/authorize/authorize.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "AuthorizeComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/6",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/auth/utils/auth.guard.ts",
+                "type": "guard",
+                "linktype": "guard",
+                "name": "AuthGuard",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/shared/ui/button/button.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ButtonComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/shared/ui/button/button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/shared/ui/button/button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/streams/data-access/stream.service.ts",
+                "type": "injectable",
+                "linktype": "injectable",
+                "name": "StreamService",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/streams/feature/get-streams-by-game-id/change-width-height.pipe.ts",
+                "type": "pipe",
+                "linktype": "pipe",
+                "name": "ResizePipe",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/streams/feature/get-streams-by-game-id/get-streams-by-game-id.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "GetStreamsByGameIdComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/6",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/streams/ui/pagination/pagination.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "PaginationComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/6",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/streams/ui/stream-card/stream-card.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "StreamCardComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/streams/utils/stream-data.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "StreamData",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/streams/utils/stream.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "Stream",
+                "coveragePercent": 0,
+                "coverageCount": "0/16",
+                "status": "low"
+            },
+            {
+                "filePath": "src/environments/environment.prod.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "apiConfig",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/environments/environment.prod.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "environment",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/environments/environment.prod.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "oAuthConfig",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/environments/environment.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "apiConfig",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/environments/environment.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "environment",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/environments/environment.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "oAuthConfig",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            }
+        ]
+    }
+}

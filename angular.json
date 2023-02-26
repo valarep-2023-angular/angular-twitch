@@ -30,7 +30,6 @@
               "src/assets"
             ],
             "styles": [
-              "node_modules/@picocss/pico/css/pico.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -97,6 +96,19 @@
               "src/styles.scss"
             ],
             "scripts": []
+          }
+        },
+        "storybook": {
+          "builder": "@storybook/angular:start-storybook",
+          "options": {
+            "browserTarget": "angular-cli:build",
+            "port": 6006
+          }
+        },
+        "build-storybook": {
+          "builder": "@storybook/angular:build-storybook",
+          "options": {
+            "browserTarget": "angular-cli:build"
           }
         }
       }
