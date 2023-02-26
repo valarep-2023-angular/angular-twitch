@@ -980,7 +980,7 @@
         },
         {
             "name": "ButtonComponent",
-            "id": "component-ButtonComponent-bc6c0c901930fd26afb956b0636a556ac1682346f7da36834a5cab3c093037d505b7f19e6026e946832c80d778c8f905642f061cdcf53344d7c5cca41da87355",
+            "id": "component-ButtonComponent-060915a4d26fb0d0cc82b75041fc24a6ef3d61e703f98ea33f270fb54705836b3f6cff8811553f755998a9008b1ec0afeb5a716420da27691ab815f2ec16e6d3",
             "file": "src/app/shared/ui/button/button.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -996,7 +996,16 @@
                 "./button.component.html"
             ],
             "viewProviders": [],
-            "inputsClass": [],
+            "inputsClass": [
+                {
+                    "name": "text",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 10,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
             "outputsClass": [],
             "propertiesClass": [],
             "methodsClass": [],
@@ -1007,7 +1016,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-button',\n  templateUrl: './button.component.html',\n  styleUrls: ['./button.component.scss']\n})\nexport class ButtonComponent {\n\n}\n",
+            "sourceCode": "import {Component, Input} from '@angular/core';\n\n@Component({\n  selector: 'app-button',\n  templateUrl: './button.component.html',\n  styleUrls: ['./button.component.scss']\n})\nexport class ButtonComponent {\n  @Input()\n  text!: string;\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -1016,7 +1025,7 @@
                 }
             ],
             "stylesData": "",
-            "templateData": "<button type=\"button\" class=\"ml-3 inline-flex items-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2\">\n  Publish\n</button>\n"
+            "templateData": "<button type=\"button\" class=\"inline-flex items-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2\">\n  {{text}}\n</button>\n"
         },
         {
             "name": "GetStreamsByGameIdComponent",
@@ -2073,7 +2082,7 @@
                 "linktype": "component",
                 "name": "ButtonComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/1",
+                "coverageCount": "0/2",
                 "status": "low"
             },
             {
