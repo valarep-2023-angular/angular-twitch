@@ -9,6 +9,7 @@ import {
 import { MobileSideMenuContentComponent } from './ui/layout-with-side-menu/mobile-side-menu-content/mobile-side-menu-content.component';
 import { SideMenuSubTitleComponent } from './ui/layout-with-side-menu/side-menu-sub-title/side-menu-sub-title.component';
 import { MediaObjectComponent } from './ui/media-object/media-object.component';
+import { GameCardComponent } from './ui/game-card/game-card.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { MediaObjectComponent } from './ui/media-object/media-object.component';
     DesktopSideMenuContentComponent,
     MobileSideMenuContentComponent,
     SideMenuSubTitleComponent,
-    MediaObjectComponent
+    MediaObjectComponent,
+    GameCardComponent
   ],
   imports: [
     CommonModule,
@@ -29,7 +31,8 @@ import { MediaObjectComponent } from './ui/media-object/media-object.component';
     DesktopSideMenuContentComponent,
     NgHeroiconsModule,
     SideMenuSubTitleComponent,
-    MediaObjectComponent
+    MediaObjectComponent,
+    GameCardComponent
   ]
 })
 export class SharedModule {

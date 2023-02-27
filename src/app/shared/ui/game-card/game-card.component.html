@@ -1,0 +1,19 @@
+<div class="bg-gray-900">
+  <img
+    class="hover:cursor-pointer hover:scale-105 transition duration-300 ease-in-out hover:border-white border-2 border-transparent rounded-lg"
+    [src]="image"
+    width="285"
+    height="380"
+    [alt]="title">
+
+  <div class="py-1">
+    <a href="#" class="block text-base font-semibold leading-7 tracking-tight text-white hover:text-indigo-400">
+      {{title}}</a>
+
+    <a href="#" class="block text-sm leading-6 text-gray-400 hover:text-indigo-400">{{subTitle}}</a>
+
+    <div class="flex mt-1" *ngIf="tags.length > 0">
+      <div *ngFor="let tag of tags" class="rounded-r rounded-l bg-gray-700 text-gray-300 px-2 py-1 text-sm mr-1">{{tag}}</div>
+    </div>
+  </div>
+</div>

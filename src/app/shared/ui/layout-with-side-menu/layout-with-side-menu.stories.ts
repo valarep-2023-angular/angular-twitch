@@ -6,6 +6,7 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {MobileSideMenuContentComponent} from "./mobile-side-menu-content/mobile-side-menu-content.component";
 import {SideMenuSubTitleComponent} from "./side-menu-sub-title/side-menu-sub-title.component";
 import {MediaObjectComponent} from "../media-object/media-object.component";
+import {GameCardComponent} from "../game-card/game-card.component";
 
 export default {
   title: 'Layouts/With side menu',
@@ -16,7 +17,8 @@ export default {
         DesktopSideMenuContentComponent,
         MobileSideMenuContentComponent,
         SideMenuSubTitleComponent,
-        MediaObjectComponent
+        MediaObjectComponent,
+        GameCardComponent
       ],
       imports: [
         BrowserAnimationsModule,
@@ -229,9 +231,113 @@ const exampleTemplate: Story = (args) => ({
         </app-mobile-side-menu-content>
 
         <!-- Any content-->
-        <div class="p-4">
-          <p>Main content</p>
+        <div class="bg-gray-900 py-3">
+          <div class="px-6">
+
+            <h2 class="text-2xl font-bold tracking-tight text-white sm:text-4xl">Parcourir</h2>
+
+            <div role="list" class="mt-6 grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-8">
+
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="Ragnarok Online" image="https://static-cdn.jtvnw.net/ttv-boxart/15229_IGDB-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="League of Legends" image="https://static-cdn.jtvnw.net/ttv-boxart/21779-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="Just Chatting" image="https://static-cdn.jtvnw.net/ttv-boxart/509658-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="DOTA 2" image="https://static-cdn.jtvnw.net/ttv-boxart/29595-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="Valorant" image="https://static-cdn.jtvnw.net/ttv-boxart/516575-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="Hogwarts Legacy" image="https://static-cdn.jtvnw.net/ttv-boxart/1095275650_IGDB-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="Sons of the Forrest" image="https://static-cdn.jtvnw.net/ttv-boxart/515479_IGDB-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="Counter Strike Global Offensive" image="https://static-cdn.jtvnw.net/ttv-boxart/32399_IGDB-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="Atomic Heart" image="https://static-cdn.jtvnw.net/ttv-boxart/505963_IGDB-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="Diablo III" image="https://static-cdn.jtvnw.net/ttv-boxart/313558_IGDB-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="Team Fight Tactics" image="https://static-cdn.jtvnw.net/ttv-boxart/513143-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="Lost Ark" image="https://static-cdn.jtvnw.net/ttv-boxart/490100-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="Music" image="https://static-cdn.jtvnw.net/ttv-boxart/26936-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="GTA V" image="https://static-cdn.jtvnw.net/ttv-boxart/32982_IGDB-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="World of Warcraft" image="https://static-cdn.jtvnw.net/ttv-boxart/18122-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="Virtual Casino" image="https://static-cdn.jtvnw.net/ttv-boxart/29452_IGDB-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="Diablo II" image="https://static-cdn.jtvnw.net/ttv-boxart/1788326126_IGDB-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="Pools, Hot Tubs & Beach" image="https://static-cdn.jtvnw.net/ttv-boxart/116747788-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="Talk shows & Podcasts" image="https://static-cdn.jtvnw.net/ttv-boxart/417752-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="Minecraft" image="https://static-cdn.jtvnw.net/ttv-boxart/27471_IGDB-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="Apex" image="https://static-cdn.jtvnw.net/ttv-boxart/511224-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="Albion Online" image="https://static-cdn.jtvnw.net/ttv-boxart/417528_IGDB-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="Tibia" image="https://static-cdn.jtvnw.net/ttv-boxart/19619_IGDB-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="Genshin Impact" image="https://static-cdn.jtvnw.net/ttv-boxart/513181_IGDB-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="Ragnarok Online" image="https://static-cdn.jtvnw.net/ttv-boxart/15229_IGDB-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="League of Legends" image="https://static-cdn.jtvnw.net/ttv-boxart/21779-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="Just Chatting" image="https://static-cdn.jtvnw.net/ttv-boxart/509658-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="DOTA 2" image="https://static-cdn.jtvnw.net/ttv-boxart/29595-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="Valorant" image="https://static-cdn.jtvnw.net/ttv-boxart/516575-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="Hogwarts Legacy" image="https://static-cdn.jtvnw.net/ttv-boxart/1095275650_IGDB-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="Sons of the Forrest" image="https://static-cdn.jtvnw.net/ttv-boxart/515479_IGDB-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="Counter Strike Global Offensive" image="https://static-cdn.jtvnw.net/ttv-boxart/32399_IGDB-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="Atomic Heart" image="https://static-cdn.jtvnw.net/ttv-boxart/505963_IGDB-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="Diablo III" image="https://static-cdn.jtvnw.net/ttv-boxart/313558_IGDB-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="Team Fight Tactics" image="https://static-cdn.jtvnw.net/ttv-boxart/513143-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="Lost Ark" image="https://static-cdn.jtvnw.net/ttv-boxart/490100-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="Music" image="https://static-cdn.jtvnw.net/ttv-boxart/26936-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="GTA V" image="https://static-cdn.jtvnw.net/ttv-boxart/32982_IGDB-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="World of Warcraft" image="https://static-cdn.jtvnw.net/ttv-boxart/18122-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="Virtual Casino" image="https://static-cdn.jtvnw.net/ttv-boxart/29452_IGDB-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="Diablo II" image="https://static-cdn.jtvnw.net/ttv-boxart/1788326126_IGDB-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="Pools, Hot Tubs & Beach" image="https://static-cdn.jtvnw.net/ttv-boxart/116747788-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="Talk shows & Podcasts" image="https://static-cdn.jtvnw.net/ttv-boxart/417752-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="Minecraft" image="https://static-cdn.jtvnw.net/ttv-boxart/27471_IGDB-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="Apex" image="https://static-cdn.jtvnw.net/ttv-boxart/511224-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="Albion Online" image="https://static-cdn.jtvnw.net/ttv-boxart/417528_IGDB-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="Tibia" image="https://static-cdn.jtvnw.net/ttv-boxart/19619_IGDB-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="Genshin Impact" image="https://static-cdn.jtvnw.net/ttv-boxart/513181_IGDB-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="Ragnarok Online" image="https://static-cdn.jtvnw.net/ttv-boxart/15229_IGDB-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="League of Legends" image="https://static-cdn.jtvnw.net/ttv-boxart/21779-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="Just Chatting" image="https://static-cdn.jtvnw.net/ttv-boxart/509658-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="DOTA 2" image="https://static-cdn.jtvnw.net/ttv-boxart/29595-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="Valorant" image="https://static-cdn.jtvnw.net/ttv-boxart/516575-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="Hogwarts Legacy" image="https://static-cdn.jtvnw.net/ttv-boxart/1095275650_IGDB-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="Sons of the Forrest" image="https://static-cdn.jtvnw.net/ttv-boxart/515479_IGDB-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="Counter Strike Global Offensive" image="https://static-cdn.jtvnw.net/ttv-boxart/32399_IGDB-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="Atomic Heart" image="https://static-cdn.jtvnw.net/ttv-boxart/505963_IGDB-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="Diablo III" image="https://static-cdn.jtvnw.net/ttv-boxart/313558_IGDB-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="Team Fight Tactics" image="https://static-cdn.jtvnw.net/ttv-boxart/513143-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="Lost Ark" image="https://static-cdn.jtvnw.net/ttv-boxart/490100-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="Music" image="https://static-cdn.jtvnw.net/ttv-boxart/26936-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="GTA V" image="https://static-cdn.jtvnw.net/ttv-boxart/32982_IGDB-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="World of Warcraft" image="https://static-cdn.jtvnw.net/ttv-boxart/18122-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="Virtual Casino" image="https://static-cdn.jtvnw.net/ttv-boxart/29452_IGDB-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="Diablo II" image="https://static-cdn.jtvnw.net/ttv-boxart/1788326126_IGDB-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="Pools, Hot Tubs & Beach" image="https://static-cdn.jtvnw.net/ttv-boxart/116747788-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="Talk shows & Podcasts" image="https://static-cdn.jtvnw.net/ttv-boxart/417752-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="Minecraft" image="https://static-cdn.jtvnw.net/ttv-boxart/27471_IGDB-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="Apex" image="https://static-cdn.jtvnw.net/ttv-boxart/511224-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="Albion Online" image="https://static-cdn.jtvnw.net/ttv-boxart/417528_IGDB-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="Tibia" image="https://static-cdn.jtvnw.net/ttv-boxart/19619_IGDB-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="Genshin Impact" image="https://static-cdn.jtvnw.net/ttv-boxart/513181_IGDB-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="Ragnarok Online" image="https://static-cdn.jtvnw.net/ttv-boxart/15229_IGDB-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="League of Legends" image="https://static-cdn.jtvnw.net/ttv-boxart/21779-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="Just Chatting" image="https://static-cdn.jtvnw.net/ttv-boxart/509658-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="DOTA 2" image="https://static-cdn.jtvnw.net/ttv-boxart/29595-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="Valorant" image="https://static-cdn.jtvnw.net/ttv-boxart/516575-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="Hogwarts Legacy" image="https://static-cdn.jtvnw.net/ttv-boxart/1095275650_IGDB-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="Sons of the Forrest" image="https://static-cdn.jtvnw.net/ttv-boxart/515479_IGDB-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="Counter Strike Global Offensive" image="https://static-cdn.jtvnw.net/ttv-boxart/32399_IGDB-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="Atomic Heart" image="https://static-cdn.jtvnw.net/ttv-boxart/505963_IGDB-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="Diablo III" image="https://static-cdn.jtvnw.net/ttv-boxart/313558_IGDB-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="Team Fight Tactics" image="https://static-cdn.jtvnw.net/ttv-boxart/513143-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="Lost Ark" image="https://static-cdn.jtvnw.net/ttv-boxart/490100-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="Music" image="https://static-cdn.jtvnw.net/ttv-boxart/26936-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="GTA V" image="https://static-cdn.jtvnw.net/ttv-boxart/32982_IGDB-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="World of Warcraft" image="https://static-cdn.jtvnw.net/ttv-boxart/18122-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="Virtual Casino" image="https://static-cdn.jtvnw.net/ttv-boxart/29452_IGDB-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="Diablo II" image="https://static-cdn.jtvnw.net/ttv-boxart/1788326126_IGDB-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="Pools, Hot Tubs & Beach" image="https://static-cdn.jtvnw.net/ttv-boxart/116747788-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="Talk shows & Podcasts" image="https://static-cdn.jtvnw.net/ttv-boxart/417752-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="Minecraft" image="https://static-cdn.jtvnw.net/ttv-boxart/27471_IGDB-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="Apex" image="https://static-cdn.jtvnw.net/ttv-boxart/511224-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="Albion Online" image="https://static-cdn.jtvnw.net/ttv-boxart/417528_IGDB-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="Tibia" image="https://static-cdn.jtvnw.net/ttv-boxart/19619_IGDB-285x380.jpg"></app-game-card>
+                <app-game-card [tags]="['tag1', 'tag2']" subTitle="455 spectateurs" title="Genshin Impact" image="https://static-cdn.jtvnw.net/ttv-boxart/513181_IGDB-285x380.jpg"></app-game-card>
+            </div>
+          </div>
         </div>
+
     </app-layout-with-side-menu>
   `
 });
