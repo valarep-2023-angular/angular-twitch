@@ -1,0 +1,66 @@
+<div>
+  <div *ngIf="isOffCanvasMenuDialog" class="relative z-40 md:hidden" role="dialog" aria-modal="true">
+
+    <div @opacityLinear *ngIf="isOffCanvasMenu" class="fixed inset-0 bg-gray-600 bg-opacity-75"></div>
+
+    <div @translateX *ngIf="isOffCanvasMenu" class="fixed inset-0 z-40 flex">
+      <div (click)="toggleOffCanvasMenu()" class="fixed inset-0"></div>
+
+      <div @translateX class="relative flex w-full max-w-xs flex-1 flex-col bg-gray-800 pt-5 pb-4">
+
+        <div @opacityInOut class="absolute top-0 right-0 -mr-12 pt-2">
+          <button type="button" (click)="toggleOffCanvasMenu()"
+                  class="ml-1 flex h-10 w-10 items-center justify-center rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+            <span class="sr-only">Close sidebar</span>
+            <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                 stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </button>
+        </div>
+
+        <div class="flex flex-shrink-0 items-center px-4">
+          <img class="h-8 w-auto" src="assets/images/twitch.svg" [alt]="title">
+          <span class="text-indigo-200 ml-3">{{title}}</span>
+        </div>
+        <div class="mt-5 h-0 flex-1 overflow-y-auto">
+          <nav class="space-y-1 px-2">
+            <ng-content select="app-mobile-side-menu-content"/>
+          </nav>
+        </div>
+      </div>
+
+      <div class="w-14 flex-shrink-0" aria-hidden="true"></div>
+    </div>
+  </div>
+
+  <div class="hidden md:fixed md:inset-y-0 md:flex md:w-64 md:flex-col">
+    <div class="flex min-h-0 flex-1 flex-col bg-gray-800">
+      <div class="flex h-16 flex-shrink-0 items-center bg-gray-900 px-4">
+        <img class="h-8 w-auto" src="assets/images/twitch.svg" [alt]="title">
+        <span class="text-indigo-200 ml-3">{{title}}</span>
+      </div>
+      <div class="flex flex-1 flex-col overflow-y-auto">
+        <nav class="flex-1 space-y-1 px-2 py-4">
+          <ng-content select="app-desktop-side-menu-content"/>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex flex-col md:pl-64">
+    <div class="sticky top-0 z-10 flex h-16 flex-shrink-0 bg-gray-800 shadow md:hidden items-center">
+      <button type="button" (click)="toggleOffCanvasMenu()"
+              class="px-4 text-indigo-200 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 md:hidden">
+        <span class="sr-only">Open sidebar</span>
+        <bars-4-outline-icon></bars-4-outline-icon>
+      </button>
+      <img class="h-8 w-auto mr-3" src="assets/images/twitch.svg" [alt]="title">
+      <div class="text-indigo-200">{{title}}</div>
+    </div>
+
+    <main class="flex-1">
+      <ng-content/>
+    </main>
+  </div>
+</div>
