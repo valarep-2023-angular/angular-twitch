@@ -4,7 +4,7 @@ import { Meta, moduleMetadata, Story } from '@storybook/angular';
 import { ButtonComponent } from './button.component';
 
 export default {
-  title: 'Buttons',
+  title: 'Basics/Buttons',
   component: ButtonComponent,
   decorators: [
     moduleMetadata({
