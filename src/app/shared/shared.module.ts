@@ -7,13 +7,17 @@ import {
   DesktopSideMenuContentComponent
 } from "./ui/layout-with-side-menu/desktop-side-menu-content/desktop-side-menu-content.component";
 import { MobileSideMenuContentComponent } from './ui/layout-with-side-menu/mobile-side-menu-content/mobile-side-menu-content.component';
+import { SideMenuSubTitleComponent } from './ui/layout-with-side-menu/side-menu-sub-title/side-menu-sub-title.component';
+import { MediaObjectComponent } from './ui/media-object/media-object.component';
 
 @NgModule({
   declarations: [
     ButtonComponent,
     LayoutWithSideMenuComponent,
     DesktopSideMenuContentComponent,
-    MobileSideMenuContentComponent
+    MobileSideMenuContentComponent,
+    SideMenuSubTitleComponent,
+    MediaObjectComponent
   ],
   imports: [
     CommonModule,
@@ -23,7 +27,9 @@ import { MobileSideMenuContentComponent } from './ui/layout-with-side-menu/mobil
     ButtonComponent,
     LayoutWithSideMenuComponent,
     DesktopSideMenuContentComponent,
-    NgHeroiconsModule
+    NgHeroiconsModule,
+    SideMenuSubTitleComponent,
+    MediaObjectComponent
   ]
 })
 export class SharedModule {
