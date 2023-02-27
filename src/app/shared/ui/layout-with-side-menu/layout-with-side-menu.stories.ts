@@ -151,10 +151,6 @@ const exampleTemplate: Story = (args) => ({
           amount="192"
           />
 
-          <app-side-menu-sub-title>
-            <hand-thumb-up-outline-icon class="mr-2"/>Chaînes recommandées
-          </app-side-menu-sub-title>
-
         </app-desktop-side-menu-content>
 
         <app-mobile-side-menu-content>
