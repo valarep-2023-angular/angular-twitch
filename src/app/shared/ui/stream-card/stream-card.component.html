@@ -1,11 +1,14 @@
-<div class="bg-gray-900 relative">
-  <div class="absolute top-2 left-2 text-white bg-red-600 text-sm font-medium px-2 rounded">Live</div>
-  <img
-    class="hover:cursor-pointer hover:scale-105 transition duration-300 ease-in-out hover:border-white border-2 border-transparent rounded-lg"
-    [src]="image"
-    width="440"
-    height="248"
-    [alt]="title">
+<div class="bg-gray-900">
+  <div class="relative">
+    <img
+      class="hover:cursor-pointer hover:scale-105 transition duration-300 ease-in-out hover:border-white border-2 border-transparent rounded-lg"
+      [src]="image"
+      width="440"
+      height="248"
+      [alt]="title">
+    <div class="absolute top-2 left-2 text-white bg-red-600 text-sm font-medium px-2 rounded">Live</div>
+    <div class="absolute bottom-2 left-2 text-white bg-gray-900 text-sm font-medium px-2 rounded bg-opacity-50">{{viewers}} viewers</div>
+  </div>
 
   <div class="p-1 flex">
 

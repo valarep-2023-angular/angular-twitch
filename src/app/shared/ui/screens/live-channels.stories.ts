@@ -52,7 +52,8 @@ export default {
         avatar: 'https://static-cdn.jtvnw.net/jtv_user_pictures/1a9da63c-0934-452e-9360-13e2c4f23799-profile_image-50x50.png',
         streamer: 'MelonieMac',
         game: 'Hogwarts Legacy',
-        tags: ['Christian']
+        tags: ['Christian'],
+        viewers: 50
       },
       {
         image: 'https://static-cdn.jtvnw.net/previews-ttv/live_user_fengrush-440x248.jpg',
@@ -60,7 +61,8 @@ export default {
         avatar: 'https://static-cdn.jtvnw.net/jtv_user_pictures/662cd845a9342f2e-profile_image-50x50.jpeg',
         streamer: 'FENGRUSH',
         game: 'Company of Heroes 3',
-        tags: ['English']
+        tags: ['English'],
+        viewers: 50
       },
       {
         image: 'https://static-cdn.jtvnw.net/previews-ttv/live_user_ozku-440x248.jpg',
@@ -68,7 +70,8 @@ export default {
         avatar: 'https://static-cdn.jtvnw.net/jtv_user_pictures/f4020214-f9ad-4e3c-9577-e5adf2054f29-profile_image-50x50.png',
         streamer: 'Ozku',
         game: 'Hogwarts Legacy',
-        tags: ['spanish', 'ClosedCaptions', 'ESP']
+        tags: ['spanish', 'ClosedCaptions', 'ESP'],
+        viewers: 50
       },
       {
         image: 'https://static-cdn.jtvnw.net/previews-ttv/live_user_illojuan-440x248.jpg',
@@ -76,7 +79,8 @@ export default {
         avatar: 'https://static-cdn.jtvnw.net/jtv_user_pictures/37454f0e-581b-42ba-b95b-416f3113fd37-profile_image-50x50.png',
         streamer: 'IlloJuan',
         game: 'Sons of the Forest',
-        tags: ['DropsActivados', 'Español']
+        tags: ['DropsActivados', 'Español'],
+        viewers: 50
       },
       {
         image: 'https://static-cdn.jtvnw.net/previews-ttv/live_user_fextralife-440x248.jpg',
@@ -84,7 +88,8 @@ export default {
         avatar: 'https://static-cdn.jtvnw.net/jtv_user_pictures/a28b0d37-81d0-415a-8ed8-1a1f998ea26d-profile_image-50x50.png',
         streamer: 'Fextralife',
         game: 'Hogwarts Legacy',
-        tags: ['English', 'hardmode']
+        tags: ['English', 'hardmode'],
+        viewers: 50
       },
       {
         image: 'https://static-cdn.jtvnw.net/previews-ttv/live_user_meloniemac-440x248.jpg',
@@ -92,7 +97,8 @@ export default {
         avatar: 'https://static-cdn.jtvnw.net/jtv_user_pictures/1a9da63c-0934-452e-9360-13e2c4f23799-profile_image-50x50.png',
         streamer: 'MelonieMac',
         game: 'Hogwarts Legacy',
-        tags: ['Christian']
+        tags: ['Christian'],
+        viewers: 50
       },
       {
         image: 'https://static-cdn.jtvnw.net/previews-ttv/live_user_fengrush-440x248.jpg',
@@ -100,7 +106,8 @@ export default {
         avatar: 'https://static-cdn.jtvnw.net/jtv_user_pictures/662cd845a9342f2e-profile_image-50x50.jpeg',
         streamer: 'FENGRUSH',
         game: 'Company of Heroes 3',
-        tags: ['English']
+        tags: ['English'],
+        viewers: 50
       },
       {
         image: 'https://static-cdn.jtvnw.net/previews-ttv/live_user_ozku-440x248.jpg',
@@ -108,7 +115,8 @@ export default {
         avatar: 'https://static-cdn.jtvnw.net/jtv_user_pictures/f4020214-f9ad-4e3c-9577-e5adf2054f29-profile_image-50x50.png',
         streamer: 'Ozku',
         game: 'Hogwarts Legacy',
-        tags: ['spanish', 'ClosedCaptions', 'ESP']
+        tags: ['spanish', 'ClosedCaptions', 'ESP'],
+        viewers: 50
       },
       {
         image: 'https://static-cdn.jtvnw.net/previews-ttv/live_user_illojuan-440x248.jpg',
@@ -116,7 +124,8 @@ export default {
         avatar: 'https://static-cdn.jtvnw.net/jtv_user_pictures/37454f0e-581b-42ba-b95b-416f3113fd37-profile_image-50x50.png',
         streamer: 'IlloJuan',
         game: 'Sons of the Forest',
-        tags: ['DropsActivados', 'Español']
+        tags: ['DropsActivados', 'Español'],
+        viewers: 50
       },
       {
         image: 'https://static-cdn.jtvnw.net/previews-ttv/live_user_fextralife-440x248.jpg',
@@ -124,7 +133,8 @@ export default {
         avatar: 'https://static-cdn.jtvnw.net/jtv_user_pictures/a28b0d37-81d0-415a-8ed8-1a1f998ea26d-profile_image-50x50.png',
         streamer: 'Fextralife',
         game: 'Hogwarts Legacy',
-        tags: ['English', 'hardmode']
+        tags: ['English', 'hardmode'],
+        viewers: 50
       },
       {
         image: 'https://static-cdn.jtvnw.net/previews-ttv/live_user_meloniemac-440x248.jpg',
@@ -132,7 +142,8 @@ export default {
         avatar: 'https://static-cdn.jtvnw.net/jtv_user_pictures/1a9da63c-0934-452e-9360-13e2c4f23799-profile_image-50x50.png',
         streamer: 'MelonieMac',
         game: 'Hogwarts Legacy',
-        tags: ['Christian']
+        tags: ['Christian'],
+        viewers: 50
       },
       {
         image: 'https://static-cdn.jtvnw.net/previews-ttv/live_user_fengrush-440x248.jpg',
@@ -140,7 +151,8 @@ export default {
         avatar: 'https://static-cdn.jtvnw.net/jtv_user_pictures/662cd845a9342f2e-profile_image-50x50.jpeg',
         streamer: 'FENGRUSH',
         game: 'Company of Heroes 3',
-        tags: ['English']
+        tags: ['English'],
+        viewers: 50
       },
       {
         image: 'https://static-cdn.jtvnw.net/previews-ttv/live_user_ozku-440x248.jpg',
@@ -148,7 +160,8 @@ export default {
         avatar: 'https://static-cdn.jtvnw.net/jtv_user_pictures/f4020214-f9ad-4e3c-9577-e5adf2054f29-profile_image-50x50.png',
         streamer: 'Ozku',
         game: 'Hogwarts Legacy',
-        tags: ['spanish', 'ClosedCaptions', 'ESP']
+        tags: ['spanish', 'ClosedCaptions', 'ESP'],
+        viewers: 50
       },
       {
         image: 'https://static-cdn.jtvnw.net/previews-ttv/live_user_illojuan-440x248.jpg',
@@ -156,7 +169,8 @@ export default {
         avatar: 'https://static-cdn.jtvnw.net/jtv_user_pictures/37454f0e-581b-42ba-b95b-416f3113fd37-profile_image-50x50.png',
         streamer: 'IlloJuan',
         game: 'Sons of the Forest',
-        tags: ['DropsActivados', 'Español']
+        tags: ['DropsActivados', 'Español'],
+        viewers: 50
       },
       {
         image: 'https://static-cdn.jtvnw.net/previews-ttv/live_user_fextralife-440x248.jpg',
@@ -164,7 +178,8 @@ export default {
         avatar: 'https://static-cdn.jtvnw.net/jtv_user_pictures/a28b0d37-81d0-415a-8ed8-1a1f998ea26d-profile_image-50x50.png',
         streamer: 'Fextralife',
         game: 'Hogwarts Legacy',
-        tags: ['English', 'hardmode']
+        tags: ['English', 'hardmode'],
+        viewers: 50
       }
     ],
     streamsInFrench: [
@@ -174,7 +189,8 @@ export default {
         avatar: 'https://static-cdn.jtvnw.net/jtv_user_pictures/1a9da63c-0934-452e-9360-13e2c4f23799-profile_image-50x50.png',
         streamer: 'MelonieMac',
         game: 'Hogwarts Legacy',
-        tags: ['Christian']
+        tags: ['Christian'],
+        viewers: 50
       },
       {
         image: 'https://static-cdn.jtvnw.net/previews-ttv/live_user_fengrush-440x248.jpg',
@@ -182,7 +198,8 @@ export default {
         avatar: 'https://static-cdn.jtvnw.net/jtv_user_pictures/662cd845a9342f2e-profile_image-50x50.jpeg',
         streamer: 'FENGRUSH',
         game: 'Company of Heroes 3',
-        tags: ['English']
+        tags: ['English'],
+        viewers: 50
       },
       {
         image: 'https://static-cdn.jtvnw.net/previews-ttv/live_user_ozku-440x248.jpg',
@@ -190,7 +207,8 @@ export default {
         avatar: 'https://static-cdn.jtvnw.net/jtv_user_pictures/f4020214-f9ad-4e3c-9577-e5adf2054f29-profile_image-50x50.png',
         streamer: 'Ozku',
         game: 'Hogwarts Legacy',
-        tags: ['spanish', 'ClosedCaptions', 'ESP']
+        tags: ['spanish', 'ClosedCaptions', 'ESP'],
+        viewers: 50
       },
       {
         image: 'https://static-cdn.jtvnw.net/previews-ttv/live_user_illojuan-440x248.jpg',
@@ -198,7 +216,8 @@ export default {
         avatar: 'https://static-cdn.jtvnw.net/jtv_user_pictures/37454f0e-581b-42ba-b95b-416f3113fd37-profile_image-50x50.png',
         streamer: 'IlloJuan',
         game: 'Sons of the Forest',
-        tags: ['DropsActivados', 'Español']
+        tags: ['DropsActivados', 'Español'],
+        viewers: 50
       },
       {
         image: 'https://static-cdn.jtvnw.net/previews-ttv/live_user_fextralife-440x248.jpg',
@@ -206,7 +225,8 @@ export default {
         avatar: 'https://static-cdn.jtvnw.net/jtv_user_pictures/a28b0d37-81d0-415a-8ed8-1a1f998ea26d-profile_image-50x50.png',
         streamer: 'Fextralife',
         game: 'Hogwarts Legacy',
-        tags: ['English', 'hardmode']
+        tags: ['English', 'hardmode'],
+        viewers: 50
       },
     ],
     channels: [
@@ -354,13 +374,13 @@ const exampleTemplate: Story = (args) => ({
                   <h3 class="text-white text-xl font-medium py-4">Les chaînes en <span class="text-indigo-400">Français</span></h3>
 
                   <div role="list" class="grid grid-cols-1 gap-2 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5">
-                      <app-stream-card *ngFor="let stream of streamsInFrench" [image]="stream.image" [title]="stream.title" [avatar]="stream.avatar" [streamer]="stream.streamer" [game]="stream.game" [tags]="stream.tags" />
+                      <app-stream-card *ngFor="let stream of streamsInFrench" [image]="stream.image" [title]="stream.title" [avatar]="stream.avatar" [streamer]="stream.streamer" [game]="stream.game" [tags]="stream.tags" [viewers]="stream.viewers" />
                   </div>
 
                   <h3 class="text-white text-xl font-medium py-4">Toutes les chaînes</h3>
 
                   <div role="list" class="grid grid-cols-1 gap-2 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5">
-                      <app-stream-card *ngFor="let stream of streams" [image]="stream.image" [title]="stream.title" [avatar]="stream.avatar" [streamer]="stream.streamer" [game]="stream.game" [tags]="stream.tags" />
+                      <app-stream-card *ngFor="let stream of streams" [image]="stream.image" [title]="stream.title" [avatar]="stream.avatar" [streamer]="stream.streamer" [game]="stream.game" [tags]="stream.tags" [viewers]="stream.viewers" />
                   </div>
 
               </div>

@@ -24,4 +24,7 @@ export class StreamCardComponent {
 
   @Input()
   game!: string;
+
+  @Input()
+  viewers!: number;
 }
