@@ -1,5 +1,6 @@
 import { Meta, moduleMetadata, Story } from '@storybook/angular';
 import {StreamCardComponent} from "./stream-card.component";
+import {TagComponent} from "../tag/tag.component";
 
 export default {
   title: 'Basics/Stream card',
@@ -7,6 +8,9 @@ export default {
   decorators: [
     moduleMetadata({
       imports: [],
+      declarations: [
+        TagComponent
+      ],
     })
   ],
   args: {

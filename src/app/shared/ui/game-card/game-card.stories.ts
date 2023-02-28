@@ -1,11 +1,15 @@
 import { Meta, moduleMetadata, Story } from '@storybook/angular';
 import {GameCardComponent} from "./game-card.component";
+import {TagComponent} from "../tag/tag.component";
 
 export default {
   title: 'Basics/Game card',
   component: GameCardComponent,
   decorators: [
     moduleMetadata({
+      declarations: [
+        TagComponent
+      ],
       imports: [],
     })
   ],

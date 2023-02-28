@@ -20,8 +20,7 @@
       <a href="#" class="block text-sm text-gray-400 hover:text-indigo-400">{{game}}</a>
 
       <div class="flex mt-1" *ngIf="tags.length > 0">
-        <div *ngFor="let tag of tags"
-             class="rounded-r rounded-l bg-gray-700 text-gray-300 px-2 py-1 text-xs mr-1">{{tag}}</div>
+        <app-tag *ngFor="let tag of tags">{{tag}}</app-tag>
       </div>
     </div>
   </div>

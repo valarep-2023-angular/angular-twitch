@@ -16,6 +16,7 @@ import {
   MobileSideMenuContentComponent
 } from "../../../layout-with-side-menu/mobile-side-menu-content/mobile-side-menu-content.component";
 import {SideMenuSubTitleComponent} from "../../../layout-with-side-menu/side-menu-sub-title/side-menu-sub-title.component";
+import {TagComponent} from "../../../tag/tag.component";
 
 export default {
   title: 'Screens/Directory (Parcourir)/All',
@@ -32,7 +33,8 @@ export default {
         MainNavComponent,
         MainNavItemComponent,
         TabsComponent,
-        TabComponent
+        TabComponent,
+        TagComponent
       ],
       imports: [
         BrowserAnimationsModule,

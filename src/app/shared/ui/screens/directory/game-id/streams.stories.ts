@@ -18,8 +18,9 @@ import {MainNavComponent} from "../../../navigation/main-nav/main-nav.component"
 import {MediaObjectComponent} from "../../../media-object/media-object.component";
 import {MainNavItemComponent} from "../../../navigation/main-nav-item/main-nav-item.component";
 import {StreamCardComponent} from "../../../stream-card/stream-card.component";
-import {GameDetailsCardComponent} from "../../../game-streams-card/game-details-card.component";
+import {GameDetailsCardComponent} from "../../../game-details-card/game-details-card.component";
 import {ButtonComponent} from "../../../button/button.component";
+import {TagComponent} from "../../../tag/tag.component";
 
 export default {
   title: 'Screens/Directory (Parcourir)/[GameID]',
@@ -39,7 +40,8 @@ export default {
         MainNavItemComponent,
         TabsComponent,
         TabComponent,
-        ButtonComponent
+        ButtonComponent,
+        TagComponent
       ],
       imports: [
         BrowserAnimationsModule,

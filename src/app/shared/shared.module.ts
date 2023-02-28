@@ -16,7 +16,8 @@ import { MainNavItemComponent } from './ui/navigation/main-nav-item/main-nav-ite
 import { TabsComponent } from './ui/navigation/tabs/tabs.component';
 import { TabComponent } from './ui/navigation/tab/tab.component';
 import { StreamCardComponent } from './ui/stream-card/stream-card.component';
-import { GameDetailsCardComponent } from './ui/game-streams-card/game-details-card.component';
+import { GameDetailsCardComponent } from './ui/game-details-card/game-details-card.component';
+import { TagComponent } from './ui/tag/tag.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { GameDetailsCardComponent } from './ui/game-streams-card/game-details-ca
     TabsComponent,
     TabComponent,
     StreamCardComponent,
-    GameDetailsCardComponent
+    GameDetailsCardComponent,
+    TagComponent
   ],
   imports: [
     CommonModule,
@@ -54,7 +56,8 @@ import { GameDetailsCardComponent } from './ui/game-streams-card/game-details-ca
     TabsComponent,
     TabComponent,
     StreamCardComponent,
-    GameDetailsCardComponent
+    GameDetailsCardComponent,
+    TagComponent
   ]
 })
 export class SharedModule {

@@ -13,7 +13,7 @@
       </div>
 
       <div *ngIf="tags.length > 0" class="hidden sm:flex flex-row mt-2 xl:pl-3 xl:mt-0">
-        <div *ngFor="let tag of tags" class="rounded-r rounded-l bg-gray-700 text-gray-300 px-2 py-1 text-sm mr-1">{{tag}}</div>
+        <app-tag *ngFor="let tag of tags">{{tag}}</app-tag>
       </div>
     </div>
 

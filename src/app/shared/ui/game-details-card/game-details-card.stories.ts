@@ -4,6 +4,7 @@ import {ButtonComponent} from "../button/button.component";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {CommonModule} from "@angular/common";
 import {NgHeroiconsModule} from "@dimaslz/ng-heroicons";
+import {TagComponent} from "../tag/tag.component";
 
 export default {
   title: 'Basics/Game details card',
@@ -15,7 +16,10 @@ export default {
         CommonModule,
         NgHeroiconsModule
       ],
-      declarations: [ButtonComponent],
+      declarations: [
+        ButtonComponent,
+        TagComponent
+      ],
     })
   ],
   args: {

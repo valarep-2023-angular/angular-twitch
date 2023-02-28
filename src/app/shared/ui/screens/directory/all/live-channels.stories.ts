@@ -18,6 +18,7 @@ import {SideMenuSubTitleComponent} from "../../../layout-with-side-menu/side-men
 import {StreamCardComponent} from "../../../stream-card/stream-card.component";
 import {CommonModule} from "@angular/common";
 import {GameCardComponent} from "../../../game-card/game-card.component";
+import {TagComponent} from "../../../tag/tag.component";
 
 export default {
   title: 'Screens/Directory (Parcourir)/All',
@@ -35,7 +36,8 @@ export default {
         MainNavComponent,
         MainNavItemComponent,
         TabsComponent,
-        TabComponent
+        TabComponent,
+        TagComponent
       ],
       imports: [
         BrowserAnimationsModule,
