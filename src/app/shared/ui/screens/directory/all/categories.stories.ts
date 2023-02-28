@@ -1,24 +1,24 @@
 import {Meta, moduleMetadata, Story} from "@storybook/angular";
 import {NgHeroiconsModule} from "@dimaslz/ng-heroicons";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import {MediaObjectComponent} from "../media-object/media-object.component";
-import {GameCardComponent} from "../game-card/game-card.component";
-import {MainHeaderComponent} from "../headers/main-header/main-header.component";
-import {MainNavComponent} from "../navigation/main-nav/main-nav.component";
-import {MainNavItemComponent} from "../navigation/main-nav-item/main-nav-item.component";
-import {TabsComponent} from "../navigation/tabs/tabs.component";
-import {TabComponent} from "../navigation/tab/tab.component";
-import {LayoutWithSideMenuComponent} from "../layout-with-side-menu/layout-with-side-menu.component";
+import {MediaObjectComponent} from "../../../media-object/media-object.component";
+import {GameCardComponent} from "../../../game-card/game-card.component";
+import {MainHeaderComponent} from "../../../headers/main-header/main-header.component";
+import {MainNavComponent} from "../../../navigation/main-nav/main-nav.component";
+import {MainNavItemComponent} from "../../../navigation/main-nav-item/main-nav-item.component";
+import {TabsComponent} from "../../../navigation/tabs/tabs.component";
+import {TabComponent} from "../../../navigation/tab/tab.component";
+import {LayoutWithSideMenuComponent} from "../../../layout-with-side-menu/layout-with-side-menu.component";
 import {
   DesktopSideMenuContentComponent
-} from "../layout-with-side-menu/desktop-side-menu-content/desktop-side-menu-content.component";
+} from "../../../layout-with-side-menu/desktop-side-menu-content/desktop-side-menu-content.component";
 import {
   MobileSideMenuContentComponent
-} from "../layout-with-side-menu/mobile-side-menu-content/mobile-side-menu-content.component";
-import {SideMenuSubTitleComponent} from "../layout-with-side-menu/side-menu-sub-title/side-menu-sub-title.component";
+} from "../../../layout-with-side-menu/mobile-side-menu-content/mobile-side-menu-content.component";
+import {SideMenuSubTitleComponent} from "../../../layout-with-side-menu/side-menu-sub-title/side-menu-sub-title.component";
 
 export default {
-  title: 'Screens/Categories',
+  title: 'Screens/Directory (Parcourir)/All',
   component: LayoutWithSideMenuComponent,
   decorators: [
     moduleMetadata({
@@ -341,5 +341,5 @@ const exampleTemplate: Story = (args) => ({
   `
 });
 
-export const Example = exampleTemplate.bind({});
-Example.args = { title: 'Angular Twitch Clone' };
+export const Categories = exampleTemplate.bind({});
+Categories.args = { title: 'Angular Twitch Clone' };
