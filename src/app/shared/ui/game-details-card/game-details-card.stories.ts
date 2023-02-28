@@ -5,6 +5,7 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {CommonModule} from "@angular/common";
 import {NgHeroiconsModule} from "@dimaslz/ng-heroicons";
 import {TagComponent} from "../tag/tag.component";
+import {RouterTestingModule} from "@angular/router/testing";
 
 export default {
   title: 'Basics/Game details card',
@@ -14,7 +15,8 @@ export default {
       imports: [
         BrowserAnimationsModule,
         CommonModule,
-        NgHeroiconsModule
+        NgHeroiconsModule,
+        RouterTestingModule
       ],
       declarations: [
         ButtonComponent,

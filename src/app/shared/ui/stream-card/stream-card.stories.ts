@@ -1,13 +1,16 @@
 import { Meta, moduleMetadata, Story } from '@storybook/angular';
 import {StreamCardComponent} from "./stream-card.component";
 import {TagComponent} from "../tag/tag.component";
+import {RouterTestingModule} from "@angular/router/testing";
 
 export default {
   title: 'Basics/Stream card',
   component: StreamCardComponent,
   decorators: [
     moduleMetadata({
-      imports: [],
+      imports: [
+        RouterTestingModule
+      ],
       declarations: [
         TagComponent
       ],

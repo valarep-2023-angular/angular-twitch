@@ -1,13 +1,16 @@
 import { Meta, moduleMetadata, Story } from '@storybook/angular';
 import {TagComponent} from "../tag/tag.component";
 import {VideoCardComponent} from "./video-card.component";
+import {RouterTestingModule} from "@angular/router/testing";
 
 export default {
   title: 'Basics/Video card',
   component: VideoCardComponent,
   decorators: [
     moduleMetadata({
-      imports: [],
+      imports: [
+        RouterTestingModule
+      ],
       declarations: [
         TagComponent
       ],

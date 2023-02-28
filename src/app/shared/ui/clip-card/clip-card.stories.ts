@@ -1,13 +1,16 @@
 import {Meta, moduleMetadata, Story} from '@storybook/angular';
 import {TagComponent} from "../tag/tag.component";
 import {ClipCardComponent} from "./clip-card.component";
+import {RouterTestingModule} from "@angular/router/testing";
 
 export default {
   title: 'Basics/Clip card',
   component: ClipCardComponent,
   decorators: [
     moduleMetadata({
-      imports: [],
+      imports: [
+        RouterTestingModule
+      ],
       declarations: [
         TagComponent
       ],
