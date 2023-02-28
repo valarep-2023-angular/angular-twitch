@@ -19,6 +19,7 @@ import { StreamCardComponent } from './ui/stream-card/stream-card.component';
 import { GameDetailsCardComponent } from './ui/game-details-card/game-details-card.component';
 import { TagComponent } from './ui/tag/tag.component';
 import { VideoCardComponent } from './ui/video-card/video-card.component';
+import { ClipCardComponent } from './ui/clip-card/clip-card.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { VideoCardComponent } from './ui/video-card/video-card.component';
     StreamCardComponent,
     GameDetailsCardComponent,
     TagComponent,
-    VideoCardComponent
+    VideoCardComponent,
+    ClipCardComponent
   ],
   imports: [
     CommonModule,
@@ -60,7 +62,8 @@ import { VideoCardComponent } from './ui/video-card/video-card.component';
     StreamCardComponent,
     GameDetailsCardComponent,
     TagComponent,
-    VideoCardComponent
+    VideoCardComponent,
+    ClipCardComponent
   ]
 })
 export class SharedModule {
