@@ -18,6 +18,7 @@ import { TabComponent } from './ui/navigation/tab/tab.component';
 import { StreamCardComponent } from './ui/stream-card/stream-card.component';
 import { GameDetailsCardComponent } from './ui/game-details-card/game-details-card.component';
 import { TagComponent } from './ui/tag/tag.component';
+import { VideoCardComponent } from './ui/video-card/video-card.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { TagComponent } from './ui/tag/tag.component';
     TabComponent,
     StreamCardComponent,
     GameDetailsCardComponent,
-    TagComponent
+    TagComponent,
+    VideoCardComponent
   ],
   imports: [
     CommonModule,
@@ -57,7 +59,8 @@ import { TagComponent } from './ui/tag/tag.component';
     TabComponent,
     StreamCardComponent,
     GameDetailsCardComponent,
-    TagComponent
+    TagComponent,
+    VideoCardComponent
   ]
 })
 export class SharedModule {
