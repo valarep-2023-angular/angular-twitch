@@ -367,7 +367,7 @@ const exampleTemplate: Story = (args) => ({
               <div class="px-6">
 
                   <div class="border-b border-gray-700">
-                      <nav class="-mb-px flex space-x-8" aria-label="Tabs">
+                      <nav class="-mb-px flex space-x-8 overflow-x-auto" aria-label="Tabs">
                         <a href="#" class="border-transparent text-gray-400 hover:border-gray-400 hover:text-gray-300 whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium">Catégories</a>
                         <a href="#" class="border-indigo-400 text-indigo-400 whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium" aria-current="page">Chaînes live</a>
                       </nav>
