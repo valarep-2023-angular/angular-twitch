@@ -18,6 +18,7 @@ import {
 import {SideMenuSubTitleComponent} from "../../layout-with-side-menu/side-menu-sub-title/side-menu-sub-title.component";
 import {StreamCardComponent} from "../../stream-card/stream-card.component";
 import {TagComponent} from "../../tag/tag.component";
+import {RouterTestingModule} from "@angular/router/testing";
 
 export default {
   title: 'Screens/Directory (Parcourir)',
@@ -40,7 +41,8 @@ export default {
       ],
       imports: [
         BrowserAnimationsModule,
-        NgHeroiconsModule
+        NgHeroiconsModule,
+        RouterTestingModule
       ],
     })
   ],

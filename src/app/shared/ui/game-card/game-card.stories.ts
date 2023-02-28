@@ -1,6 +1,7 @@
 import { Meta, moduleMetadata, Story } from '@storybook/angular';
 import {GameCardComponent} from "./game-card.component";
 import {TagComponent} from "../tag/tag.component";
+import {RouterTestingModule} from "@angular/router/testing";
 
 export default {
   title: 'Basics/Game card',
@@ -10,7 +11,9 @@ export default {
       declarations: [
         TagComponent
       ],
-      imports: [],
+      imports: [
+        RouterTestingModule
+      ],
     })
   ],
   args: {

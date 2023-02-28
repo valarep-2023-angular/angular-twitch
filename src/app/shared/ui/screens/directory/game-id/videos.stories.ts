@@ -23,6 +23,7 @@ import {GameDetailsCardComponent} from "../../../game-details-card/game-details-
 import {ButtonComponent} from "../../../button/button.component";
 import {TagComponent} from "../../../tag/tag.component";
 import {VideoCardComponent} from "../../../video-card/video-card.component";
+import {RouterTestingModule} from "@angular/router/testing";
 
 export default {
   title: 'Screens/Directory (Parcourir)/[GameID]',
@@ -48,7 +49,8 @@ export default {
       imports: [
         BrowserAnimationsModule,
         CommonModule,
-        NgHeroiconsModule
+        NgHeroiconsModule,
+        RouterTestingModule
       ],
     })
   ],

@@ -19,6 +19,7 @@ import {StreamCardComponent} from "../../../stream-card/stream-card.component";
 import {CommonModule} from "@angular/common";
 import {GameCardComponent} from "../../../game-card/game-card.component";
 import {TagComponent} from "../../../tag/tag.component";
+import {RouterTestingModule} from "@angular/router/testing";
 
 export default {
   title: 'Screens/Directory (Parcourir)/All',
@@ -42,7 +43,8 @@ export default {
       imports: [
         BrowserAnimationsModule,
         CommonModule,
-        NgHeroiconsModule
+        NgHeroiconsModule,
+        RouterTestingModule
       ],
     })
   ],
