@@ -23,6 +23,7 @@ import {TagComponent} from './ui/tag/tag.component';
 import {VideoCardComponent} from './ui/video-card/video-card.component';
 import {ClipCardComponent} from './ui/clip-card/clip-card.component';
 import {RouterModule} from "@angular/router";
+import { StreamsCarouselComponent } from './ui/streams-carousel/streams-carousel.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import {RouterModule} from "@angular/router";
     GameDetailsCardComponent,
     TagComponent,
     VideoCardComponent,
-    ClipCardComponent
+    ClipCardComponent,
+    StreamsCarouselComponent
   ],
   imports: [
     RouterModule,
@@ -67,7 +69,8 @@ import {RouterModule} from "@angular/router";
     GameDetailsCardComponent,
     TagComponent,
     VideoCardComponent,
-    ClipCardComponent
+    ClipCardComponent,
+    StreamsCarouselComponent
   ]
 })
 export class SharedModule {
