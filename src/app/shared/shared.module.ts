@@ -39,6 +39,7 @@ import { TabComponent } from './ui/navigation/tab/tab.component';
     ButtonComponent,
     LayoutWithSideMenuComponent,
     DesktopSideMenuContentComponent,
+    MobileSideMenuContentComponent,
     NgHeroiconsModule,
     SideMenuSubTitleComponent,
     MediaObjectComponent,
