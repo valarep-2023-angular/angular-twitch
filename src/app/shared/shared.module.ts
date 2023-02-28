@@ -15,6 +15,7 @@ import { MainNavComponent } from './ui/navigation/main-nav/main-nav.component';
 import { MainNavItemComponent } from './ui/navigation/main-nav-item/main-nav-item.component';
 import { TabsComponent } from './ui/navigation/tabs/tabs.component';
 import { TabComponent } from './ui/navigation/tab/tab.component';
+import { StreamCardComponent } from './ui/stream-card/stream-card.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { TabComponent } from './ui/navigation/tab/tab.component';
     MainNavComponent,
     MainNavItemComponent,
     TabsComponent,
-    TabComponent
+    TabComponent,
+    StreamCardComponent
   ],
   imports: [
     CommonModule,
@@ -48,7 +50,8 @@ import { TabComponent } from './ui/navigation/tab/tab.component';
     MainNavComponent,
     MainNavItemComponent,
     TabsComponent,
-    TabComponent
+    TabComponent,
+    StreamCardComponent
   ]
 })
 export class SharedModule {

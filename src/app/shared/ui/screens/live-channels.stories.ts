@@ -2,7 +2,6 @@ import {Meta, moduleMetadata, Story} from "@storybook/angular";
 import {NgHeroiconsModule} from "@dimaslz/ng-heroicons";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {MediaObjectComponent} from "../media-object/media-object.component";
-import {GameCardComponent} from "../game-card/game-card.component";
 import {MainHeaderComponent} from "../headers/main-header/main-header.component";
 import {MainNavComponent} from "../navigation/main-nav/main-nav.component";
 import {MainNavItemComponent} from "../navigation/main-nav-item/main-nav-item.component";
@@ -16,9 +15,12 @@ import {
   MobileSideMenuContentComponent
 } from "../layout-with-side-menu/mobile-side-menu-content/mobile-side-menu-content.component";
 import {SideMenuSubTitleComponent} from "../layout-with-side-menu/side-menu-sub-title/side-menu-sub-title.component";
+import {StreamCardComponent} from "../stream-card/stream-card.component";
+import {CommonModule} from "@angular/common";
+import {GameCardComponent} from "../game-card/game-card.component";
 
 export default {
-  title: 'Screens/Categories',
+  title: 'Screens/Live channels',
   component: LayoutWithSideMenuComponent,
   decorators: [
     moduleMetadata({
@@ -27,6 +29,7 @@ export default {
         MobileSideMenuContentComponent,
         SideMenuSubTitleComponent,
         MediaObjectComponent,
+        StreamCardComponent,
         GameCardComponent,
         MainHeaderComponent,
         MainNavComponent,
@@ -36,159 +39,178 @@ export default {
       ],
       imports: [
         BrowserAnimationsModule,
+        CommonModule,
         NgHeroiconsModule
       ],
     })
   ],
   args: {
-    games: [
+    streams: [
       {
-        title: 'Sons of the Forrest',
-        subTitle: '455 spectateurs',
-        image: 'https://static-cdn.jtvnw.net/ttv-boxart/515479_IGDB-285x380.jpg',
-        tags: ['tag1', 'tag2']
+        image: 'https://static-cdn.jtvnw.net/previews-ttv/live_user_meloniemac-440x248.jpg',
+        title: 'Ura biggit harry [Hard/ Hufflepuff]',
+        avatar: 'https://static-cdn.jtvnw.net/jtv_user_pictures/1a9da63c-0934-452e-9360-13e2c4f23799-profile_image-50x50.png',
+        streamer: 'MelonieMac',
+        game: 'Hogwarts Legacy',
+        tags: ['Christian']
       },
       {
-        title: 'Counter Strike Global Offensive',
-        subTitle: '455 spectateurs',
-        image: 'https://static-cdn.jtvnw.net/ttv-boxart/32399_IGDB-285x380.jpg',
-        tags: ['tag1', 'tag2']
+        image: 'https://static-cdn.jtvnw.net/previews-ttv/live_user_fengrush-440x248.jpg',
+        title: 'LEARNIN',
+        avatar: 'https://static-cdn.jtvnw.net/jtv_user_pictures/662cd845a9342f2e-profile_image-50x50.jpeg',
+        streamer: 'FENGRUSH',
+        game: 'Company of Heroes 3',
+        tags: ['English']
       },
       {
-        title: 'Atomic Heart',
-        subTitle: '455 spectateurs',
-        image: 'https://static-cdn.jtvnw.net/ttv-boxart/505963_IGDB-285x380.jpg',
-        tags: ['tag1', 'tag2']
+        image: 'https://static-cdn.jtvnw.net/previews-ttv/live_user_ozku-440x248.jpg',
+        title: '🔴 Daditos x2!! - EL Magozku, besto maguito en howartion, cual era mi casa? | !dados !tienda',
+        avatar: 'https://static-cdn.jtvnw.net/jtv_user_pictures/f4020214-f9ad-4e3c-9577-e5adf2054f29-profile_image-50x50.png',
+        streamer: 'Ozku',
+        game: 'Hogwarts Legacy',
+        tags: ['spanish', 'ClosedCaptions', 'ESP']
       },
       {
-        title: 'Diablo III',
-        subTitle: '455 spectateurs',
-        image: 'https://static-cdn.jtvnw.net/ttv-boxart/313558_IGDB-285x380.jpg',
-        tags: ['tag1', 'tag2']
+        image: 'https://static-cdn.jtvnw.net/previews-ttv/live_user_illojuan-440x248.jpg',
+        title: '🪓 HOY NOS TOCA TRABAJAR (no se lo cree ni tu prima la coja) - Sons of the Forest ft. Andrés #2',
+        avatar: 'https://static-cdn.jtvnw.net/jtv_user_pictures/37454f0e-581b-42ba-b95b-416f3113fd37-profile_image-50x50.png',
+        streamer: 'IlloJuan',
+        game: 'Sons of the Forest',
+        tags: ['DropsActivados', 'Español']
       },
       {
-        title: 'Team Fight Tactics',
-        subTitle: '455 spectateurs',
-        image: 'https://static-cdn.jtvnw.net/ttv-boxart/513143-285x380.jpg',
-        tags: ['tag1', 'tag2']
+        image: 'https://static-cdn.jtvnw.net/previews-ttv/live_user_fextralife-440x248.jpg',
+        title: '!GIVEAWAY !MAP THE END??? Hogwarts Hard Mode with Yuria',
+        avatar: 'https://static-cdn.jtvnw.net/jtv_user_pictures/a28b0d37-81d0-415a-8ed8-1a1f998ea26d-profile_image-50x50.png',
+        streamer: 'Fextralife',
+        game: 'Hogwarts Legacy',
+        tags: ['English', 'hardmode']
       },
       {
-        title: 'Lost Ark',
-        subTitle: '455 spectateurs',
-        image: 'https://static-cdn.jtvnw.net/ttv-boxart/490100-285x380.jpg',
-        tags: ['tag1', 'tag2']
+        image: 'https://static-cdn.jtvnw.net/previews-ttv/live_user_meloniemac-440x248.jpg',
+        title: 'Ura biggit harry [Hard/ Hufflepuff]',
+        avatar: 'https://static-cdn.jtvnw.net/jtv_user_pictures/1a9da63c-0934-452e-9360-13e2c4f23799-profile_image-50x50.png',
+        streamer: 'MelonieMac',
+        game: 'Hogwarts Legacy',
+        tags: ['Christian']
       },
       {
-        title: 'Music',
-        subTitle: '455 spectateurs',
-        image: 'https://static-cdn.jtvnw.net/ttv-boxart/26936-285x380.jpg',
-        tags: ['tag1', 'tag2']
+        image: 'https://static-cdn.jtvnw.net/previews-ttv/live_user_fengrush-440x248.jpg',
+        title: 'LEARNIN',
+        avatar: 'https://static-cdn.jtvnw.net/jtv_user_pictures/662cd845a9342f2e-profile_image-50x50.jpeg',
+        streamer: 'FENGRUSH',
+        game: 'Company of Heroes 3',
+        tags: ['English']
       },
       {
-        title: 'GTA V',
-        subTitle: '455 spectateurs',
-        image: 'https://static-cdn.jtvnw.net/ttv-boxart/32982_IGDB-285x380.jpg',
-        tags: ['tag1', 'tag2']
+        image: 'https://static-cdn.jtvnw.net/previews-ttv/live_user_ozku-440x248.jpg',
+        title: '🔴 Daditos x2!! - EL Magozku, besto maguito en howartion, cual era mi casa? | !dados !tienda',
+        avatar: 'https://static-cdn.jtvnw.net/jtv_user_pictures/f4020214-f9ad-4e3c-9577-e5adf2054f29-profile_image-50x50.png',
+        streamer: 'Ozku',
+        game: 'Hogwarts Legacy',
+        tags: ['spanish', 'ClosedCaptions', 'ESP']
       },
       {
-        title: 'World of Warcraft',
-        subTitle: '455 spectateurs',
-        image: 'https://static-cdn.jtvnw.net/ttv-boxart/18122-285x380.jpg',
-        tags: ['tag1', 'tag2']
+        image: 'https://static-cdn.jtvnw.net/previews-ttv/live_user_illojuan-440x248.jpg',
+        title: '🪓 HOY NOS TOCA TRABAJAR (no se lo cree ni tu prima la coja) - Sons of the Forest ft. Andrés #2',
+        avatar: 'https://static-cdn.jtvnw.net/jtv_user_pictures/37454f0e-581b-42ba-b95b-416f3113fd37-profile_image-50x50.png',
+        streamer: 'IlloJuan',
+        game: 'Sons of the Forest',
+        tags: ['DropsActivados', 'Español']
       },
       {
-        title: 'Valorant',
-        subTitle: '455 spectateurs',
-        image: 'https://static-cdn.jtvnw.net/ttv-boxart/517226-285x380.jpg',
-        tags: ['tag1', 'tag2']
+        image: 'https://static-cdn.jtvnw.net/previews-ttv/live_user_fextralife-440x248.jpg',
+        title: '!GIVEAWAY !MAP THE END??? Hogwarts Hard Mode with Yuria',
+        avatar: 'https://static-cdn.jtvnw.net/jtv_user_pictures/a28b0d37-81d0-415a-8ed8-1a1f998ea26d-profile_image-50x50.png',
+        streamer: 'Fextralife',
+        game: 'Hogwarts Legacy',
+        tags: ['English', 'hardmode']
       },
       {
-        title: 'Diablo II',
-        subTitle: '455 spectateurs',
-        image: 'https://static-cdn.jtvnw.net/ttv-boxart/1788326126_IGDB-285x380.jpg',
-        tags: ['tag1', 'tag2']
+        image: 'https://static-cdn.jtvnw.net/previews-ttv/live_user_meloniemac-440x248.jpg',
+        title: 'Ura biggit harry [Hard/ Hufflepuff]',
+        avatar: 'https://static-cdn.jtvnw.net/jtv_user_pictures/1a9da63c-0934-452e-9360-13e2c4f23799-profile_image-50x50.png',
+        streamer: 'MelonieMac',
+        game: 'Hogwarts Legacy',
+        tags: ['Christian']
       },
       {
-        title: 'Pools, Hot Tubs & Beach',
-        subTitle: '455 spectateurs',
-        image: 'https://static-cdn.jtvnw.net/ttv-boxart/116747788-285x380.jpg',
-        tags: ['tag1', 'tag2']
+        image: 'https://static-cdn.jtvnw.net/previews-ttv/live_user_fengrush-440x248.jpg',
+        title: 'LEARNIN',
+        avatar: 'https://static-cdn.jtvnw.net/jtv_user_pictures/662cd845a9342f2e-profile_image-50x50.jpeg',
+        streamer: 'FENGRUSH',
+        game: 'Company of Heroes 3',
+        tags: ['English']
       },
       {
-        title: 'Talk shows & Podcasts',
-        subTitle: '455 spectateurs',
-        image: 'https://static-cdn.jtvnw.net/ttv-boxart/417752-285x380.jpg',
-        tags: ['tag1', 'tag2']
+        image: 'https://static-cdn.jtvnw.net/previews-ttv/live_user_ozku-440x248.jpg',
+        title: '🔴 Daditos x2!! - EL Magozku, besto maguito en howartion, cual era mi casa? | !dados !tienda',
+        avatar: 'https://static-cdn.jtvnw.net/jtv_user_pictures/f4020214-f9ad-4e3c-9577-e5adf2054f29-profile_image-50x50.png',
+        streamer: 'Ozku',
+        game: 'Hogwarts Legacy',
+        tags: ['spanish', 'ClosedCaptions', 'ESP']
       },
       {
-        title: 'League of Legends',
-        subTitle: '455 spectateurs',
-        image: 'https://static-cdn.jtvnw.net/ttv-boxart/League%20of%20Legends-285x380.jpg',
-        tags: ['tag1', 'tag2']
+        image: 'https://static-cdn.jtvnw.net/previews-ttv/live_user_illojuan-440x248.jpg',
+        title: '🪓 HOY NOS TOCA TRABAJAR (no se lo cree ni tu prima la coja) - Sons of the Forest ft. Andrés #2',
+        avatar: 'https://static-cdn.jtvnw.net/jtv_user_pictures/37454f0e-581b-42ba-b95b-416f3113fd37-profile_image-50x50.png',
+        streamer: 'IlloJuan',
+        game: 'Sons of the Forest',
+        tags: ['DropsActivados', 'Español']
       },
       {
-        title: 'Apex',
-        subTitle: '455 spectateurs',
-        image: 'https://static-cdn.jtvnw.net/ttv-boxart/511224-285x380.jpg',
-        tags: ['tag1', 'tag2']
-      },
-      {
-        title: 'Dota 2',
-        subTitle: '455 spectateurs',
-        image: 'https://static-cdn.jtvnw.net/ttv-boxart/Dota%202-285x380.jpg',
-        tags: ['tag1', 'tag2']
-      },
-      {
-        title: 'Hearthstone',
-        subTitle: '455 spectateurs',
-        image: 'https://static-cdn.jtvnw.net/ttv-boxart/Hearthstone-285x380.jpg',
-        tags: ['tag1', 'tag2']
-      },
-      {
-        title: 'Overwatch',
-        subTitle: '455 spectateurs',
-        image: 'https://static-cdn.jtvnw.net/ttv-boxart/Overwatch-285x380.jpg',
-        tags: ['tag1', 'tag2']
-      },
-      {
-        title: 'Fortnite',
-        subTitle: '455 spectateurs',
-        image: 'https://static-cdn.jtvnw.net/ttv-boxart/Fortnite-285x380.jpg',
-        tags: ['tag1', 'tag2']
-      },
-      {
-        title: 'Call of Duty',
-        subTitle: '455 spectateurs',
-        image: 'https://static-cdn.jtvnw.net/ttv-boxart/Call%20of%20Duty-285x380.jpg',
-        tags: ['tag1', 'tag2']
-      },
-      {
-        title: 'Counter-Strike',
-        subTitle: '455 spectateurs',
-        image: 'https://static-cdn.jtvnw.net/ttv-boxart/Counter-Strike-285x380.jpg',
-        tags: ['tag1', 'tag2']
-      },
-      {
-        title: 'StarCraft II',
-        subTitle: '455 spectateurs',
-        image: 'https://static-cdn.jtvnw.net/ttv-boxart/StarCraft%20II-285x380.jpg',
-        tags: ['tag1', 'tag2']
-      },
-      {
-        title: 'Minecraft',
-        subTitle: '455 spectateurs',
-        image: 'https://static-cdn.jtvnw.net/ttv-boxart/Minecraft-285x380.jpg',
-        tags: ['tag1', 'tag2']
-      },
-      {
-        title: 'Just Chatting',
-        subTitle: '455 spectateurs',
-        image: 'https://static-cdn.jtvnw.net/ttv-boxart/Just%20Chatting-285x380.jpg',
-        tags: ['tag1', 'tag2']
+        image: 'https://static-cdn.jtvnw.net/previews-ttv/live_user_fextralife-440x248.jpg',
+        title: '!GIVEAWAY !MAP THE END??? Hogwarts Hard Mode with Yuria',
+        avatar: 'https://static-cdn.jtvnw.net/jtv_user_pictures/a28b0d37-81d0-415a-8ed8-1a1f998ea26d-profile_image-50x50.png',
+        streamer: 'Fextralife',
+        game: 'Hogwarts Legacy',
+        tags: ['English', 'hardmode']
       }
+    ],
+    streamsInFrench: [
+      {
+        image: 'https://static-cdn.jtvnw.net/previews-ttv/live_user_meloniemac-440x248.jpg',
+        title: 'Ura biggit harry [Hard/ Hufflepuff]',
+        avatar: 'https://static-cdn.jtvnw.net/jtv_user_pictures/1a9da63c-0934-452e-9360-13e2c4f23799-profile_image-50x50.png',
+        streamer: 'MelonieMac',
+        game: 'Hogwarts Legacy',
+        tags: ['Christian']
+      },
+      {
+        image: 'https://static-cdn.jtvnw.net/previews-ttv/live_user_fengrush-440x248.jpg',
+        title: 'LEARNIN',
+        avatar: 'https://static-cdn.jtvnw.net/jtv_user_pictures/662cd845a9342f2e-profile_image-50x50.jpeg',
+        streamer: 'FENGRUSH',
+        game: 'Company of Heroes 3',
+        tags: ['English']
+      },
+      {
+        image: 'https://static-cdn.jtvnw.net/previews-ttv/live_user_ozku-440x248.jpg',
+        title: '🔴 Daditos x2!! - EL Magozku, besto maguito en howartion, cual era mi casa? | !dados !tienda',
+        avatar: 'https://static-cdn.jtvnw.net/jtv_user_pictures/f4020214-f9ad-4e3c-9577-e5adf2054f29-profile_image-50x50.png',
+        streamer: 'Ozku',
+        game: 'Hogwarts Legacy',
+        tags: ['spanish', 'ClosedCaptions', 'ESP']
+      },
+      {
+        image: 'https://static-cdn.jtvnw.net/previews-ttv/live_user_illojuan-440x248.jpg',
+        title: '🪓 HOY NOS TOCA TRABAJAR (no se lo cree ni tu prima la coja) - Sons of the Forest ft. Andrés #2',
+        avatar: 'https://static-cdn.jtvnw.net/jtv_user_pictures/37454f0e-581b-42ba-b95b-416f3113fd37-profile_image-50x50.png',
+        streamer: 'IlloJuan',
+        game: 'Sons of the Forest',
+        tags: ['DropsActivados', 'Español']
+      },
+      {
+        image: 'https://static-cdn.jtvnw.net/previews-ttv/live_user_fextralife-440x248.jpg',
+        title: '!GIVEAWAY !MAP THE END??? Hogwarts Hard Mode with Yuria',
+        avatar: 'https://static-cdn.jtvnw.net/jtv_user_pictures/a28b0d37-81d0-415a-8ed8-1a1f998ea26d-profile_image-50x50.png',
+        streamer: 'Fextralife',
+        game: 'Hogwarts Legacy',
+        tags: ['English', 'hardmode']
+      },
     ]
   }
-} as Meta<LayoutWithSideMenuComponent>
+} as Meta<LayoutWithSideMenuComponent>;
 
 const exampleTemplate: Story = (args) => ({
   props: args,
@@ -262,8 +284,6 @@ const exampleTemplate: Story = (args) => ({
             subtitle="Sons of the Forest"
             amount="192"
             />
-
-
 
           <app-side-menu-sub-title>
               <fire-outline-icon class="mr-2 mt-2"/>Chaînes recommandées
@@ -426,18 +446,25 @@ const exampleTemplate: Story = (args) => ({
 
               <div class="px-6">
 
-                  <app-tabs></app-tabs>
-
-                  <div role="list" class="mt-6 grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 2xl:grid-cols-8">
-
-                      <app-game-card *ngFor="let game of games"
-                      [title]="game.title"
-                      [image]="game.image"
-                      [tags]="game.tags"
-                      [subTitle]="game.subTitle"
-                      />
-
+                  <div class="border-b border-gray-700">
+                      <nav class="-mb-px flex space-x-8" aria-label="Tabs">
+                        <a href="#" class="border-transparent text-gray-400 hover:border-gray-400 hover:text-gray-300 whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium">Catégories</a>
+                        <a href="#" class="border-indigo-400 text-indigo-400 whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium" aria-current="page">Chaînes live</a>
+                      </nav>
                   </div>
+
+                  <h3 class="text-white text-xl font-medium py-4">Les chaînes en <span class="text-indigo-400">Français</span></h3>
+
+                  <div role="list" class="grid grid-cols-1 gap-2 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5">
+                      <app-stream-card *ngFor="let stream of streamsInFrench" [image]="stream.image" [title]="stream.title" [avatar]="stream.avatar" [streamer]="stream.streamer" [game]="stream.game" [tags]="stream.tags" />
+                  </div>
+
+                  <h3 class="text-white text-xl font-medium py-4">Toutes les chaînes</h3>
+
+                  <div role="list" class="grid grid-cols-1 gap-2 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5">
+                      <app-stream-card *ngFor="let stream of streams" [image]="stream.image" [title]="stream.title" [avatar]="stream.avatar" [streamer]="stream.streamer" [game]="stream.game" [tags]="stream.tags" />
+                  </div>
+
               </div>
           </div>
 
