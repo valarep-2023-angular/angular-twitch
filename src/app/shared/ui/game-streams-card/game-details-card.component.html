@@ -1,0 +1,28 @@
+<div class="flex flex-row items-center">
+  <img class="mr-6" [src]="image" alt="League of Legends">
+  <div class="flex flex-col">
+    <h1 class="font-medium text-white text-3xl xl:text-4xl">{{title}}</h1>
+    <div class="flex flex-col xl:flex-row xl:divide-x xl:divide-gray-700 my-2">
+
+      <div class="hidden sm:block text-xl text-white xl:pr-3">
+        <span class="font-bold">{{viewers}}</span>&nbsp;<span class="font-normal">spectateurs</span>
+      </div>
+
+      <div class="hidden sm:block text-xl text-white xl:px-3">
+        <span class="font-bold">{{followers}}</span>&nbsp;<span class="font-normal">followers</span>
+      </div>
+
+      <div *ngIf="tags.length > 0" class="hidden sm:flex flex-row mt-2 xl:pl-3 xl:mt-0">
+        <div *ngFor="let tag of tags" class="rounded-r rounded-l bg-gray-700 text-gray-300 px-2 py-1 text-sm mr-1">{{tag}}</div>
+      </div>
+    </div>
+
+    <div class="mt-2 xl:mt-4">
+      <app-button (onClick)="follow.emit(id)">
+        <heart-outline-icon></heart-outline-icon>
+        <span class="ml-2">Suivre</span>
+      </app-button>
+    </div>
+
+  </div>
+</div>
