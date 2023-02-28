@@ -17,5 +17,8 @@ export class GameCardComponent {
   subTitle!: string;
 
   @Input()
+  link!: string;
+
+  @Input()
   tags: string[] = [];
 }

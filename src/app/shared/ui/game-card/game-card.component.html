@@ -1,5 +1,6 @@
 <div class="bg-gray-900">
   <img
+    [routerLink]="link"
     class="w-full hover:cursor-pointer hover:scale-105 transition duration-300 ease-in-out hover:border-white border-2 border-transparent rounded-lg"
     [src]="image"
     width="285"
@@ -7,10 +8,10 @@
     [alt]="title">
 
   <div class="py-1 min-w-0">
-    <a href="#" class="block text-base font-semibold leading-7 tracking-tight text-white hover:text-indigo-400 truncate">
+    <a href="#" [routerLink]="link" class="block text-base font-semibold leading-7 tracking-tight text-white hover:cursor-pointer hover:text-indigo-400 truncate">
       {{title}}</a>
 
-    <a href="#" class="block text-sm leading-6 text-gray-400 hover:text-indigo-400">{{subTitle}}</a>
+    <a href="#" [routerLink]="link" class="block text-sm leading-6 text-gray-400 hover:cursor-pointer hover:text-indigo-400">{{subTitle}}</a>
 
     <div class="flex mt-1" *ngIf="tags.length > 0">
       <app-tag *ngFor="let tag of tags">
