@@ -1,0 +1,6 @@
+<ng-container *ngIf="isCurrent">
+  <a [href]="link" class="border-indigo-400 text-indigo-400 whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium" aria-current="page">{{text}}</a>
+</ng-container>
+<ng-container *ngIf="!isCurrent">
+  <a [href]="link" class="border-transparent text-gray-400 hover:border-gray-400 hover:text-gray-300 whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium">{{text}}</a>
+</ng-container>

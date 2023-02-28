@@ -1,5 +1,5 @@
 <div>
-  <div *ngIf="isOffCanvasMenuDialog" class="relative z-40 md:hidden" role="dialog" aria-modal="true">
+  <div *ngIf="isOffCanvasMenuDialog" class="relative z-40 lg:hidden" role="dialog" aria-modal="true">
 
     <div @opacityLinear *ngIf="isOffCanvasMenu" class="fixed inset-0 bg-gray-600 bg-opacity-75"></div>
 
@@ -23,7 +23,7 @@
           <img class="h-8 w-auto" src="assets/images/twitch.svg" [alt]="title">
           <span class="text-indigo-200 ml-3">{{title}}</span>
         </div>
-        <div class="mt-5 h-0 flex-1 overflow-y-auto">
+        <div class="mt-5 h-0 flex-1 overflow-y-auto scrollbar-thin scrollbar-thumb-indigo-400 scrollbar-track-indigo-200">
           <nav class="space-y-1">
             <ng-content select="app-mobile-side-menu-content"/>
           </nav>
@@ -34,24 +34,24 @@
     </div>
   </div>
 
-  <div class="hidden md:fixed md:inset-y-0 md:flex md:w-64 md:flex-col">
+  <div class="hidden lg:fixed md:inset-y-0 lg:flex lg:w-72 lg:flex-col">
     <div class="flex min-h-0 flex-1 flex-col bg-gray-800">
-      <div class="flex h-16 flex-shrink-0 items-center bg-gray-900 px-4">
+      <div class="flex h-16 flex-shrink-0 items-center bg-gray-800 px-4">
         <img class="h-8 w-auto" src="assets/images/twitch.svg" [alt]="title">
-        <span class="text-indigo-200 ml-3">{{title}}</span>
+        <span class="font-medium text-indigo-200 ml-3">{{title}}</span>
       </div>
-      <div class="flex flex-1 flex-col overflow-y-auto">
-        <nav class="flex-1 space-y-1 py-2">
+      <div class="flex flex-1 overflow-y-auto scrollbar-thin scrollbar-thumb-indigo-400 scrollbar-track-indigo-200">
+        <nav class="flex-1 space-y-1 py-2 pr-2">
           <ng-content select="app-desktop-side-menu-content"/>
         </nav>
       </div>
     </div>
   </div>
 
-  <div class="flex flex-col md:pl-64">
-    <div class="sticky top-0 z-10 flex h-16 flex-shrink-0 bg-gray-800 shadow md:hidden items-center">
+  <div class="flex flex-col lg:pl-72">
+    <div class="sticky top-0 z-10 flex h-16 flex-shrink-0 bg-gray-800 shadow lg:hidden items-center">
       <button type="button" (click)="toggleOffCanvasMenu()"
-              class="px-4 text-indigo-200 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 md:hidden">
+              class="px-6 text-indigo-200 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 lg:hidden">
         <span class="sr-only">Open sidebar</span>
         <bars-4-outline-icon></bars-4-outline-icon>
       </button>

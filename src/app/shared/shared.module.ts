@@ -10,6 +10,11 @@ import { MobileSideMenuContentComponent } from './ui/layout-with-side-menu/mobil
 import { SideMenuSubTitleComponent } from './ui/layout-with-side-menu/side-menu-sub-title/side-menu-sub-title.component';
 import { MediaObjectComponent } from './ui/media-object/media-object.component';
 import { GameCardComponent } from './ui/game-card/game-card.component';
+import { MainHeaderComponent } from './ui/headers/main-header/main-header.component';
+import { MainNavComponent } from './ui/navigation/main-nav/main-nav.component';
+import { MainNavItemComponent } from './ui/navigation/main-nav-item/main-nav-item.component';
+import { TabsComponent } from './ui/navigation/tabs/tabs.component';
+import { TabComponent } from './ui/navigation/tab/tab.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +24,12 @@ import { GameCardComponent } from './ui/game-card/game-card.component';
     MobileSideMenuContentComponent,
     SideMenuSubTitleComponent,
     MediaObjectComponent,
-    GameCardComponent
+    GameCardComponent,
+    MainHeaderComponent,
+    MainNavComponent,
+    MainNavItemComponent,
+    TabsComponent,
+    TabComponent
   ],
   imports: [
     CommonModule,
@@ -32,7 +42,12 @@ import { GameCardComponent } from './ui/game-card/game-card.component';
     NgHeroiconsModule,
     SideMenuSubTitleComponent,
     MediaObjectComponent,
-    GameCardComponent
+    GameCardComponent,
+    MainHeaderComponent,
+    MainNavComponent,
+    MainNavItemComponent,
+    TabsComponent,
+    TabComponent
   ]
 })
 export class SharedModule {
