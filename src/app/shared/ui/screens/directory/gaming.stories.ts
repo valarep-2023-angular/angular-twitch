@@ -45,7 +45,7 @@ export default {
   args: {
     games: [
       {
-        title: 'Sons of the Forrest',
+        title: 'Sons of the Forest',
         subTitle: '455 spectateurs',
         image: 'https://static-cdn.jtvnw.net/ttv-boxart/515479_IGDB-285x380.jpg',
         tags: ['tag1', 'tag2']

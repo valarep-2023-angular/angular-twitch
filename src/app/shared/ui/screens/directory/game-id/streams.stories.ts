@@ -50,7 +50,7 @@ export default {
   ],
   args: {
     game: {
-      title: 'Sons of the Forrest',
+      title: 'Sons of the Forest',
       image: 'https://static-cdn.jtvnw.net/ttv-boxart/515479_IGDB-144x192.jpg',
       viewers: 50,
       followers: 150,
