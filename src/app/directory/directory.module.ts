@@ -12,6 +12,7 @@ import { LoadStreamsByGameIdComponent } from './feature/load-streams-by-game-id/
 import { LoadVideosByGameIdComponent } from './feature/load-videos-by-game-id/load-videos-by-game-id.component';
 import { LoadClipsByGameIdComponent } from './feature/load-clips-by-game-id/load-clips-by-game-id.component';
 import {SharedModule} from "../shared/shared.module";
+import { Resize } from '../shared/utils/pipes/resize/resize.pipe';
 
 
 @NgModule({
@@ -24,12 +25,13 @@ import {SharedModule} from "../shared/shared.module";
     LoadMusicStreamsComponent,
     LoadStreamsByGameIdComponent,
     LoadVideosByGameIdComponent,
-    LoadClipsByGameIdComponent
+    LoadClipsByGameIdComponent,
+    Resize
   ],
   imports: [
     CommonModule,
     DirectoryRoutingModule,
-    SharedModule
+    SharedModule    
   ]
 })
 export class DirectoryModule { }
