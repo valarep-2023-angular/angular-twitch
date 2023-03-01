@@ -1,7 +1,8 @@
 import {HttpClient} from '@angular/common/http';
 import {Injectable} from '@angular/core';
-import {Observable} from 'rxjs';
+import {map, Observable} from 'rxjs';
 import {StreamDataDto} from '../../dto/stream-data.dto';
+import { StreamDto } from '../../dto/stream.dto';
 
 @Injectable({
   providedIn: 'root'
@@ -13,16 +14,15 @@ export class StreamService {
 
   }
 
-  getStreamByGameId(id: number): Observable<StreamDataDto> {
-    return this.http.get<StreamDataDto>(`/streams?game_id=${id}`);
+  getStreams() :Observable<StreamDto[]>{
+    return this.http.get<StreamDataDto>(`/streams`).pipe(
+      map(response => response.data)
+    );
   }
 
-  getStreamByGameIdAfter(id: number,pagination: string): Observable<StreamDataDto> {
-    return this.http.get<StreamDataDto>(`/streams?game_id=${id}&after=${pagination}`);
+  getStreamByGameId(id: number): Observable<StreamDto[]> {
+    return this.http.get<StreamDataDto>(`/streams?game_id=${id}`).pipe(
+      map(response => response.data)
+    );
   }
-
-  getStreamByGameIdBefore(id: number,pagination: string): Observable<StreamDataDto> {
-    return this.http.get<StreamDataDto>(`/streams?game_id=${id}&before=${pagination}`);
-  }
-
 }
