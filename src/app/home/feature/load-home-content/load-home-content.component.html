@@ -1,0 +1,189 @@
+<app-main-nav/>
+
+<div class="px-6">
+
+  <h3 class="text-white text-xl font-medium py-4">Chaînes live qui pourraient vous plaire</h3>
+
+  <div role="list" class="grid grid-cols-1 gap-2 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5">
+    <app-stream-card *ngFor="let stream of fakeStreams" [image]="stream.image" [title]="stream.title" [avatar]="stream.avatar" [streamer]="stream.streamer" [game]="stream.game" [tags]="stream.tags" [viewers]="stream.viewers" />
+  </div>
+
+  <hr class="border-gray-600 mt-6">
+
+  <h3 class="text-white text-xl font-medium py-4">Catégories qui pourraient vous plaire</h3>
+
+  <div role="list" class="grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 2xl:grid-cols-8">
+    <app-game-card *ngFor="let game of fakeGames" [title]="game.title" [image]="game.image" [tags]="game.tags" [subTitle]="game.subTitle"/>
+  </div>
+
+  <hr class="border-gray-600 mt-6">
+
+  <h3 class="text-white text-xl font-medium py-4">En vogue</h3>
+
+  <div role="list" class="grid grid-cols-1 gap-2 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5">
+    <app-stream-card *ngFor="let stream of fakeStreams" [image]="stream.image" [title]="stream.title" [avatar]="stream.avatar" [streamer]="stream.streamer" [game]="stream.game" [tags]="stream.tags" [viewers]="stream.viewers" />
+  </div>
+
+  <hr class="border-gray-600 mt-6">
+
+  <h3 class="text-white text-xl font-medium py-4">Jeux récemment sortis</h3>
+
+  <div role="list" class="grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 2xl:grid-cols-8">
+    <app-game-card *ngFor="let game of fakeGames" [title]="game.title" [image]="game.image" [tags]="game.tags" [subTitle]="game.subTitle"/>
+  </div>
+
+  <hr class="border-gray-600 mt-6">
+
+  <h3 class="text-white text-xl font-medium py-4">Streams de jeux récemment sortis</h3>
+
+  <div role="list" class="grid grid-cols-1 gap-2 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5">
+    <app-stream-card *ngFor="let stream of fakeStreams" [image]="stream.image" [title]="stream.title" [avatar]="stream.avatar" [streamer]="stream.streamer" [game]="stream.game" [tags]="stream.tags" [viewers]="stream.viewers" />
+  </div>
+
+  <hr class="border-gray-600 mt-6">
+
+  <h3 class="text-white text-xl font-medium py-4">Chaînes de Discussion recommandées</h3>
+
+  <div role="list" class="grid grid-cols-1 gap-2 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5">
+    <app-stream-card *ngFor="let stream of fakeStreams" [image]="stream.image" [title]="stream.title" [avatar]="stream.avatar" [streamer]="stream.streamer" [game]="stream.game" [tags]="stream.tags" [viewers]="stream.viewers" />
+  </div>
+
+  <hr class="border-gray-600 mt-6">
+
+  <h3 class="text-white text-xl font-medium py-4">Chaînes de League of Legends recommandées</h3>
+
+  <div role="list" class="grid grid-cols-1 gap-2 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5">
+    <app-stream-card *ngFor="let stream of fakeStreams" [image]="stream.image" [title]="stream.title" [avatar]="stream.avatar" [streamer]="stream.streamer" [game]="stream.game" [tags]="stream.tags" [viewers]="stream.viewers" />
+  </div>
+
+  <hr class="border-gray-600 mt-6">
+
+  <h3 class="text-white text-xl font-medium py-4">Chaînes de Sons of the Forest recommandées</h3>
+
+  <div role="list" class="grid grid-cols-1 gap-2 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5">
+    <app-stream-card *ngFor="let stream of fakeStreams" [image]="stream.image" [title]="stream.title" [avatar]="stream.avatar" [streamer]="stream.streamer" [game]="stream.game" [tags]="stream.tags" [viewers]="stream.viewers" />
+  </div>
+
+  <hr class="border-gray-600 mt-6">
+
+  <h3 class="text-white text-xl font-medium py-4">Tous à bord du train de la Hype !</h3>
+
+  <div role="list" class="grid grid-cols-1 gap-2 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5">
+    <app-stream-card *ngFor="let stream of fakeStreams" [image]="stream.image" [title]="stream.title" [avatar]="stream.avatar" [streamer]="stream.streamer" [game]="stream.game" [tags]="stream.tags" [viewers]="stream.viewers" />
+  </div>
+
+  <hr class="border-gray-600 mt-6">
+
+  <h3 class="text-white text-xl font-medium py-4">Clips qui pourraient vous plaire</h3>
+
+  <!--TODO: Add clips-->
+  <div role="list" class="grid grid-cols-1 gap-2 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5">
+    <app-stream-card *ngFor="let stream of fakeStreams" [image]="stream.image" [title]="stream.title" [avatar]="stream.avatar" [streamer]="stream.streamer" [game]="stream.game" [tags]="stream.tags" [viewers]="stream.viewers" />
+  </div>
+
+  <hr class="border-gray-600 mt-6">
+
+  <h3 class="text-white text-xl font-medium py-4">Speedruns et défis</h3>
+
+  <div role="list" class="grid grid-cols-1 gap-2 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5">
+    <app-stream-card *ngFor="let stream of fakeStreams" [image]="stream.image" [title]="stream.title" [avatar]="stream.avatar" [streamer]="stream.streamer" [game]="stream.game" [tags]="stream.tags" [viewers]="stream.viewers" />
+  </div>
+
+  <hr class="border-gray-600 mt-6">
+
+  <h3 class="text-white text-xl font-medium py-4">Il est l'heure de jouer à des jeux indépendants</h3>
+
+  <div role="list" class="grid grid-cols-1 gap-2 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5">
+    <app-stream-card *ngFor="let stream of fakeStreams" [image]="stream.image" [title]="stream.title" [avatar]="stream.avatar" [streamer]="stream.streamer" [game]="stream.game" [tags]="stream.tags" [viewers]="stream.viewers" />
+  </div>
+
+  <hr class="border-gray-600 mt-6">
+
+  <h3 class="text-white text-xl font-medium py-4">Drops activés !</h3>
+
+  <div role="list" class="grid grid-cols-1 gap-2 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5">
+    <app-stream-card *ngFor="let stream of fakeStreams" [image]="stream.image" [title]="stream.title" [avatar]="stream.avatar" [streamer]="stream.streamer" [game]="stream.game" [tags]="stream.tags" [viewers]="stream.viewers" />
+  </div>
+
+  <hr class="border-gray-600 mt-6">
+
+  <h3 class="text-white text-xl font-medium py-4">VTubers</h3>
+
+  <div role="list" class="grid grid-cols-1 gap-2 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5">
+    <app-stream-card *ngFor="let stream of fakeStreams" [image]="stream.image" [title]="stream.title" [avatar]="stream.avatar" [streamer]="stream.streamer" [game]="stream.game" [tags]="stream.tags" [viewers]="stream.viewers" />
+  </div>
+
+  <hr class="border-gray-600 mt-6">
+
+  <h3 class="text-white text-xl font-medium py-4">Créativité</h3>
+
+  <div role="list" class="grid grid-cols-1 gap-2 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5">
+    <app-stream-card *ngFor="let stream of fakeStreams" [image]="stream.image" [title]="stream.title" [avatar]="stream.avatar" [streamer]="stream.streamer" [game]="stream.game" [tags]="stream.tags" [viewers]="stream.viewers" />
+  </div>
+
+  <hr class="border-gray-600 mt-6">
+
+  <h3 class="text-white text-xl font-medium py-4">Joueurs professionnels</h3>
+
+  <div role="list" class="grid grid-cols-1 gap-2 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5">
+    <app-stream-card *ngFor="let stream of fakeStreams" [image]="stream.image" [title]="stream.title" [avatar]="stream.avatar" [streamer]="stream.streamer" [game]="stream.game" [tags]="stream.tags" [viewers]="stream.viewers" />
+  </div>
+
+  <hr class="border-gray-600 mt-6">
+
+  <h3 class="text-white text-xl font-medium py-4">Jeux de combats</h3>
+
+  <div role="list" class="grid grid-cols-1 gap-2 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5">
+    <app-stream-card *ngFor="let stream of fakeStreams" [image]="stream.image" [title]="stream.title" [avatar]="stream.avatar" [streamer]="stream.streamer" [game]="stream.game" [tags]="stream.tags" [viewers]="stream.viewers" />
+  </div>
+
+  <hr class="border-gray-600 mt-6">
+
+  <h3 class="text-white text-xl font-medium py-4">Jeux de cartes et de plateau</h3>
+
+  <div role="list" class="grid grid-cols-1 gap-2 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5">
+    <app-stream-card *ngFor="let stream of fakeStreams" [image]="stream.image" [title]="stream.title" [avatar]="stream.avatar" [streamer]="stream.streamer" [game]="stream.game" [tags]="stream.tags" [viewers]="stream.viewers" />
+  </div>
+
+  <hr class="border-gray-600 mt-6">
+
+  <h3 class="text-white text-xl font-medium py-4">Jeux de plateforme</h3>
+
+  <div role="list" class="grid grid-cols-1 gap-2 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5">
+    <app-stream-card *ngFor="let stream of fakeStreams" [image]="stream.image" [title]="stream.title" [avatar]="stream.avatar" [streamer]="stream.streamer" [game]="stream.game" [tags]="stream.tags" [viewers]="stream.viewers" />
+  </div>
+
+  <hr class="border-gray-600 mt-6">
+
+  <h3 class="text-white text-xl font-medium py-4">Simulations de course</h3>
+
+  <div role="list" class="grid grid-cols-1 gap-2 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5">
+    <app-stream-card *ngFor="let stream of fakeStreams" [image]="stream.image" [title]="stream.title" [avatar]="stream.avatar" [streamer]="stream.streamer" [game]="stream.game" [tags]="stream.tags" [viewers]="stream.viewers" />
+  </div>
+
+  <hr class="border-gray-600 mt-6">
+
+  <h3 class="text-white text-xl font-medium py-4">Jeux de sport</h3>
+
+  <div role="list" class="grid grid-cols-1 gap-2 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5">
+    <app-stream-card *ngFor="let stream of fakeStreams" [image]="stream.image" [title]="stream.title" [avatar]="stream.avatar" [streamer]="stream.streamer" [game]="stream.game" [tags]="stream.tags" [viewers]="stream.viewers" />
+  </div>
+
+  <hr class="border-gray-600 mt-6">
+
+  <h3 class="text-white text-xl font-medium py-4">Streams caritatifs vérifiés</h3>
+
+  <div role="list" class="grid grid-cols-1 gap-2 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5">
+    <app-stream-card *ngFor="let stream of fakeStreams" [image]="stream.image" [title]="stream.title" [avatar]="stream.avatar" [streamer]="stream.streamer" [game]="stream.game" [tags]="stream.tags" [viewers]="stream.viewers" />
+  </div>
+
+  <hr class="border-gray-600 mt-6">
+
+  <h3 class="text-white text-xl font-medium py-4">Exploration spatiale : explorez le cosmos</h3>
+
+  <div role="list" class="grid grid-cols-1 gap-2 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5">
+    <app-stream-card *ngFor="let stream of fakeStreams" [image]="stream.image" [title]="stream.title" [avatar]="stream.avatar" [streamer]="stream.streamer" [game]="stream.game" [tags]="stream.tags" [viewers]="stream.viewers" />
+  </div>
+
+  <hr class="border-gray-600 mt-6">
+</div>

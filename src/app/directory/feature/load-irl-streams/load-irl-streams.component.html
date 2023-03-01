@@ -1,0 +1,100 @@
+<app-main-nav/>
+
+<div class="px-6">
+
+  <h3 class="text-white text-xl font-medium py-4">Catégories IRL recommandées</h3>
+
+  <div role="list" class="grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 2xl:grid-cols-8">
+
+    <app-game-card *ngFor="let game of games"
+                   [title]="game.title"
+                   [image]="game.image"
+                   [tags]="game.tags"
+                   [subTitle]="game.subTitle"
+    />
+
+  </div>
+
+  <hr class="border-gray-600 mt-6">
+
+  <h3 class="text-white text-xl font-medium py-4">Streams IRL recommandés</h3>
+
+  <div role="list" class="grid grid-cols-1 gap-2 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5">
+    <app-stream-card *ngFor="let stream of streams" [image]="stream.image" [title]="stream.title" [avatar]="stream.avatar" [streamer]="stream.streamer" [game]="stream.game" [tags]="stream.tags" [viewers]="stream.viewers" />
+  </div>
+
+  <hr class="border-gray-600 mt-6">
+
+  <h3 class="text-white text-xl font-medium py-4">Sport</h3>
+
+  <div role="list" class="grid grid-cols-1 gap-2 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5">
+    <app-stream-card *ngFor="let stream of streams" [image]="stream.image" [title]="stream.title" [avatar]="stream.avatar" [streamer]="stream.streamer" [game]="stream.game" [tags]="stream.tags" [viewers]="stream.viewers" />
+  </div>
+
+  <hr class="border-gray-600 mt-6">
+
+  <h3 class="text-white text-xl font-medium py-4">ASMR</h3>
+
+  <div role="list" class="grid grid-cols-1 gap-2 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5">
+    <app-stream-card *ngFor="let stream of streams" [image]="stream.image" [title]="stream.title" [avatar]="stream.avatar" [streamer]="stream.streamer" [game]="stream.game" [tags]="stream.tags" [viewers]="stream.viewers" />
+  </div>
+
+  <hr class="border-gray-600 mt-6">
+
+  <h3 class="text-white text-xl font-medium py-4">Voyage et extérieur</h3>
+
+  <div role="list" class="grid grid-cols-1 gap-2 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5">
+    <app-stream-card *ngFor="let stream of streams" [image]="stream.image" [title]="stream.title" [avatar]="stream.avatar" [streamer]="stream.streamer" [game]="stream.game" [tags]="stream.tags" [viewers]="stream.viewers" />
+  </div>
+
+  <hr class="border-gray-600 mt-6">
+
+  <h3 class="text-white text-xl font-medium py-4">Talk-shows et podcasts</h3>
+
+  <div role="list" class="grid grid-cols-1 gap-2 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5">
+    <app-stream-card *ngFor="let stream of streams" [image]="stream.image" [title]="stream.title" [avatar]="stream.avatar" [streamer]="stream.streamer" [game]="stream.game" [tags]="stream.tags" [viewers]="stream.viewers" />
+  </div>
+
+  <hr class="border-gray-600 mt-6">
+
+  <h3 class="text-white text-xl font-medium py-4">Piscines, jacuzzi et plages</h3>
+
+  <div role="list" class="grid grid-cols-1 gap-2 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5">
+    <app-stream-card *ngFor="let stream of streams" [image]="stream.image" [title]="stream.title" [avatar]="stream.avatar" [streamer]="stream.streamer" [game]="stream.game" [tags]="stream.tags" [viewers]="stream.viewers" />
+  </div>
+
+  <hr class="border-gray-600 mt-6">
+
+  <h3 class="text-white text-xl font-medium py-4">Événements spéciaux</h3>
+
+  <div role="list" class="grid grid-cols-1 gap-2 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5">
+    <app-stream-card *ngFor="let stream of streams" [image]="stream.image" [title]="stream.title" [avatar]="stream.avatar" [streamer]="stream.streamer" [game]="stream.game" [tags]="stream.tags" [viewers]="stream.viewers" />
+  </div>
+
+  <hr class="border-gray-600 mt-6">
+
+  <h3 class="text-white text-xl font-medium py-4">Politique</h3>
+
+  <div role="list" class="grid grid-cols-1 gap-2 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5">
+    <app-stream-card *ngFor="let stream of streams" [image]="stream.image" [title]="stream.title" [avatar]="stream.avatar" [streamer]="stream.streamer" [game]="stream.game" [tags]="stream.tags" [viewers]="stream.viewers" />
+  </div>
+
+  <hr class="border-gray-600 mt-6">
+
+  <h3 class="text-white text-xl font-medium py-4">Science et technologie</h3>
+
+  <div role="list" class="grid grid-cols-1 gap-2 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5">
+    <app-stream-card *ngFor="let stream of streams" [image]="stream.image" [title]="stream.title" [avatar]="stream.avatar" [streamer]="stream.streamer" [game]="stream.game" [tags]="stream.tags" [viewers]="stream.viewers" />
+  </div>
+
+  <hr class="border-gray-600 mt-6">
+
+  <h3 class="text-white text-xl font-medium py-4">Discussions</h3>
+
+  <div role="list" class="grid grid-cols-1 gap-2 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5">
+    <app-stream-card *ngFor="let stream of streams" [image]="stream.image" [title]="stream.title" [avatar]="stream.avatar" [streamer]="stream.streamer" [game]="stream.game" [tags]="stream.tags" [viewers]="stream.viewers" />
+  </div>
+
+  <hr class="border-gray-600 mt-6">
+
+</div>

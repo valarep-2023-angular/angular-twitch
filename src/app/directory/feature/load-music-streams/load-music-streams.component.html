@@ -1,0 +1,63 @@
+<app-main-nav/>
+
+<div class="px-6">
+
+  <h3 class="text-white text-xl font-medium py-4">Streams musicaux pour vous</h3>
+
+  <div role="list" class="grid grid-cols-1 gap-2 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5">
+    <app-stream-card *ngFor="let stream of streams" [image]="stream.image" [title]="stream.title" [avatar]="stream.avatar" [streamer]="stream.streamer" [game]="stream.game" [tags]="stream.tags" [viewers]="stream.viewers" />
+  </div>
+
+  <hr class="border-gray-600 mt-6">
+
+  <h3 class="text-white text-xl font-medium py-4">Artistes suggérés</h3>
+
+  <div role="list" class="grid grid-cols-1 gap-2 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5">
+    <app-stream-card *ngFor="let stream of streams" [image]="stream.image" [title]="stream.title" [avatar]="stream.avatar" [streamer]="stream.streamer" [game]="stream.game" [tags]="stream.tags" [viewers]="stream.viewers" />
+  </div>
+
+  <hr class="border-gray-600 mt-6">
+
+  <h3 class="text-white text-xl font-medium py-4">Productions musicales et discussions</h3>
+
+  <div role="list" class="grid grid-cols-1 gap-2 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5">
+    <app-stream-card *ngFor="let stream of streams" [image]="stream.image" [title]="stream.title" [avatar]="stream.avatar" [streamer]="stream.streamer" [game]="stream.game" [tags]="stream.tags" [viewers]="stream.viewers" />
+  </div>
+
+  <hr class="border-gray-600 mt-6">
+
+  <h3 class="text-white text-xl font-medium py-4">Soutien des petits streamers de musique</h3>
+
+  <div role="list" class="grid grid-cols-1 gap-2 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5">
+    <app-stream-card *ngFor="let stream of streams" [image]="stream.image" [title]="stream.title" [avatar]="stream.avatar" [streamer]="stream.streamer" [game]="stream.game" [tags]="stream.tags" [viewers]="stream.viewers" />
+  </div>
+
+  <hr class="border-gray-600 mt-6">
+
+  <!-- TODO: PROCHAINS STREAMS MUSICAUX -->
+
+  <h3 class="text-white text-xl font-medium py-4">Acoustique et Instrumental</h3>
+
+  <div role="list" class="grid grid-cols-1 gap-2 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5">
+    <app-stream-card *ngFor="let stream of streams" [image]="stream.image" [title]="stream.title" [avatar]="stream.avatar" [streamer]="stream.streamer" [game]="stream.game" [tags]="stream.tags" [viewers]="stream.viewers" />
+  </div>
+
+  <hr class="border-gray-600 mt-6">
+
+  <h3 class="text-white text-xl font-medium py-4">Hip-hop et Rap</h3>
+
+  <div role="list" class="grid grid-cols-1 gap-2 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5">
+    <app-stream-card *ngFor="let stream of streams" [image]="stream.image" [title]="stream.title" [avatar]="stream.avatar" [streamer]="stream.streamer" [game]="stream.game" [tags]="stream.tags" [viewers]="stream.viewers" />
+  </div>
+
+  <hr class="border-gray-600 mt-6">
+
+  <h3 class="text-white text-xl font-medium py-4">Rock et Métal</h3>
+
+  <div role="list" class="grid grid-cols-1 gap-2 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5">
+    <app-stream-card *ngFor="let stream of streams" [image]="stream.image" [title]="stream.title" [avatar]="stream.avatar" [streamer]="stream.streamer" [game]="stream.game" [tags]="stream.tags" [viewers]="stream.viewers" />
+  </div>
+
+  <hr class="border-gray-600 mt-6">
+
+</div>

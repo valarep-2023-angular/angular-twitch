@@ -7,7 +7,6 @@ import {MainHeaderComponent} from "../../headers/main-header/main-header.compone
 import {MainNavComponent} from "../../navigation/main-nav/main-nav.component";
 import {MainNavItemComponent} from "../../navigation/main-nav-item/main-nav-item.component";
 import {TabsComponent} from "../../navigation/tabs/tabs.component";
-import {TabComponent} from "../../navigation/tab/tab.component";
 import {LayoutWithSideMenuComponent} from "../../layout-with-side-menu/layout-with-side-menu.component";
 import {
   DesktopSideMenuContentComponent
@@ -36,7 +35,6 @@ export default {
         MainNavComponent,
         MainNavItemComponent,
         TabsComponent,
-        TabComponent,
         TagComponent
       ],
       imports: [
@@ -339,16 +337,9 @@ const exampleTemplate: Story = (args) => ({
           <!-- Any content-->
           <div class="bg-gray-900">
 
-              <app-main-header>
-                  <app-main-nav>
-                      <app-main-nav-item text="Tout" [isCurrent]="true" link="#"/>
-                      <app-main-nav-item text="Jeux" [isCurrent]="false" link="#" />
-                      <app-main-nav-item text="IRL" [isCurrent]="false" link="#" />
-                      <app-main-nav-item text="Musique" [isCurrent]="false" link="#" />
-                      <app-main-nav-item text="Esports" [isCurrent]="false" link="#" />
-                      <app-main-nav-item text="Créatif" [isCurrent]="false" link="#" />
-                  </app-main-nav>
-              </app-main-header>
+              <app-main-header/>
+
+              <app-main-nav/>
 
               <div class="px-6">
 

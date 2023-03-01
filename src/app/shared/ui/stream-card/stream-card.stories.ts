@@ -23,7 +23,7 @@ export default {
     streamer: 'MelonieMac',
     game: 'Hogwarts Legacy',
     tags: ['Christian'],
-    viewers: 50
+    viewers: '50k'
   }
 } as Meta<StreamCardComponent>;
 

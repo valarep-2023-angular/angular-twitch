@@ -1,1 +1,65 @@
-<router-outlet></router-outlet>
+<app-layout-with-side-menu [title]="'Angular Twitch Clone'">
+
+  <app-desktop-side-menu-content>
+
+    <app-side-menu-sub-title>
+      <heart-outline-icon class="mr-2"/>
+      <span>Chaînes suivies</span>
+    </app-side-menu-sub-title>
+
+    <app-media-object *ngFor="let channel of channels"
+      [image]="channel.image"
+      [title]="channel.title"
+      [subtitle]="channel.subTitle"
+      [amount]="channel.amount"
+    />
+
+    <app-side-menu-sub-title>
+      <fire-outline-icon class="mr-2"/>
+      <span>Chaînes recommandées</span>
+    </app-side-menu-sub-title>
+
+    <app-media-object *ngFor="let channel of channels"
+        [image]="channel.image"
+        [title]="channel.title"
+        [subtitle]="channel.subTitle"
+        [amount]="channel.amount"
+    />
+  </app-desktop-side-menu-content>
+
+  <app-mobile-side-menu-content>
+
+    <app-side-menu-sub-title>
+      <heart-outline-icon class="mr-2"/>
+      <span>Chaînes suivies</span>
+    </app-side-menu-sub-title>
+
+    <app-media-object *ngFor="let channel of channels"
+        [image]="channel.image"
+        [title]="channel.title"
+        [subtitle]="channel.subTitle"
+        [amount]="channel.amount"
+    />
+
+    <app-side-menu-sub-title>
+      <fire-outline-icon class="mr-2"/>
+      <span>Chaînes recommandées</span>
+    </app-side-menu-sub-title>
+
+    <app-media-object *ngFor="let channel of channels"
+        [image]="channel.image"
+        [title]="channel.title"
+        [subtitle]="channel.subTitle"
+        [amount]="channel.amount"
+    />
+
+  </app-mobile-side-menu-content>
+
+  <div class="bg-gray-900">
+
+    <app-main-header/>
+
+    <router-outlet/>
+  </div>
+
+</app-layout-with-side-menu>

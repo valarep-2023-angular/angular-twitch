@@ -19,11 +19,7 @@ export default {
 const Template: Story = (args) => ({
   props: args,
   template: `
-    <app-main-nav>
-      <app-main-nav-item text="Home" link="/" [isCurrent]="true"></app-main-nav-item>
-      <app-main-nav-item text="About" link="/about" [isCurrent]="false"></app-main-nav-item>
-      <app-main-nav-item text="Contact" link="/contact" [isCurrent]="false"></app-main-nav-item>
-    </app-main-nav>
+    <app-main-nav/>
   `
 });
 

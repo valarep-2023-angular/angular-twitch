@@ -16,7 +16,6 @@ import {MainHeaderComponent} from './ui/headers/main-header/main-header.componen
 import {MainNavComponent} from './ui/navigation/main-nav/main-nav.component';
 import {MainNavItemComponent} from './ui/navigation/main-nav-item/main-nav-item.component';
 import {TabsComponent} from './ui/navigation/tabs/tabs.component';
-import {TabComponent} from './ui/navigation/tab/tab.component';
 import {StreamCardComponent} from './ui/stream-card/stream-card.component';
 import {GameDetailsCardComponent} from './ui/game-details-card/game-details-card.component';
 import {TagComponent} from './ui/tag/tag.component';
@@ -24,6 +23,8 @@ import {VideoCardComponent} from './ui/video-card/video-card.component';
 import {ClipCardComponent} from './ui/clip-card/clip-card.component';
 import {RouterModule} from "@angular/router";
 import { StreamsCarouselComponent } from './ui/streams-carousel/streams-carousel.component';
+import {Resize} from "./utils/pipes/resize/resize.pipe";
+import {PaginationComponent} from "./ui/pagination/pagination.component";
 
 @NgModule({
   declarations: [
@@ -38,13 +39,13 @@ import { StreamsCarouselComponent } from './ui/streams-carousel/streams-carousel
     MainNavComponent,
     MainNavItemComponent,
     TabsComponent,
-    TabComponent,
     StreamCardComponent,
     GameDetailsCardComponent,
     TagComponent,
     VideoCardComponent,
     ClipCardComponent,
-    StreamsCarouselComponent
+    StreamsCarouselComponent,
+    PaginationComponent
   ],
   imports: [
     RouterModule,
@@ -64,13 +65,16 @@ import { StreamsCarouselComponent } from './ui/streams-carousel/streams-carousel
     MainNavComponent,
     MainNavItemComponent,
     TabsComponent,
-    TabComponent,
     StreamCardComponent,
     GameDetailsCardComponent,
     TagComponent,
     VideoCardComponent,
     ClipCardComponent,
-    StreamsCarouselComponent
+    StreamsCarouselComponent,
+    PaginationComponent
+  ],
+  providers: [
+    Resize
   ]
 })
 export class SharedModule {

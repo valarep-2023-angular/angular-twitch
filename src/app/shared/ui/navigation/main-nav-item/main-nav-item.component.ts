@@ -11,7 +11,4 @@ export class MainNavItemComponent {
 
   @Input()
   link!: string;
-
-  @Input()
-  isCurrent!: boolean;
 }

@@ -1,7 +1,6 @@
 <div class="border-b border-gray-700">
   <nav class="-mb-px flex space-x-8 overflow-x-auto" aria-label="Tabs">
-    <!-- Current: "border-indigo-500 text-indigo-600", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" -->
-    <a href="#" class="border-indigo-400 text-indigo-400 whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium" aria-current="page">Catégories</a>
-    <a href="#" class="border-transparent text-gray-400 hover:border-gray-400 hover:text-gray-300 whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium">Chaînes live</a>
+    <a routerLink="/directory" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="border-indigo-400 text-indigo-400 hover:text-indigo-400 hover:border-indigo-400 border-b-2" href="#" class="text-gray-400 hover:border-gray-400 hover:text-gray-300 whitespace-nowrap py-4 px-1 text-sm font-medium" aria-current="page">Catégories</a>
+    <a routerLink="/directory/all" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="border-indigo-400 text-indigo-400 hover:text-indigo-400 hover:border-indigo-400 border-b-2" href="#" class="text-gray-400 hover:border-gray-400 hover:text-gray-300 whitespace-nowrap py-4 px-1 text-sm font-medium" aria-current="page">Chaînes live</a>
   </nav>
 </div>

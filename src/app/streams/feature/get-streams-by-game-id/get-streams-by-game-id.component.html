@@ -1,7 +1,0 @@
-<ng-container *ngIf="(streamData$ | async) as streamData">
-    <app-stream-card [streams]="streamData.data"></app-stream-card>
-    <app-pagination 
-    (before)="before(streamData.pagination.cursor)"
-     (after)="after(streamData.pagination.cursor)">
-    </app-pagination>
-</ng-container>

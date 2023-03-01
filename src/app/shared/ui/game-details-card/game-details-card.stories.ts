@@ -28,7 +28,7 @@ export default {
     game: {
       title: 'Sons of the Forest',
       image: 'https://static-cdn.jtvnw.net/ttv-boxart/515479_IGDB-144x192.jpg',
-      viewers: 50,
+      viewers: '50',
       followers: 150,
       tags: ['tag1', 'tag2']
     }

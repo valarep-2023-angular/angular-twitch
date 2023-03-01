@@ -26,5 +26,5 @@ export class GameDetailsCardComponent {
   followers!: string;
 
   @Input()
-  tags: [] = [];
+  tags: string[] = [];
 }

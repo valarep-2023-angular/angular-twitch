@@ -18,7 +18,7 @@ export class ApiInterceptor implements HttpInterceptor {
       headers: request.headers
         .set('Client-ID', environment.api.clientId)
         .set('Authorization', `Bearer ${token}`),
-      url: environment.api.baseUrl + request.url
+        url: environment.api.baseUrl + request.url
     });
 
     return next.handle(cloneReq);

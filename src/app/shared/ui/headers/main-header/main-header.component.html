@@ -1,41 +1,40 @@
-<header class="bg-gray-800 sticky top-0 z-30">
-  <div class="divide-y divide-gray-700">
-    <div class="flex px-0">
-      <div class="w-full flex lg:px-0">
-        <nav id="nav" class="w-full flex flex-col items-center lg:flex-row lg:h-16">
+<header class="bg-gray-800 sticky top-0 z-30 border-b border-b-gray-700">
+  <div class="flex px-0">
+    <div class="w-full flex lg:px-0">
+      <nav id="nav" class="w-full flex flex-col items-center lg:flex-row lg:h-16">
 
-          <div class="flex mt-4 lg:justify-start lg:mt-0 divide-x divide-gray-700">
-            <a href="#" class="flex items-center text-lg font-medium text-indigo-400 mr-4 lg:ml-6" aria-current="page">
-              <rocket-launch-outline-icon class="mr-2"/>
-              <span>Parcourir</span>
-            </a>
+        <div class="flex mt-4 lg:justify-start lg:mt-0 divide-x divide-gray-700">
+          <a routerLink="/directory" routerLinkActive="text-indigo-400 hover:text-indigo-200" href="#"
+             class="flex items-center text-lg font-medium text-gray-500 hover:text-gray-400 mr-4 lg:ml-6">
+            <rocket-launch-outline-icon class="mr-2"/>
+            <span>Parcourir</span>
+          </a>
 
-            <a href="#" class="flex items-center text-lg font-medium text-gray-500 hover:text-gray-400">
-              <heart-outline-icon class="mr-2 ml-4"/>
-              <span>Suivis</span>
-            </a>
-          </div>
+          <a routerLink="/following" routerLinkActive="text-indigo-400 hover:text-indigo-200" href="#"
+             class="flex items-center text-lg font-medium text-gray-500 hover:text-gray-400">
+            <heart-outline-icon class="mr-2 ml-4"/>
+            <span>Suivis</span>
+          </a>
+        </div>
 
-          <div class="w-full relative z-0 my-5 flex items-center justify-center px-6">
+        <div class="w-full relative z-0 my-5 flex items-center justify-center px-6">
 
-            <label for="search" class="sr-only">Search</label>
+          <label for="search" class="sr-only">Search</label>
 
-            <div class="relative w-full">
-              <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+          <div class="relative w-full">
+            <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
 
-                <magnifying-glass-outline-icon class="w-5 text-gray-400"/>
+              <magnifying-glass-outline-icon class="w-5 text-gray-400"/>
 
-              </div>
-              <input id="search" name="search" class="block w-full rounded-md border border-transparent bg-gray-700 py-2 pl-10 pr-3 text-sm placeholder-gray-400 focus:border-gray-100 focus:bg-gray-100 focus:text-gray-600 focus:placeholder-gray-600 focus:outline-none focus:ring-white sm:text-sm" placeholder="Search" type="search">
             </div>
-
+            <input id="search" name="search"
+                   class="block w-full rounded-md border border-transparent bg-gray-700 py-2 pl-10 pr-3 text-sm placeholder-gray-400 focus:border-gray-100 focus:bg-gray-100 focus:text-gray-600 focus:placeholder-gray-600 focus:outline-none focus:ring-white sm:text-sm"
+                   placeholder="Search" type="search">
           </div>
-        </nav>
-      </div>
-    </div>
 
-    <div class="flex overflow-x-auto">
-      <ng-content select="app-main-nav"/>
+        </div>
+      </nav>
     </div>
   </div>
 </header>
+

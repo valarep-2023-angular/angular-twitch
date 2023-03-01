@@ -15,7 +15,6 @@ import {GameCardComponent} from "../../../game-card/game-card.component";
 import {
   SideMenuSubTitleComponent
 } from "../../../layout-with-side-menu/side-menu-sub-title/side-menu-sub-title.component";
-import {TabComponent} from "../../../navigation/tab/tab.component";
 import {MainNavComponent} from "../../../navigation/main-nav/main-nav.component";
 import {MediaObjectComponent} from "../../../media-object/media-object.component";
 import {MainNavItemComponent} from "../../../navigation/main-nav-item/main-nav-item.component";
@@ -42,7 +41,6 @@ export default {
         MainNavComponent,
         MainNavItemComponent,
         TabsComponent,
-        TabComponent,
         ButtonComponent,
         TagComponent
       ],
@@ -58,7 +56,7 @@ export default {
     game: {
       title: 'Sons of the Forest',
       image: 'https://static-cdn.jtvnw.net/ttv-boxart/515479_IGDB-144x192.jpg',
-      viewers: 50,
+      viewers: '50',
       followers: 150,
       tags: ['tag1', 'tag2']
     },
