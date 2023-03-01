@@ -1,7 +1,7 @@
-import {HttpClient} from '@angular/common/http';
-import {Injectable} from '@angular/core';
-import {map, Observable} from 'rxjs';
-import {StreamDataDto} from '../../dto/stream-data.dto';
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { map, Observable } from 'rxjs';
+import { StreamDataDto } from '../../dto/stream-data.dto';
 import { StreamDto } from '../../dto/stream.dto';
 
 @Injectable({
@@ -14,8 +14,14 @@ export class StreamService {
 
   }
 
-  getStreams() :Observable<StreamDto[]>{
+  getStreams(): Observable<StreamDto[]> {
     return this.http.get<StreamDataDto>(`/streams`).pipe(
+      map(response => response.data)
+    );
+  }
+
+  getStreamsByLanguage(lang: string): Observable<StreamDto[]> {
+    return this.http.get<StreamDataDto>(`/streams?language=${lang}`).pipe(
       map(response => response.data)
     );
   }
