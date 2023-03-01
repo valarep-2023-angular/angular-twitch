@@ -11,9 +11,11 @@ import { StreamDto } from '../../../shared/dto/stream.dto';
 })
 export class LoadAllStreamsComponent {
 
-  stream$?: Observable<StreamDto[]>; 
+  streams$?: Observable<StreamDto[]>; 
+  streamsInFrench$?: Observable<StreamDto[]>
 
   constructor(private route: ActivatedRoute, private streamService: StreamService) {
-    this.stream$ = this.streamService.getStreams();
+    this.streams$ = this.streamService.getStreams();
+    this.streamsInFrench$ = this.streamService.getStreamsByLanguage("fr");
   }
 }
