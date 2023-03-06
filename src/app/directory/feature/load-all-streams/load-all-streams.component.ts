@@ -11,10 +11,14 @@ import { StreamDto } from '../../../shared/dto/stream.dto';
 })
 export class LoadAllStreamsComponent {
 
-  streams$?: Observable<StreamDto[]>; 
+  streams$?: Observable<StreamDto[]>;
   streamsInFrench$?: Observable<StreamDto[]>
 
   constructor(private route: ActivatedRoute, private streamService: StreamService) {
+
+  }
+
+  ngOnInit(): void {
     this.streams$ = this.streamService.getStreams();
     this.streamsInFrench$ = this.streamService.getStreamsByLanguage("fr");
   }
