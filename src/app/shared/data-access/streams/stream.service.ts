@@ -14,19 +14,19 @@ export class StreamService {
 
   }
 
-  getStreams(): Observable<StreamDto[]> {
+  getStreams$(): Observable<StreamDto[]> {
     return this.http.get<StreamDataDto>(`/streams`).pipe(
       map(response => response.data)
     );
   }
 
-  getStreamsByLanguage(lang: string): Observable<StreamDto[]> {
+  getStreamsByLanguage$(lang: string): Observable<StreamDto[]> {
     return this.http.get<StreamDataDto>(`/streams?language=${lang}`).pipe(
       map(response => response.data)
     );
   }
 
-  getStreamByGameId(id: number): Observable<StreamDto[]> {
+  getStreamByGameId$(id: number): Observable<StreamDto[]> {
     return this.http.get<StreamDataDto>(`/streams?game_id=${id}`).pipe(
       map(response => response.data)
     );

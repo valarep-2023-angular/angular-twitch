@@ -19,7 +19,7 @@ export class LoadAllStreamsComponent {
   }
 
   ngOnInit(): void {
-    this.streams$ = this.streamService.getStreams();
-    this.streamsInFrench$ = this.streamService.getStreamsByLanguage("fr");
+    this.streams$ = this.streamService.getStreams$();
+    this.streamsInFrench$ = this.streamService.getStreamsByLanguage$("fr");
   }
 }
