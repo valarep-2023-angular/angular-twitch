@@ -1,3 +1,5 @@
+import { UserDto } from "./user.dto";
+
 export interface StreamDto {
   id: number,
   user_id: number,
@@ -13,5 +15,6 @@ export interface StreamDto {
   language: string,
   thumbnail_url: string,
   tag_ids: string[],
-  is_mature: boolean
+  is_mature: boolean,
+  user: UserDto
 }
