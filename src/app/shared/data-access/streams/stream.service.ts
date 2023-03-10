@@ -36,7 +36,18 @@ export class StreamService {
 
   getStreamsByLanguage$(lang: string): Observable<StreamDto[]> {
     return this.http.get<StreamDataDto>(`/streams?language=${lang}`).pipe(
-      map(response => response.data)
+      map(response => response.data),
+      mergeMap(streams => {
+        const userObservables = streams.map(stream => this.userService.getUserById$(stream.user_id));
+        return forkJoin(userObservables).pipe(
+          map(user => {
+            return streams.map((stream, index) => ({
+              ...stream,
+              user: user[index][0]
+            }))
+          })
+        )
+      })
     );
   }
 
