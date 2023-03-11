@@ -19,7 +19,7 @@
       <a href="#" class="block text-sm text-gray-400 hover:text-indigo-400">{{streamer}}</a>
       <a href="#" class="block text-sm text-gray-400 hover:text-indigo-400">{{game}}</a>
 
-      <div class="flex mt-1" *ngIf="tags && tags.length > 0">
+      <div class="mt-1 flex max-h-8 flex-wrap overflow-hidden" *ngIf="tags && tags.length > 0">
         <app-tag *ngFor="let tag of tags">{{tag}}</app-tag>
       </div>
     </div>
