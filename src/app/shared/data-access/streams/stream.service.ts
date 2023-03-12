@@ -21,29 +21,30 @@ export class StreamService {
     return this.http.get<StreamDataDto>(`/streams`).pipe(
       map(response => response.data),
       mergeMap(streams => {
-        const userObservables = streams.map(stream => this.userService.getUserById$(stream.user_id));
-        return forkJoin(userObservables).pipe(
-          map(user => {
+        const userIds = streams.map(stream => stream.user_id);
+        return this.userService.getUsersById$(userIds).pipe(
+          map(users => {
             return streams.map((stream, index) => ({
               ...stream,
-              user: user[index][0]
+              user: users[index]
             }))
           })
         )
       })
     );
   }
+  
 
   getStreamsByLanguage$(lang: string): Observable<StreamDto[]> {
     return this.http.get<StreamDataDto>(`/streams?language=${lang}`).pipe(
       map(response => response.data),
       mergeMap(streams => {
-        const userObservables = streams.map(stream => this.userService.getUserById$(stream.user_id));
-        return forkJoin(userObservables).pipe(
-          map(user => {
+        const userIds = streams.map(stream => stream.user_id);
+        return this.userService.getUsersById$(userIds).pipe(
+          map(users => {
             return streams.map((stream, index) => ({
               ...stream,
-              user: user[index][0]
+              user: users[index]
             }))
           })
         )
