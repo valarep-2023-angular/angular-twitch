@@ -31,4 +31,10 @@ export class StreamService {
       map(response => response.data)
     );
   }
+
+  getStreamByGameIdByLanguage$(id: number,lang: string): Observable<StreamDto[]> {
+    return this.http.get<StreamDataDto>(`/streams?game_id=${id}&language=${lang}`).pipe(
+      map(response => response.data)
+    );
+  }
 }
