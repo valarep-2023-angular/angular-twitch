@@ -11,10 +11,24 @@ export class UsersService {
 
   constructor(private http: HttpClient) {
 
-  } 
+  }
 
-  getUserById$(id: number): Observable<UserDto[]>{
+  getUserById$(id: number): Observable<UserDto[]> {
     return this.http.get<UserDataDto>(`/users?id=${id}`).pipe(
+      map(response => response.data)
+    );
+  }
+
+  getUsersById$(ids: number[]): Observable<UserDto[]> {
+    var param = "";
+    ids.forEach(function (id, index) {
+      if (index === 0) {
+        param = `${id}`;
+        return;
+      }
+      param = `${param}&id=${id}`
+    });
+    return this.http.get<UserDataDto>(`/users?id=${param}`).pipe(
       map(response => response.data)
     );
   }
