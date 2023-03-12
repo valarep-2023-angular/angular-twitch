@@ -13,10 +13,8 @@ export class UsersService {
 
   }
 
-  getUserById$(id: number): Observable<UserDto[]> {
-    return this.http.get<UserDataDto>(`/users?id=${id}`).pipe(
-      map(response => response.data)
-    );
+  getUserById$(id: number): Observable<UserDto> {
+    return this.http.get<UserDto>(`/users?id=${id}`);
   }
 
   getUsersById$(ids: number[]): Observable<UserDto[]> {
