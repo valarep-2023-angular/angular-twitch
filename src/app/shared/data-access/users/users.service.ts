@@ -18,14 +18,7 @@ export class UsersService {
   }
 
   getUsersById$(ids: number[]): Observable<UserDto[]> {
-    var param = "";
-    ids.forEach(function (id, index) {
-      if (index === 0) {
-        param = `${id}`;
-        return;
-      }
-      param = `${param}&id=${id}`
-    });
+    var param = ids.join("&id=");
     return this.http.get<UserDataDto>(`/users?id=${param}`).pipe(
       map(response => response.data)
     );
