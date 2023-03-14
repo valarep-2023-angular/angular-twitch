@@ -1,4 +1,4 @@
-<app-main-nav/>
+<app-main-nav />
 
 <div class="px-6">
 
@@ -6,13 +6,8 @@
 
   <div role="list" class="grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 2xl:grid-cols-8">
 
-    <app-game-card *ngFor="let game of games"
-       routerLink="/directory/{{game.slug}}"
-       [title]="game.title"
-       [image]="game.image"
-       [tags]="game.tags"
-       [subTitle]="game.subTitle"
-    />
+    <app-game-card *ngFor="let game of games$ | async" routerLink="/directory/{{game.slug}}" [title]="game.title"
+      [image]="game.image" [tags]="game.tags" [subTitle]="game.subTitle" />
 
   </div>
 
@@ -21,7 +16,9 @@
   <h3 class="text-white text-xl font-medium py-4">Streams recommandés</h3>
 
   <div role="list" class="grid grid-cols-1 gap-2 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5">
-    <app-stream-card *ngFor="let stream of streams" [image]="stream.image" [title]="stream.title" [avatar]="stream.avatar" [streamer]="stream.streamer" [game]="stream.game" [tags]="stream.tags" [viewers]="stream.viewers" />
+    <app-stream-card *ngFor="let stream of streams" [image]="stream.image" [title]="stream.title"
+      [avatar]="stream.avatar" [streamer]="stream.streamer" [game]="stream.game" [tags]="stream.tags"
+      [viewers]="stream.viewers" />
   </div>
 
   <hr class="border-gray-600 mt-6">
@@ -29,7 +26,9 @@
   <h3 class="text-white text-xl font-medium py-4">Action et aventure</h3>
 
   <div role="list" class="grid grid-cols-1 gap-2 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5">
-    <app-stream-card *ngFor="let stream of streams" [image]="stream.image" [title]="stream.title" [avatar]="stream.avatar" [streamer]="stream.streamer" [game]="stream.game" [tags]="stream.tags" [viewers]="stream.viewers" />
+    <app-stream-card *ngFor="let stream of streams" [image]="stream.image" [title]="stream.title"
+      [avatar]="stream.avatar" [streamer]="stream.streamer" [game]="stream.game" [tags]="stream.tags"
+      [viewers]="stream.viewers" />
   </div>
 
   <hr class="border-gray-600 mt-6">
@@ -37,7 +36,9 @@
   <h3 class="text-white text-xl font-medium py-4">Jeux de rôle</h3>
 
   <div role="list" class="grid grid-cols-1 gap-2 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5">
-    <app-stream-card *ngFor="let stream of streams" [image]="stream.image" [title]="stream.title" [avatar]="stream.avatar" [streamer]="stream.streamer" [game]="stream.game" [tags]="stream.tags" [viewers]="stream.viewers" />
+    <app-stream-card *ngFor="let stream of streams" [image]="stream.image" [title]="stream.title"
+      [avatar]="stream.avatar" [streamer]="stream.streamer" [game]="stream.game" [tags]="stream.tags"
+      [viewers]="stream.viewers" />
   </div>
 
   <hr class="border-gray-600 mt-6">
@@ -45,7 +46,9 @@
   <h3 class="text-white text-xl font-medium py-4">Jeux de tir</h3>
 
   <div role="list" class="grid grid-cols-1 gap-2 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5">
-    <app-stream-card *ngFor="let stream of streams" [image]="stream.image" [title]="stream.title" [avatar]="stream.avatar" [streamer]="stream.streamer" [game]="stream.game" [tags]="stream.tags" [viewers]="stream.viewers" />
+    <app-stream-card *ngFor="let stream of streams" [image]="stream.image" [title]="stream.title"
+      [avatar]="stream.avatar" [streamer]="stream.streamer" [game]="stream.game" [tags]="stream.tags"
+      [viewers]="stream.viewers" />
   </div>
 
   <hr class="border-gray-600 mt-6">
@@ -53,7 +56,9 @@
   <h3 class="text-white text-xl font-medium py-4">MOBA et stratégie</h3>
 
   <div role="list" class="grid grid-cols-1 gap-2 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5">
-    <app-stream-card *ngFor="let stream of streams" [image]="stream.image" [title]="stream.title" [avatar]="stream.avatar" [streamer]="stream.streamer" [game]="stream.game" [tags]="stream.tags" [viewers]="stream.viewers" />
+    <app-stream-card *ngFor="let stream of streams" [image]="stream.image" [title]="stream.title"
+      [avatar]="stream.avatar" [streamer]="stream.streamer" [game]="stream.game" [tags]="stream.tags"
+      [viewers]="stream.viewers" />
   </div>
 
   <hr class="border-gray-600 mt-6">
@@ -61,7 +66,9 @@
   <h3 class="text-white text-xl font-medium py-4">Horreur</h3>
 
   <div role="list" class="grid grid-cols-1 gap-2 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5">
-    <app-stream-card *ngFor="let stream of streams" [image]="stream.image" [title]="stream.title" [avatar]="stream.avatar" [streamer]="stream.streamer" [game]="stream.game" [tags]="stream.tags" [viewers]="stream.viewers" />
+    <app-stream-card *ngFor="let stream of streams" [image]="stream.image" [title]="stream.title"
+      [avatar]="stream.avatar" [streamer]="stream.streamer" [game]="stream.game" [tags]="stream.tags"
+      [viewers]="stream.viewers" />
   </div>
 
   <hr class="border-gray-600 mt-6">
@@ -69,7 +76,9 @@
   <h3 class="text-white text-xl font-medium py-4">Courses de voiture et sports</h3>
 
   <div role="list" class="grid grid-cols-1 gap-2 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5">
-    <app-stream-card *ngFor="let stream of streams" [image]="stream.image" [title]="stream.title" [avatar]="stream.avatar" [streamer]="stream.streamer" [game]="stream.game" [tags]="stream.tags" [viewers]="stream.viewers" />
+    <app-stream-card *ngFor="let stream of streams" [image]="stream.image" [title]="stream.title"
+      [avatar]="stream.avatar" [streamer]="stream.streamer" [game]="stream.game" [tags]="stream.tags"
+      [viewers]="stream.viewers" />
   </div>
 
   <hr class="border-gray-600 mt-6">
@@ -77,7 +86,9 @@
   <h3 class="text-white text-xl font-medium py-4">Jeux de cartes et de plateau</h3>
 
   <div role="list" class="grid grid-cols-1 gap-2 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5">
-    <app-stream-card *ngFor="let stream of streams" [image]="stream.image" [title]="stream.title" [avatar]="stream.avatar" [streamer]="stream.streamer" [game]="stream.game" [tags]="stream.tags" [viewers]="stream.viewers" />
+    <app-stream-card *ngFor="let stream of streams" [image]="stream.image" [title]="stream.title"
+      [avatar]="stream.avatar" [streamer]="stream.streamer" [game]="stream.game" [tags]="stream.tags"
+      [viewers]="stream.viewers" />
   </div>
 
   <hr class="border-gray-600 mt-6">
@@ -85,7 +96,9 @@
   <h3 class="text-white text-xl font-medium py-4">Combat</h3>
 
   <div role="list" class="grid grid-cols-1 gap-2 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5">
-    <app-stream-card *ngFor="let stream of streams" [image]="stream.image" [title]="stream.title" [avatar]="stream.avatar" [streamer]="stream.streamer" [game]="stream.game" [tags]="stream.tags" [viewers]="stream.viewers" />
+    <app-stream-card *ngFor="let stream of streams" [image]="stream.image" [title]="stream.title"
+      [avatar]="stream.avatar" [streamer]="stream.streamer" [game]="stream.game" [tags]="stream.tags"
+      [viewers]="stream.viewers" />
   </div>
 
   <hr class="border-gray-600 mt-6">
