@@ -7,7 +7,7 @@
   <div role="list" class="grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 2xl:grid-cols-8">
 
     <app-game-card *ngFor="let game of games$ | async" routerLink="/directory/{{game.slug}}" [title]="game.title"
-      [image]="game.image" [tags]="game.tags" [subTitle]="game.subTitle" />
+      [image]="game.image | resize:285:380" [tags]="game.tags" [subTitle]="game.subTitle" />
 
   </div>
 
