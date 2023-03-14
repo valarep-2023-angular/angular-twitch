@@ -52,12 +52,36 @@ export class StreamService {
   }
 
   getStreamsByGameId$(id: number): Observable<StreamDto[]> {
-    return this.http.get<StreamDto[]>(`/streams?game_id=${id}`);
+    return this.http.get<StreamDataDto>(`/streams?game_id=${id}`).pipe(
+      map(response => response.data),
+      mergeMap(streams => {
+        const userIds = streams.map(stream => stream.user_id);
+        return this.userService.getUsersById$(userIds).pipe(
+          map(users => {
+            return streams.map((stream, index) => ({
+              ...stream,
+              user: users[index]
+            }))
+          })
+        )
+      })
+    );
   }
 
   getStreamByGameIdByLanguage$(id: number,lang: string): Observable<StreamDto[]> {
     return this.http.get<StreamDataDto>(`/streams?game_id=${id}&language=${lang}`).pipe(
-      map(response => response.data)
+      map(response => response.data),
+      mergeMap(streams => {
+        const userIds = streams.map(stream => stream.user_id);
+        return this.userService.getUsersById$(userIds).pipe(
+          map(users => {
+            return streams.map((stream, index) => ({
+              ...stream,
+              user: users[index]
+            }))
+          })
+        )
+      })
     );
   }
 }
