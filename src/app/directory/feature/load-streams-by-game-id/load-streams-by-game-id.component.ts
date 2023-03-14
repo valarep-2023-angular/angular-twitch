@@ -26,7 +26,7 @@ export class LoadStreamsByGameIdComponent {
 
   ngOnInit(): void {
     this.streams$ = this.route.params.pipe(
-      switchMap(params => this.streamService.getStreamByGameId$(params["gameId"])
+      switchMap(params => this.streamService.getStreamsByGameId$(params["gameId"])
       ));
     this.streamsInFrench$ = this.route.params.pipe(
       switchMap(params => this.streamService.getStreamByGameIdByLanguage$(params["gameId"],"fr")

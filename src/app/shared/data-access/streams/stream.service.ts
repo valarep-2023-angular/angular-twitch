@@ -1,11 +1,10 @@
-import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
-import { forkJoin, Observable } from 'rxjs';
-import { map, mergeMap } from 'rxjs/operators';
-import { StreamDataDto } from '../../dto/stream-data.dto';
-import { StreamDto } from '../../dto/stream.dto';
-import { UserDto } from '../../dto/user.dto';
-import { UsersService } from '../users/users.service';
+import {HttpClient} from '@angular/common/http';
+import {Injectable} from '@angular/core';
+import {Observable} from 'rxjs';
+import {map, mergeMap} from 'rxjs/operators';
+import {StreamDataDto} from '../../dto/stream-data.dto';
+import {StreamDto} from '../../dto/stream.dto';
+import {UsersService} from '../users/users.service';
 
 @Injectable({
   providedIn: 'root'
@@ -33,7 +32,7 @@ export class StreamService {
       })
     );
   }
-  
+
 
   getStreamsByLanguage$(lang: string): Observable<StreamDto[]> {
     return this.http.get<StreamDataDto>(`/streams?language=${lang}`).pipe(
@@ -52,8 +51,8 @@ export class StreamService {
     );
   }
 
-  getStreamByGameId$(id: number): Observable<StreamDto> {
-    return this.http.get<StreamDto>(`/streams?game_id=${id}`);
+  getStreamsByGameId$(id: number): Observable<StreamDto[]> {
+    return this.http.get<StreamDto[]>(`/streams?game_id=${id}`);
   }
 
   getStreamByGameIdByLanguage$(id: number,lang: string): Observable<StreamDto[]> {
