@@ -1,7 +1,9 @@
-export interface TwitchResponseDto {
-  data : [],
+import { GameDto } from "./game.dto"
 
-  pagination : {
+export interface TwitchResponseDto {
+  data: GameDto[],
+
+  pagination: {
     cursor: string
   }
 }
