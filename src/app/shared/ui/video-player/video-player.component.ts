@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { DatePipe } from '@angular/common';
+import { SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-video-player',
@@ -35,7 +36,7 @@ export class VideoPlayerComponent {
   // }
 
   @Input()
-  url!: string;
+  url!: SafeResourceUrl;
 
   @Input()
   title!: string;
