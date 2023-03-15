@@ -1,7 +1,7 @@
 <div class="h-screen bg-gray-800 text-white">
 
     <div class="">
-        <iframe class="aspect-video border-2 bg-blue-400 " src="" frameborder="0" height="100%"
+        <iframe class="aspect-video border-2 bg-blue-400 " [src]="url | safe" frameborder="0" height="100%"
             width="100%"></iframe>
     </div>
 
@@ -30,17 +30,17 @@
 
                     <div class="flex items-center">
                         <div>
-                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" 
+                            <img [src]="avatar" 
                             class="w-14 h-14 my-4 mx-2 rounded-full border-2 border-red-400 " alt="" srcset="">
                             <p class="w-8 relative left-5 bottom-7 text-center rounded-md text-[11px] font-bold border-2 border-gray-800 text-white bg-red-600">LIVE</p>
                         </div>
                         <div>
-                            <h2>Sierge streamer</h2>
-                            <h3>Phrase d'accroche</h3>
+                            <h2>{{streamer}}</h2>
+                            <h3>{{title}}</h3>
                             <div class="flex">
-                                <p class="mr-2 text-purple-300 font-bold hover:text-purple-500">League of Legends</p>
-                                <p class="mr-2">Esport</p>
-                                <p>Français</p>
+                                <p class="mr-2 text-purple-300 font-bold hover:text-purple-500">{{game}}</p>
+                                <app-tag class="mr-2" *ngFor="let tag of tags">{{tag}}</app-tag>
+                                <app-tag *ngFor="let tag of tags">{{tag}}</app-tag>
                             </div>
                         </div>
                     </div>
@@ -49,7 +49,7 @@
                         <div class="flex">
                             <p class="flex mr-1 p-1 text-pink-200">
                                 <user-outline-icon></user-outline-icon>
-                                4505
+                                {{viewers}}
                             </p>
                             <p class="mr-1 p-1">01.22.15</p>
                         </div>
