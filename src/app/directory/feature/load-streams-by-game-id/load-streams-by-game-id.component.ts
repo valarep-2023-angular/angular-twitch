@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable, switchMap } from 'rxjs';
 import { GamesServiceService } from 'src/app/shared/data-access/games/games.service';
@@ -11,13 +11,14 @@ import { StreamDto } from 'src/app/shared/dto/stream.dto';
   templateUrl: './load-streams-by-game-id.component.html',
   styleUrls: ['./load-streams-by-game-id.component.scss']
 })
-export class LoadStreamsByGameIdComponent {
+export class LoadStreamsByGameIdComponent implements OnInit {
   game$?: Observable<GameDto>;
   streams$?: Observable<StreamDto[]>;
   streamsInFrench$?: Observable<StreamDto[]>;
+  gameId = "0";
 
   constructor(private route: ActivatedRoute, private streamService: StreamService, private gameService: GamesServiceService) {
-
+    this.route.params.subscribe( params => this.gameId = params["gameId"])
   }
 
   ngOnInit(): void {
