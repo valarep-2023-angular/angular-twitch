@@ -4,7 +4,6 @@ import {HttpClient} from "@angular/common/http";
 import {Game} from "../../dto/game";
 import {TwitchResponseDto} from "../../../api/data-access/twitch-response.dto";
 import {GameDto} from "../../dto/game.dto";
-import {ClipDataDto} from "../../dto/clip-data.dto";
 
 @Injectable({
   providedIn: 'root'
