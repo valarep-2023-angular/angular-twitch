@@ -1,1 +1,26 @@
-<p>load-videos-by-game-id works!</p>
+<div class="px-6">
+
+    <div class="mt-6 mb-3">
+        <app-game-details-card
+          [image]="game.image"
+          [title]="game.title"
+          [viewers]="game.viewers"
+          [followers]="game.followers"
+          [tags]="game.tags"
+        />
+    </div>
+
+    <div class="border-b border-gray-700">
+        <nav class="-mb-px flex space-x-8 overflow-x-auto" aria-label="Tabs">
+
+          <a href="#" class="border-transparent text-gray-400 hover:border-gray-400 hover:text-gray-300 whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium">Chaînes live</a>
+          <a href="#" class="border-indigo-400 text-indigo-400 whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium" aria-current="page">Vidéos</a>
+          <a href="#" class="border-transparent text-gray-400 hover:border-gray-400 hover:text-gray-300 whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium">Clips</a>
+        </nav>
+    </div>
+
+    <div role="list" class="grid grid-cols-1 gap-2 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5 mt-6">
+        <app-video-card *ngFor="let video of videos" [image]="video.image" [title]="video.title" [avatar]="video.avatar" [streamer]="video.streamer" [duration]="video.duration" [createdAt]="video.createdAt" [views]="video.views" />
+    </div>
+
+</div>

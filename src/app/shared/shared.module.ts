@@ -27,6 +27,7 @@ import {Resize} from "./utils/pipes/resize/resize.pipe";
 import {PaginationComponent} from "./ui/pagination/pagination.component";
 import { VideoPlayerComponent } from './ui/video-player/video-player.component';
 import { SafePipe } from './utils/pipes/safe/safe.pipe';
+import { SuffixNumber } from './utils/pipes/suffix-number/suffix-number.pipe';
 
 @NgModule({
   declarations: [
@@ -79,7 +80,8 @@ import { SafePipe } from './utils/pipes/safe/safe.pipe';
   ],
   providers: [
     Resize,
-    SafePipe
+    SafePipe,
+    SuffixNumber
   ]
 })
 export class SharedModule {

@@ -27,5 +27,11 @@ export class GamesServiceService {
       )
     )
   }
+
+  getGamesById$(id: number): Observable<GameDto> {
+    return this.http.get<TwitchResponseDto<GameDto>>(`/games?id=${id}`).pipe(
+      map(response => response.data[0])
+    )
+  }
 }
 

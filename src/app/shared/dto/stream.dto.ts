@@ -10,7 +10,7 @@ export interface StreamDto {
   type: string,
   title: string,
   tags: string[],
-  viewer_count: string,
+  viewer_count: number,
   started_at: Date,
   language: string,
   thumbnail_url: string,

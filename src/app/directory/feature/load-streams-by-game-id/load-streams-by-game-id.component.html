@@ -1,8 +1,7 @@
 <div class="px-6">
 
-  <div class="mt-6 mb-3">
-    <app-game-details-card [image]="game.image" [title]="game.title" [viewers]="game.viewers"
-      [followers]="game.followers" [tags]="game.tags" />
+  <div class="mt-6 mb-3" *ngIf="(game$ | async) as game">
+    <app-game-details-card [image]="game.box_art_url | resize:144:192" [title]="game.name" />
   </div>
 
   <div class="border-b border-gray-700">
@@ -10,7 +9,7 @@
       <a href="#"
         class="border-indigo-400 text-indigo-400 whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium">Chaînes
         live</a>
-      <a href="#"
+      <a href="#" routerLink="/directory/21779/videos"
         class="border-transparent text-gray-400 hover:border-gray-400 hover:text-gray-300 whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium">Vidéos</a>
       <a href="#"
         class="border-transparent text-gray-400 hover:border-gray-400 hover:text-gray-300 whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium">Clips</a>
@@ -23,7 +22,7 @@
     class="grid grid-cols-1 gap-2 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5">
     <app-stream-card *ngFor="let stream of streamsInFrench" [image]="stream.thumbnail_url | resize:440:248"
       [title]="stream.title" [streamer]="stream.user_name" [game]="stream.game_name" [tags]="stream.tags"
-      [viewers]="stream.viewer_count" [avatar]="stream.user.profile_image_url" [routerLink]="['/',stream.user_login]" />
+      [viewers]="stream.viewer_count | suffixNumber" [avatar]="stream.user.profile_image_url"  [routerLink]="['/',stream.user_login]"  />
   </div>
 
   <h3 class="text-white text-xl font-medium py-4">Toutes les chaînes</h3>
@@ -32,7 +31,7 @@
     class="grid grid-cols-1 gap-2 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5">
     <app-stream-card *ngFor="let stream of streams" [image]="stream.thumbnail_url | resize:440:248"
       [title]="stream.title" [streamer]="stream.user_name" [game]="stream.game_name" [tags]="stream.tags"
-      [viewers]="stream.viewer_count" [avatar]="stream.user.profile_image_url" [routerLink]="['/',stream.user_login]" />
+      [viewers]="stream.viewer_count | suffixNumber" [avatar]="stream.user.profile_image_url"  [routerLink]="['/',stream.user_login]"  />
   </div>
 
 </div>
