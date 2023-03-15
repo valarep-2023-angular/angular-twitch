@@ -22,7 +22,7 @@ export class LoadClipsByGameIdComponent implements OnInit{
     
   }
   ngOnInit(): void {
-    this.clips$ = this.clipsService.getClipsByGamesId(21779);
+    this.clips$ = this.clipsService.getClipsByGamesId$(21779);
   }
 
 

@@ -1,4 +1,4 @@
-import { Game } from "./game";
+import {UserDto} from "./user.dto"
 
 export interface ClipDto{
     id: string,
@@ -17,5 +17,5 @@ export interface ClipDto{
     thumbnail_url: string,
     duration: number,
     vod_offset: number,
-    game: Game
+    avatar: string
 }

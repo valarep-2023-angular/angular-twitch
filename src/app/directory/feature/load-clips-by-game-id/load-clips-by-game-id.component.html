@@ -1,5 +1,5 @@
 <div class="px-6">
-<div class="mt-6 mb-3">
+  <div class="mt-6 mb-3">
     <app-game-details-card [image]="game.image" [title]="game.title" [viewers]="game.viewers"
       [followers]="game.followers" [tags]="game.tags" />
   </div>
@@ -16,10 +16,10 @@
     </nav>
   </div>
 
-<div *ngIf="(clips$ | async) as clips" role="list"
-class="grid grid-cols-1 gap-2 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5">
-<app-clip-card *ngFor="let clip of clips" [image]="clip.thumbnail_url | resize:440:248"
-  [title]="clip.title" [views]="clip.view_count" [author]="clip.creator_name" [duration]="clip.duration" 
-  [createdAt]="clip.created_at" [streamer]="clip.broadcaster_name" />
-</div>
+  <div *ngIf="(clips$ | async) as clips" role="list"
+    class="grid grid-cols-1 gap-2 mt-6 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5">
+    <app-clip-card *ngFor="let clip of clips" [image]="clip.thumbnail_url | resize:440:248" [title]="clip.title"
+      [views]="clip.view_count" [author]="clip.creator_name" [duration]="clip.duration" [createdAt]="clip.created_at"
+      [streamer]="clip.broadcaster_name" [avatar]="clip.avatar" />
+  </div>
 </div>
