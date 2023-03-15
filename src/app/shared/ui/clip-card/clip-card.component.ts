@@ -19,7 +19,7 @@ export class ClipCardComponent {
   streamer!: string;
 
   @Input()
-  duration!: number;
+  duration!: string;
 
   @Input()
   createdAt!: string;

@@ -26,6 +26,7 @@ import {StreamsCarouselComponent} from './ui/streams-carousel/streams-carousel.c
 import {Resize} from "./utils/pipes/resize/resize.pipe";
 import {PaginationComponent} from "./ui/pagination/pagination.component";
 import { CreateAtDatePipe } from './utils/pipes/created-at-date/created-at-date.pipe';
+import { DurationClipPipe } from './utils/pipes/duration-clip/duration-clip.pipe';
 import {VideoPlayerComponent} from './ui/video-player/video-player.component';
 import {SafePipe} from './utils/pipes/safe/safe.pipe';
 import {SuffixNumber} from './utils/pipes/suffix-number/suffix-number.pipe';
@@ -54,7 +55,8 @@ import {SuffixNumber} from './utils/pipes/suffix-number/suffix-number.pipe';
     Resize,
     SafePipe,
     SuffixNumber,
-    CreateAtDatePipe
+    CreateAtDatePipe,
+    DurationClipPipe
   ],
   imports: [
     RouterModule,
@@ -81,11 +83,12 @@ import {SuffixNumber} from './utils/pipes/suffix-number/suffix-number.pipe';
     ClipCardComponent,
     StreamsCarouselComponent,
     PaginationComponent,
+    CreateAtDatePipe,
+    DurationClipPipe,
     VideoPlayerComponent,
     Resize,
     SafePipe,
-    SuffixNumber,
-    CreateAtDatePipe
+    SuffixNumber
   ]
 })
 export class SharedModule {
