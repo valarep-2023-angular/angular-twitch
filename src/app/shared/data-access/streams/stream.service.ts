@@ -86,7 +86,7 @@ export class StreamService {
   }
 
   getStreamByUserLogin$(login:string):Observable<StreamDto>{
-    return this.http.get<StreamDataDto>(`/streams?user_login${login}`).pipe(
+    return this.http.get<StreamDataDto>(`/streams?user_login=${login}`).pipe(
       map(response=> response.data[0])
     );
   }
