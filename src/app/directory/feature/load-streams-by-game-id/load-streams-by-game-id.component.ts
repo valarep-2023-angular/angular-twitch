@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable, switchMap } from 'rxjs';
+import { GamesServiceService } from 'src/app/shared/data-access/games/games.service';
 import { StreamService } from 'src/app/shared/data-access/streams/stream.service';
+import { GameDto } from 'src/app/shared/dto/game.dto';
 import { StreamDto } from 'src/app/shared/dto/stream.dto';
 
 @Component({
@@ -10,17 +12,11 @@ import { StreamDto } from 'src/app/shared/dto/stream.dto';
   styleUrls: ['./load-streams-by-game-id.component.scss']
 })
 export class LoadStreamsByGameIdComponent {
-  game = {
-    title: 'Sons of the Forest',
-    image: 'https://static-cdn.jtvnw.net/ttv-boxart/515479_IGDB-144x192.jpg',
-    viewers: '50',
-    followers: '150',
-    tags: ['tag1', 'tag2']
-  };
+  game$?: Observable<GameDto>;
   streams$?: Observable<StreamDto[]>;
   streamsInFrench$?: Observable<StreamDto[]>;
 
-  constructor(private route: ActivatedRoute, private streamService: StreamService) {
+  constructor(private route: ActivatedRoute, private streamService: StreamService, private gameService: GamesServiceService) {
 
   }
 
@@ -30,6 +26,9 @@ export class LoadStreamsByGameIdComponent {
       ));
     this.streamsInFrench$ = this.route.params.pipe(
       switchMap(params => this.streamService.getStreamByGameIdByLanguage$(params["gameId"],"fr")
+      ));
+    this.game$ = this.route.params.pipe(
+      switchMap(params => this.gameService.getGamesById$(params["gameId"])
       ));
   }
 
