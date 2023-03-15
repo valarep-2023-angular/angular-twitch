@@ -31,5 +31,11 @@ export class UsersService {
     );
   }
 
+  getUserByLogin$(login:string):Observable<UserDto>{
+    return this.http.get<UserDataDto>(`/users?login=${login}`).pipe(
+      map(response => response.data[0])
+    );
+  }
+
 
 }

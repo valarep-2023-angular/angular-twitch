@@ -1,3 +1,6 @@
-<div class="px-1">
-    <app-video-player [url]="urlStream | safe"></app-video-player>
+<div *ngIf="(stream$ | async) as stream">
+    <div *ngIf="(user$ | async) as user" class="px-1">
+        <app-video-player [url]="urlStream | safe" [avatar]="user.profile_image_url" [title]="user.description"
+            [streamer]="user.display_name" [viewers]="stream.viewer_count" [game]="stream.game_name"></app-video-player>
+    </div>
 </div>
