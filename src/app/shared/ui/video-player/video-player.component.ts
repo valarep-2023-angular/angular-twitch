@@ -8,33 +8,6 @@ import { SafeResourceUrl } from '@angular/platform-browser';
   styleUrls: ['./video-player.component.scss']
 })
 export class VideoPlayerComponent {
-
-  private interval: any;
-  showDuration = false;
-  duration = '';
-
-  //TODO
-
-  // constructor(private datePipe: DatePipe) {}
-
-  // ngOnInit() {
-  //   const myDate = new Date('2022-01-01');
-  //   this.updateDuration(myDate);
-  //   this.interval = setInterval(() => this.updateDuration(myDate), 1000);
-  // }
-
-  // ngOnDestroy() {
-  //   clearInterval(this.interval);
-  // }
-
-  // updateDuration(date: Date) {
-  //   const now = new Date();
-  //   const diff = Math.abs(now.getTime() - date.getTime());
-  //   const diffDate = new Date(diff);
-  //   this.duration = this.datePipe.transform(diffDate, 'HH:mm:ss');
-  //   this.showDuration = true;
-  // }
-
   @Input()
   url!: SafeResourceUrl;
 
@@ -58,9 +31,4 @@ export class VideoPlayerComponent {
 
   @Input()
   startAt!: Date;
-
-
-
-
-
 }
