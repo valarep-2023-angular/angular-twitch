@@ -13,9 +13,9 @@ export const environment = {
   production: true,
   api: {...apiConfig, ...oAuthConfig},
   twitch: {
-    videoPlayerUrl: 'http://player.twitch.tv/?parent=localhost&channel=',
-    videoClipUrl: 'https://clips.twitch.tv/embed?parent=localhost&clip=',
-    videoVideoUrl: 'https://videos.twitch.tv/embed?parent=localhost&video=',
-    chatRoomUrl: 'https://www.twitch.tv/embed/[USERNAME]/chat',
+    streamPlayerUrl: 'https://player.twitch.tv/?parent=localhost&channel=',
+    clipPlayerUrl: 'https://clips.twitch.tv/embed?parent=localhost&clip=',
+    videoPlayerUrl: 'https://videos.twitch.tv/embed?parent=localhost&video=',
+    chatUrl: 'https://www.twitch.tv/embed/[USERNAME]/chat?parent=localhost',
   }
 };
