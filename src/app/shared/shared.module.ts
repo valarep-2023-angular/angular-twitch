@@ -25,6 +25,7 @@ import {RouterModule} from "@angular/router";
 import { StreamsCarouselComponent } from './ui/streams-carousel/streams-carousel.component';
 import {Resize} from "./utils/pipes/resize/resize.pipe";
 import {PaginationComponent} from "./ui/pagination/pagination.component";
+import { NumberPipe } from './utils/pipes/number/number.pipe';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import {PaginationComponent} from "./ui/pagination/pagination.component";
     VideoCardComponent,
     ClipCardComponent,
     StreamsCarouselComponent,
-    PaginationComponent
+    PaginationComponent,
+    NumberPipe
   ],
   imports: [
     RouterModule,
