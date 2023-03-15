@@ -24,7 +24,7 @@ export class VideoPlayerComponent {
   game!: string;
 
   @Input()
-  viewers!: string;
+  viewers!: string | number;
 
   @Input()
   tags: string[] = [];
