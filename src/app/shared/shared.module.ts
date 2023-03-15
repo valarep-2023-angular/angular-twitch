@@ -25,7 +25,7 @@ import {RouterModule} from "@angular/router";
 import { StreamsCarouselComponent } from './ui/streams-carousel/streams-carousel.component';
 import {Resize} from "./utils/pipes/resize/resize.pipe";
 import {PaginationComponent} from "./ui/pagination/pagination.component";
-import { NumberPipe } from './utils/pipes/number/number.pipe';
+import { SuffixNumber } from './utils/pipes/suffix-number/suffix-number.pipe';
 
 @NgModule({
   declarations: [
@@ -46,8 +46,7 @@ import { NumberPipe } from './utils/pipes/number/number.pipe';
     VideoCardComponent,
     ClipCardComponent,
     StreamsCarouselComponent,
-    PaginationComponent,
-    NumberPipe
+    PaginationComponent
   ],
   imports: [
     RouterModule,
@@ -76,7 +75,8 @@ import { NumberPipe } from './utils/pipes/number/number.pipe';
     PaginationComponent
   ],
   providers: [
-    Resize
+    Resize,
+    SuffixNumber
   ]
 })
 export class SharedModule {
