@@ -16,8 +16,8 @@ import { StreamDto } from 'src/app/shared/dto/stream.dto';
 export class StreamPlayerComponent {
 
   urlStream!: string;
-  user$!: Observable<UserDto>;
-  stream$!:Observable<StreamDto>;
+  user$?: Observable<UserDto>;
+  stream$?:Observable<StreamDto>;
 
   constructor(private route: ActivatedRoute, private userService: UsersService, private streamService:StreamService) { }
 
