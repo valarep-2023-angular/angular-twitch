@@ -9,6 +9,13 @@ import { ClipDto } from 'src/app/shared/dto/clip.dto';
   styleUrls: ['./load-clips-by-game-id.component.scss']
 })
 export class LoadClipsByGameIdComponent implements OnInit{
+  game = {
+    title: 'Sons of the Forest',
+    image: 'https://static-cdn.jtvnw.net/ttv-boxart/515479_IGDB-144x192.jpg',
+    viewers: '50',
+    followers: '150',
+    tags: ['tag1', 'tag2']
+  };
 
   clips$?: Observable<ClipDto[]>
   constructor(private clipsService: ClipsService) {

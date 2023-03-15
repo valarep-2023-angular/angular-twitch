@@ -1,18 +1,21 @@
+import { Game } from "./game";
+
 export interface ClipDto{
-    id: String,
-    url: String,
-    embed_url: String,
-    broadcaster_id: String,
-    broadcaster_name: String, 
-    creator_id: String,
-    creator_name: String,
-    video_id: String,
-    game_id: String,
-    language: String,
-    title: String,
+    id: string,
+    url: string,
+    embed_url: string,
+    broadcaster_id: string,
+    broadcaster_name: string, 
+    creator_id: string,
+    creator_name: string,
+    video_id: string,
+    game_id: string,
+    language: string,
+    title: string,
     view_count: number,
-    created_at: String,
-    thumbnail_url: String,
+    created_at: string,
+    thumbnail_url: string,
     duration: number,
-    vod_offset: number
+    vod_offset: number,
+    game: Game
 }
