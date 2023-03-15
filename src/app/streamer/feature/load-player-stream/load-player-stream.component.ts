@@ -9,9 +9,9 @@ import { StreamService } from 'src/app/shared/data-access/streams/stream.service
 import { StreamDto } from 'src/app/shared/dto/stream.dto';
 
 @Component({
-  selector: 'app-stream-player',
-  templateUrl: './stream-player.component.html',
-  styleUrls: ['./stream-player.component.scss']
+  selector: 'app-load-player-stream',
+  templateUrl: './load-player-stream.component.html',
+  styleUrls: ['./load-player-stream.component.scss']
 })
 export class StreamPlayerComponent {
 

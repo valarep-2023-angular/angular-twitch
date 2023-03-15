@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { StreamPlayerComponent } from './feature/stream-player/stream-player.component';
+import { StreamPlayerComponent } from './feature/load-player-stream/load-player-stream.component';
 
 const routes: Routes = [
   { path: '', component: StreamPlayerComponent }
