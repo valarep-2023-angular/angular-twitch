@@ -1,4 +1,4 @@
-import { Pipe, PipeTransform } from '@angular/core';
+import {Pipe, PipeTransform} from '@angular/core';
 
 @Pipe({
   name: 'suffixNumber'
@@ -6,7 +6,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class SuffixNumber implements PipeTransform {
 
   transform(value: number): string {
-    let newValue: number | string = value;
+    let newValue: number | string;
     const suffixes = ["", "k", "M"];
     let suffixNum = 0;
 
