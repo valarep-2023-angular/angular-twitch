@@ -31,6 +31,7 @@ import { DurationClipPipe } from './utils/pipes/duration-clip/duration-clip.pipe
 import {VideoPlayerComponent} from './ui/video-player/video-player.component';
 import {SafePipe} from './utils/pipes/safe/safe.pipe';
 import {SuffixNumber} from './utils/pipes/suffix-number/suffix-number.pipe';
+import {ChatUrlPipe} from "./utils/pipes/chat-url/chat-url.pipe";
 
 @NgModule({
   declarations: [
@@ -58,7 +59,8 @@ import {SuffixNumber} from './utils/pipes/suffix-number/suffix-number.pipe';
     SafePipe,
     SuffixNumber,
     CreateAtDatePipe,
-    DurationClipPipe
+    DurationClipPipe,
+    ChatUrlPipe
   ],
   imports: [
     RouterModule,
@@ -90,7 +92,8 @@ import {SuffixNumber} from './utils/pipes/suffix-number/suffix-number.pipe';
     VideoPlayerComponent,
     Resize,
     SafePipe,
-    SuffixNumber
+    SuffixNumber,
+    ChatUrlPipe
   ]
 })
 export class SharedModule {
