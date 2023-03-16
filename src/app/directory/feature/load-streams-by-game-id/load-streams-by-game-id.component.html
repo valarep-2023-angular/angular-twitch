@@ -1,6 +1,6 @@
 <div class="px-6">
 
-  <div class="mt-6 mb-3" *ngIf="(game$ | async) as game">
+  <div class="mt-6 mb-3 group-aria-pressed:" *ngIf="(game$ | async) as game">
     <app-game-details-card [image]="game.box_art_url | resize:144:192" [title]="game.name" />
   </div>
 
@@ -11,7 +11,7 @@
         live</a>
       <a href="#" routerLink="/directory/21779/videos"
         class="border-transparent text-gray-400 hover:border-gray-400 hover:text-gray-300 whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium">Vidéos</a>
-      <a href="#"
+      <a href="#" [routerLink]="['/directory', gameId, 'clips']"
         class="border-transparent text-gray-400 hover:border-gray-400 hover:text-gray-300 whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium">Clips</a>
     </nav>
   </div>
