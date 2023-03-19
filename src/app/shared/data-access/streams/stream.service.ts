@@ -1,10 +1,10 @@
-import {HttpClient} from '@angular/common/http';
-import {Injectable} from '@angular/core';
-import {Observable} from 'rxjs';
-import {map, mergeMap} from 'rxjs/operators';
-import {StreamDataDto} from '../../dto/stream-data.dto';
-import {StreamDto} from '../../dto/stream.dto';
-import {UsersService} from '../users/users.service';
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { forkJoin, Observable } from 'rxjs';
+import { map, mergeMap } from 'rxjs/operators';
+import { StreamDataDto } from '../../dto/stream-data.dto';
+import { StreamDto } from '../../dto/stream.dto';
+import { UsersService } from '../users/users.service';
 
 @Injectable({
   providedIn: 'root'
@@ -68,7 +68,7 @@ export class StreamService {
     );
   }
 
-  getStreamByGameIdByLanguage$(id: number,lang: string): Observable<StreamDto[]> {
+  getStreamByGameIdByLanguage$(id: number, lang: string): Observable<StreamDto[]> {
     return this.http.get<StreamDataDto>(`/streams?game_id=${id}&language=${lang}`).pipe(
       map(response => response.data),
       mergeMap(streams => {
@@ -85,9 +85,30 @@ export class StreamService {
     );
   }
 
-  getStreamByUserLogin$(login:string):Observable<StreamDto>{
+  getStreamByUserLogin$(login: string): Observable<StreamDto> {
     return this.http.get<StreamDataDto>(`/streams?user_login=${login}`).pipe(
-      map(response=> response.data[0])
+      map(response => response.data[0])
     );
   }
+
+  getStreamsAfter$(limit: number, after?: string): Observable<StreamDataDto> {
+    return this.http.get<StreamDataDto>(`/streams?limit=${limit}${after ? `&after=${after}` : ''}`).pipe(
+      mergeMap(response => {
+        const streams = response.data;
+        const userIds = streams.map(stream => stream.user_id);
+        return this.userService.getUsersById$(userIds).pipe(
+          map(users => {
+            return {
+              data: streams.map((stream, index) => ({
+                ...stream,
+                user: users[index]
+              })),
+              pagination: response.pagination
+            };
+          })
+        )
+      })
+    );
+  }
+  
 }
