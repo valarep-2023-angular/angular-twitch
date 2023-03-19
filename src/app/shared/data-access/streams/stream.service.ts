@@ -110,5 +110,26 @@ export class StreamService {
       })
     );
   }
-  
+
+  getStreamsByGameIdAfter$(gameId: number, limit: number, after?: string): Observable<StreamDataDto> {
+    return this.http.get<StreamDataDto>(`/streams?game_id=${gameId}&first=${limit}${after ? `&after=${after}` : ''}`).pipe(
+      mergeMap(response => {
+        const streams = response.data;
+        const userIds = streams.map(stream => stream.user_id);
+        return this.userService.getUsersById$(userIds).pipe(
+          map(users => {
+            return {
+              data: streams.map((stream, index) => ({
+                ...stream,
+                user: users[index]
+              })),
+              pagination: response.pagination
+            };
+          })
+        )
+      })
+    );
+  }
+
+
 }
