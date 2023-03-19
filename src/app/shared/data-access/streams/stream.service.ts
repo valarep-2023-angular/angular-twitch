@@ -92,7 +92,7 @@ export class StreamService {
   }
 
   getStreamsAfter$(limit: number, after?: string): Observable<StreamDataDto> {
-    return this.http.get<StreamDataDto>(`/streams?limit=${limit}${after ? `&after=${after}` : ''}`).pipe(
+    return this.http.get<StreamDataDto>(`/streams?first=${limit}${after ? `&after=${after}` : ''}`).pipe(
       mergeMap(response => {
         const streams = response.data;
         const userIds = streams.map(stream => stream.user_id);
