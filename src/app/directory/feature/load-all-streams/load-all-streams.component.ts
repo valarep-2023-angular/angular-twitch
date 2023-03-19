@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { map, Observable, tap, concat, forkJoin, of } from 'rxjs';
+import { map, Observable, tap, forkJoin, of } from 'rxjs';
 import { StreamService } from 'src/app/shared/data-access/streams/stream.service';
 import { StreamDto } from '../../../shared/dto/stream.dto';
 
