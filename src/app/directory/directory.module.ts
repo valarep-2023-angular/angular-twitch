@@ -11,6 +11,7 @@ import {LoadMusicStreamsComponent} from './feature/load-music-streams/load-music
 import {LoadStreamsByGameIdComponent} from './feature/load-streams-by-game-id/load-streams-by-game-id.component';
 import {LoadVideosByGameIdComponent} from './feature/load-videos-by-game-id/load-videos-by-game-id.component';
 import {LoadClipsByGameIdComponent} from './feature/load-clips-by-game-id/load-clips-by-game-id.component';
+import {InfiniteScrollModule} from 'ngx-infinite-scroll';
 import {SharedModule} from "../shared/shared.module";
 
 
@@ -29,7 +30,8 @@ import {SharedModule} from "../shared/shared.module";
   imports: [
     CommonModule,
     DirectoryRoutingModule,
-    SharedModule
+    SharedModule,
+    InfiniteScrollModule
   ]
 })
 export class DirectoryModule { }
