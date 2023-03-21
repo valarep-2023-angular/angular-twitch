@@ -1,4 +1,4 @@
-<div class="px-6">
+<div infinite-scroll [infiniteScrollThrottle]="1000" [infiniteScrollDistance]="10" (scrolled)="onScroll()" class="px-6">
 
   <div class="mt-6 mb-3 group-aria-pressed:" *ngIf="(game$ | async) as game">
     <app-game-details-card [image]="game.box_art_url | resize:144:192" [title]="game.name" />
@@ -22,7 +22,8 @@
     class="grid grid-cols-1 gap-2 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5">
     <app-stream-card *ngFor="let stream of streamsInFrench" [image]="stream.thumbnail_url | resize:440:248"
       [title]="stream.title" [streamer]="stream.user_name" [game]="stream.game_name" [tags]="stream.tags"
-      [viewers]="stream.viewer_count | suffixNumber" [avatar]="stream.user.profile_image_url"  [routerLink]="['/',stream.user_login]"  />
+      [viewers]="stream.viewer_count | suffixNumber" [avatar]="stream.user.profile_image_url"
+      [routerLink]="['/',stream.user_login]" />
   </div>
 
   <h3 class="text-white text-xl font-medium py-4">Toutes les chaînes</h3>
@@ -31,7 +32,8 @@
     class="grid grid-cols-1 gap-2 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5">
     <app-stream-card *ngFor="let stream of streams" [image]="stream.thumbnail_url | resize:440:248"
       [title]="stream.title" [streamer]="stream.user_name" [game]="stream.game_name" [tags]="stream.tags"
-      [viewers]="stream.viewer_count | suffixNumber" [avatar]="stream.user.profile_image_url"  [routerLink]="['/',stream.user_login]"  />
+      [viewers]="stream.viewer_count | suffixNumber" [avatar]="stream.user.profile_image_url"
+      [routerLink]="['/',stream.user_login]" />
   </div>
 
 </div>
