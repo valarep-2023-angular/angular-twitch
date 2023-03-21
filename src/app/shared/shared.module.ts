@@ -1,5 +1,5 @@
 import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
+import {CommonModule, NgOptimizedImage} from '@angular/common';
 import {ButtonComponent} from './ui/button/button.component';
 import {LayoutWithSideMenuComponent} from './ui/layout-with-side-menu/layout-with-side-menu.component';
 import {NgHeroiconsModule} from "@dimaslz/ng-heroicons";
@@ -62,11 +62,12 @@ import {ChatUrlPipe} from "./utils/pipes/chat-url/chat-url.pipe";
     DurationClipPipe,
     ChatUrlPipe
   ],
-  imports: [
-    RouterModule,
-    CommonModule,
-    NgHeroiconsModule,
-  ],
+    imports: [
+        RouterModule,
+        CommonModule,
+        NgHeroiconsModule,
+        NgOptimizedImage,
+    ],
   exports: [
     ButtonComponent,
     LayoutWithSideMenuComponent,

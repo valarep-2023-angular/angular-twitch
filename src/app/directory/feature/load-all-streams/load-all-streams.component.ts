@@ -1,20 +1,21 @@
-import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { map, Observable, tap, forkJoin, of } from 'rxjs';
-import { StreamService } from 'src/app/shared/data-access/streams/stream.service';
-import { StreamDto } from '../../../shared/dto/stream.dto';
+import {Component, OnDestroy, OnInit} from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
+import {BehaviorSubject, map, Observable, Subscription, switchMap, tap} from 'rxjs';
+import {StreamService} from 'src/app/shared/data-access/streams/stream.service';
+import {StreamDto} from '../../../shared/dto/stream.dto';
 
 @Component({
   selector: 'app-load-all-streams',
   templateUrl: './load-all-streams.component.html',
-  styleUrls: ['./load-all-streams.component.scss']
+  styleUrls: ['./load-all-streams.component.scss'],
 })
-export class LoadAllStreamsComponent {
+export class LoadAllStreamsComponent implements OnInit, OnDestroy {
 
-  limit = 20;
-  after?: string;
+  private streamsNextCursor?: string;
+  private streamsPaginationSubject$ = new BehaviorSubject(this.streamsNextCursor);
+  private streamsPaginationSubscription?: Subscription;
+  streams: StreamDto[] = [];
 
-  streams$?: Observable<StreamDto[]>;
   streamsInFrench$?: Observable<StreamDto[]>
 
   constructor(private route: ActivatedRoute, private streamService: StreamService) {
@@ -22,31 +23,28 @@ export class LoadAllStreamsComponent {
   }
 
   ngOnInit(): void {
-    this.streams$ = this.streamService.getStreamsAfter$(this.limit, this.after).pipe(
-      tap(response => {
-        this.after = response.pagination.cursor;
-      }),
-      map(response => response.data)
-    );
+    this.streamsPaginationSubscription = this.streamsPaginationSubject$.pipe(
+      switchMap(nextCursor => this.streamService.getStreamsAfter$(50, nextCursor)),
+      tap(streams => this.streamsNextCursor = streams.pagination.cursor),
+      map(streams => streams.data)
+    ).subscribe(newStreams => {
+      this.streams = [...this.streams, ...newStreams];
+    });
+
+    this.streamsPaginationSubject$.next(this.streamsNextCursor);
+
     this.streamsInFrench$ = this.streamService.getStreamsByLanguage$("fr");
   }
 
   onScroll(): void {
-    if (this.streams$) {
-      forkJoin([
-        this.streams$,
-        this.streamService.getStreamsAfter$(this.limit, this.after).pipe(
-          tap(response => {
-            this.after = response.pagination.cursor;
-          }),
-          map(response => response.data)
-        )
-      ]).pipe(
-        map(([streams, newStreams]) => [...streams, ...newStreams])
-      ).subscribe(streams => {
-        this.streams$ = of(streams);
-      });
+    console.log('next', this.streamsNextCursor);
+    this.streamsPaginationSubject$.next(this.streamsNextCursor);
+  }
+
+  ngOnDestroy(): void {
+    if(this.streamsPaginationSubscription) {
+      this.streamsPaginationSubscription.unsubscribe();
     }
   }
-  
+
 }
