@@ -17,6 +17,9 @@ export class StreamCardComponent {
   avatar!: string;
 
   @Input()
+  link!: string;
+
+  @Input()
   streamer!: string;
 
   @Input()
