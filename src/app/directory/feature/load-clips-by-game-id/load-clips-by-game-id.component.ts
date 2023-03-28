@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { ClipsService } from 'src/app/shared/data-access/clips/clips.service';
 import { ClipDto } from 'src/app/shared/dto/clip.dto';
@@ -16,10 +17,11 @@ export class LoadClipsByGameIdComponent implements OnInit{
     followers: '150',
     tags: ['tag1', 'tag2']
   };
+  clipId = "0";
 
   clips$?: Observable<ClipDto[]>
-  constructor(private clipsService: ClipsService) {
-    
+  constructor(private clipsService: ClipsService,private route: ActivatedRoute) {
+    this.route.params.subscribe(params => this.clipId = params["clipId"])
   }
   ngOnInit(): void {
     this.clips$ = this.clipsService.getClipsByGamesId$(21779);
