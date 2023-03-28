@@ -25,7 +25,7 @@ export class ClipCardComponent {
   createdAt!: string;
 
   @Input()
-  views!: number;
+  views!: string;
 
   @Input()
   author!: string;
