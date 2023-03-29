@@ -44,19 +44,8 @@ export class GamesServiceService {
     )
   }
 
-  getCategoriesAfter$(limit: number, after?: string): Observable<Game[]> {
-    return this.http.get<GameDataDto>(`/games?first=${limit}${after ? `&after=${after}` : ''}`).pipe(
-      map(response => response.data),
-      map(gameDtos => gameDtos.map(gameDto => ({
-        title: gameDto.name,
-        image: gameDto.box_art_url,
-        tags: gameDto.tags || [],
-        subTitle: gameDto.subTitle,
-        slug: gameDto.id,
-      })
-      )
-      )
-    )
+  getCategoriesAfter$(limit: number, after?: string): Observable<GameDataDto> {
+    return this.http.get<GameDataDto>(`/games/top?first=${limit}${after ? `&after=${after}` : ''}`);
   }
 
   getGamesById$(id: number): Observable<GameDto> {
