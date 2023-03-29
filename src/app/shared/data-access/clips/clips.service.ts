@@ -32,7 +32,7 @@ export class ClipsService {
   }
 
   getClipsById$(id:string): Observable<ClipDto> {
-    return this.http.get<TwitchResponseDto<ClipDto>>(`/clip?id=${id}`).pipe(
+    return this.http.get<TwitchResponseDto<ClipDto>>(`/clips?id=${id}`).pipe(
       map(response => response.data[0])
     )
   }
