@@ -1,8 +1,9 @@
 <div class="bg-gray-800 text-white">
 
-    <div>
-        <iframe class="aspect-video" [src]="url" frameborder="0" height="100%"
-            width="100%"></iframe>
+    <div class="lg:flex lg:items-stretch ">
+        <iframe class="aspect-video" [src]="url" frameborder="0" height="100%" width="100%">
+        </iframe>
+        <app-chat-room class="self-stretch bg" [streamer]="streamer"></app-chat-room>
     </div>
 
 
@@ -30,9 +31,10 @@
 
                     <div class="flex items-start">
                         <div class="mr-2">
-                            <img [src]="avatar" 
-                            class="w-14 h-14 m-4 rounded-full border-2 border-red-400 " alt="">
-                            <p class="w-8 relative left-7 bottom-7 text-center rounded-md text-[11px] font-bold border-2 border-gray-800 text-white bg-red-600">LIVE</p>
+                            <img [src]="avatar" class="w-14 h-14 m-4 rounded-full border-2 border-red-400 " alt="">
+                            <p
+                                class="w-8 relative left-7 bottom-7 text-center rounded-md text-[11px] font-bold border-2 border-gray-800 text-white bg-red-600">
+                                LIVE</p>
                         </div>
                         <div class="w-full">
                             <div>
@@ -55,26 +57,28 @@
                             </p>
                             <p class="mr-1 p-1">01.22.15</p>
                         </div>
-    
+
                         <div class="flex">
                             <button class="flex">
-                                <arrow-up-tray-outline-icon class="hover:bg-gray-600 rounded-md p-1"></arrow-up-tray-outline-icon>
+                                <arrow-up-tray-outline-icon
+                                    class="hover:bg-gray-600 rounded-md p-1"></arrow-up-tray-outline-icon>
                             </button>
-                            
+
                             <button class="flex">
-                                <ellipsis-vertical-outline-icon class="hover:bg-gray-600 rounded-md p-1"></ellipsis-vertical-outline-icon>
+                                <ellipsis-vertical-outline-icon
+                                    class="hover:bg-gray-600 rounded-md p-1"></ellipsis-vertical-outline-icon>
                             </button>
                         </div>
                     </div>
 
                 </div>
 
-                
+
 
             </div>
 
-            
-            
+
+
         </div>
 
         <div>
