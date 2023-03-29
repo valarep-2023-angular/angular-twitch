@@ -33,7 +33,8 @@ export class MainHeaderComponent implements OnInit, OnDestroy {
   }  
 
   onInput(e: any) {
-    this.inputSubject$.next(e.target.value);
+    this.inputWritten=e.target.value;
+    this.inputSubject$.next(this.inputWritten);
     console.log("new",this.categories);
   }
 
