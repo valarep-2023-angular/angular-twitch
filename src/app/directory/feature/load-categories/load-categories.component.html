@@ -7,7 +7,7 @@
   <div infinite-scroll (scrolled)="onScroll()" [infiniteScrollDistance]="2" [infiniteScrollThrottle]="50" role="list"
     class="mt-6 grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 2xl:grid-cols-8">
 
-    <app-game-card *ngFor="let game of categories" routerLink="/directory/{{game.slug}}" [title]="game.title"
+    <app-game-card *ngFor="let game of categories" [routerLink]="['/directory', game.slug]" [title]="game.title"
       [image]="game.image | resize:285:380" [tags]="game.tags" [subTitle]="game.subTitle" />
 
   </div>
