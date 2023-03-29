@@ -10,6 +10,7 @@ import { ClipDto } from 'src/app/shared/dto/clip.dto';
 })
 export class LoadClipsByGameIdComponent implements OnInit{
   game = {
+    id: '1',
     title: 'Sons of the Forest',
     image: 'https://static-cdn.jtvnw.net/ttv-boxart/515479_IGDB-144x192.jpg',
     viewers: '50',
