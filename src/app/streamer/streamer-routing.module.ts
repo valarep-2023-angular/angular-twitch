@@ -3,11 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { StreamPlayerComponent } from './feature/load-player-stream/load-player-stream.component';
 
 const routes: Routes = [
-  { path: '', component: StreamPlayerComponent }
+  { path: '', component: StreamPlayerComponent },
+  { path: 'clip/:clipId', component: StreamPlayerComponent }
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class StreamerRoutingModule { }
+
+export class StreamerRoutingModule { }  

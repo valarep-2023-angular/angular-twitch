@@ -5,6 +5,7 @@ import { ClipDataDto } from '../../dto/clip-data.dto';
 import { ClipDto } from '../../dto/clip.dto';
 import { UsersService } from '../users/users.service';
 import {mergeMap} from 'rxjs/operators';
+import {TwitchResponseDto} from "../../../api/data-access/twitch-response.dto";
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +14,7 @@ export class ClipsService {
 
   constructor(private http: HttpClient, private userService: UsersService) { }
 
-  getClipsByGamesId$(id: number): Observable<ClipDto[]> {
+  getClipsByGameId$(id: number): Observable<ClipDto[]> {
     return this.http.get<ClipDataDto>(`/clips?game_id=${id}`).pipe(
       map(response => response.data),
       mergeMap(clips => {
@@ -27,6 +28,12 @@ export class ClipsService {
           })
         )
       })
+    )
+  }
+
+  getClipsById$(id:string): Observable<ClipDto> {
+    return this.http.get<TwitchResponseDto<ClipDto>>(`/clip?id=${id}`).pipe(
+      map(response => response.data[0])
     )
   }
 }
