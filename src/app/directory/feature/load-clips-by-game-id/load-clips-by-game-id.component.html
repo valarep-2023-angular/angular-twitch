@@ -21,5 +21,6 @@
     <app-clip-card *ngFor="let clip of clips" [image]="clip.thumbnail_url | resize:440:248" [title]="clip.title"
       [views]="clip.view_count" [author]="clip.creator_name" [duration]="clip.duration | durationClip " [createdAt]="clip.created_at | createdAtDate"
       [streamer]="clip.broadcaster_name" [avatar]="clip.avatar" [routerLink]="['/',clip.broadcaster_name, 'clip', clip.id]"/>
+
   </div>
 </div>
