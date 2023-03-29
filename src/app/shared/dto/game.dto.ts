@@ -5,5 +5,5 @@ export interface GameDto {
   box_art_url: string;
   tags: string[];
   subTitle: string;
-
+  slug: string;
 }
