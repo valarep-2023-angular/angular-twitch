@@ -12,8 +12,8 @@ export class CategoriesService {
 
   constructor(private http: HttpClient) { }
 
-  getCategoriesByQueries(query: string): Observable<GameDto[]>{
-    return this.http.get<GameDataDto>(`/search/categories?query=${query}`).pipe(
+  getCategoriesByQueries(value: string): Observable<GameDto[]>{
+    return this.http.get<GameDataDto>(`/search/categories?query=${value}&first=50`).pipe(
       map(response => response.data)
     );
   }
