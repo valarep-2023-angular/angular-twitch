@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Observable } from 'rxjs';
+import { map, Observable, tap, forkJoin, of, switchMap } from 'rxjs';
 import { ClipsService } from 'src/app/shared/data-access/clips/clips.service';
 import { ClipDto } from 'src/app/shared/dto/clip.dto';
 
@@ -25,7 +25,7 @@ export class LoadClipsByGameIdComponent implements OnInit{
   }
   ngOnInit(): void {
     this.clips$ = this.clipsService.getClipsByGamesId$(21779);
+    this.route.params.pipe(
+      switchMap(params => this.clipsService.getClipsById$(params["clipId"])
+      ))}
   }
-
-
-}
