@@ -1,6 +1,6 @@
 import { Component,OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Observable, switchMap } from 'rxjs';
+import { Observable, switchMap, tap } from 'rxjs';
 import { ClipsService } from 'src/app/shared/data-access/clips/clips.service';
 import { UsersService } from 'src/app/shared/data-access/users/users.service';
 import { ClipDto } from 'src/app/shared/dto/clip.dto';
@@ -22,12 +22,12 @@ export class LoadClipByIdComponent {
   }
 
   ngOnInit(): void {
-    this.slug = this.route.snapshot.paramMap.get("clipId") || "";
     console.log("slug : ",this.slug);
     this.user$ = this.route.params.pipe(
       switchMap(params => this.userService.getUserByLogin$(params["streamerName"]))
     );
     this.clip$ = this.route.params.pipe(
+      tap(params => this.slug = params["clipId"]),
       switchMap(params => this.clipService.getClipsById$(params["clipId"]))
     )
   }
