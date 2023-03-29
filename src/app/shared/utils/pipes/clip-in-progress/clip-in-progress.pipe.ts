@@ -12,7 +12,6 @@ export class ClipInProgressPipe implements PipeTransform {
 
   transform(slug:string): SafeResourceUrl {
     const url = environment.twitch.clipPlayerUrl+slug;
-    console.log("url",url);
     return this.sanitizer.bypassSecurityTrustResourceUrl(url);
   }
 
