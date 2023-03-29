@@ -9,9 +9,9 @@
       <a href="#"
         class="border-transparent text-gray-400 whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium">Chaînes
         live</a>
-      <a href="#"
+      <a href="#" [routerLink]="['/directory', game.id, 'videos']"
         class="border-transparent text-gray-400 hover:border-gray-400 hover:text-gray-300 whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium">Vidéos</a>
-      <a href="#"
+      <a href="#" [routerLink]="['/directory', game.id, 'clips']"
         class="border-indigo-400 text-indigo-400 hover:border-gray-400 hover:text-gray-300 whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium">Clips</a>
     </nav>
   </div>
@@ -20,6 +20,6 @@
     class="grid grid-cols-1 gap-2 mt-6 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5">
     <app-clip-card *ngFor="let clip of clips" [image]="clip.thumbnail_url | resize:440:248" [title]="clip.title"
       [views]="clip.view_count" [author]="clip.creator_name" [duration]="clip.duration | durationClip " [createdAt]="clip.created_at | createdAtDate"
-      [streamer]="clip.broadcaster_name" [avatar]="clip.avatar" />
+      [streamer]="clip.broadcaster_name" [avatar]="clip.avatar"/>
   </div>
 </div>

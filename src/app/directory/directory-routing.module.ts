@@ -18,11 +18,14 @@ const routes: Routes = [
   {path: 'gaming', component: LoadGamingStreamsComponent},
   {path: 'irl', component: LoadIrlStreamsComponent},
   {path: 'music', component: LoadMusicStreamsComponent},
-  {path: ':gameId', redirectTo: ':gameId/streams'},
-  {path: ':gameId/streams', component: LoadStreamsByGameIdComponent},
-  {path: ':gameId/videos', component: LoadVideosByGameIdComponent},
-  {path: ':gameId/clips', component: LoadClipsByGameIdComponent},
-];
+  {path: ':gameId', children:[
+  {path: 'streams', component: LoadStreamsByGameIdComponent},
+  {path: 'videos', component: LoadVideosByGameIdComponent},
+  {path: 'clips', component: LoadClipsByGameIdComponent},
+  {path: '', redirectTo:'streams', pathMatch:'full'}
+  ]},
+]
+
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
