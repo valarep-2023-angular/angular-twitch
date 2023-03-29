@@ -9,9 +9,9 @@
       <a href="#"
         class="border-indigo-400 text-indigo-400 whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium">Chaînes
         live</a>
-      <a href="#" routerLink="/directory/21779/videos"
+        <a href="#" routerLink="/directory/21779/videos"
         class="border-transparent text-gray-400 hover:border-gray-400 hover:text-gray-300 whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium">Vidéos</a>
-      <a href="#" [routerLink]="['/directory', gameId, 'clips']"
+        <a href="#" [routerLink]="['/directory', gameId, 'clips']"
         class="border-transparent text-gray-400 hover:border-gray-400 hover:text-gray-300 whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium">Clips</a>
     </nav>
   </div>
@@ -21,9 +21,8 @@
   <div *ngIf="(streamsInFrench$ | async) as streamsInFrench" role="list"
     class="grid grid-cols-1 gap-2 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5">
     <app-stream-card *ngFor="let stream of streamsInFrench" [image]="stream.thumbnail_url | resize:440:248"
-      [title]="stream.title" [streamer]="stream.user_name" [game]="stream.game_name" [tags]="stream.tags"
-      [viewers]="stream.viewer_count | suffixNumber" [avatar]="stream.user.profile_image_url"
-      [routerLink]="['/',stream.user_login]" />
+      [title]="stream.title" [streamer]="stream.user_name"  [link]="'/'+stream.user_login" [game]="stream.game_name" [tags]="stream.tags"
+      [viewers]="stream.viewer_count | suffixNumber" [avatar]="stream.user.profile_image_url" [linkGame]="'/directory/'+stream.game_id+'/streams'" />
   </div>
 
   <h3 class="text-white text-xl font-medium py-4">Toutes les chaînes</h3>
@@ -31,9 +30,8 @@
   <div *ngIf="(streams$ | async) as streams" role="list"
     class="grid grid-cols-1 gap-2 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5">
     <app-stream-card *ngFor="let stream of streams" [image]="stream.thumbnail_url | resize:440:248"
-      [title]="stream.title" [streamer]="stream.user_name" [game]="stream.game_name" [tags]="stream.tags"
-      [viewers]="stream.viewer_count | suffixNumber" [avatar]="stream.user.profile_image_url"
-      [routerLink]="['/',stream.user_login]" />
+      [title]="stream.title" [streamer]="stream.user_name"  [link]="'/'+stream.user_login"[game]="stream.game_name" [tags]="stream.tags"
+      [viewers]="stream.viewer_count | suffixNumber" [avatar]="stream.user.profile_image_url" [linkGame]="'/directory/'+stream.game_id+'/streams'" />
   </div>
 
 </div>

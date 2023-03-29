@@ -3,6 +3,7 @@
     <img
       class="w-full hover:cursor-pointer hover:scale-105 transition duration-300 ease-in-out hover:border-white border-2 border-transparent rounded-lg"
       [ngSrc]="image"
+      [routerLink]="[link]"
       width="440"
       height="248"
       [alt]="title">
@@ -15,9 +16,9 @@
     <img class="h-8 w-8 rounded-full" width="32" height="32" [ngSrc]="avatar" [alt]="streamer">
 
     <div class="ml-3 min-w-0">
-      <a href="#" class="block text-sm font-semibold tracking-tight text-white hover:text-indigo-400 truncate">{{title}}</a>
-      <a href="#" class="block text-sm text-gray-400 hover:text-indigo-400">{{streamer}}</a>
-      <a href="#" class="block text-sm text-gray-400 hover:text-indigo-400">{{game}}</a>
+      <a href="#" class="block text-sm font-semibold tracking-tight text-white hover:text-indigo-400 truncate" [routerLink]="[link]" >{{title}}</a>
+      <a href="#" class="block text-sm text-gray-400 hover:text-indigo-400" [routerLink]="[link]">{{streamer}}</a>
+      <a href="#" class="block text-sm text-gray-400 hover:text-indigo-400" [routerLink]="[linkGame]">{{game}}</a>
 
       <div class="mt-1 flex max-h-8 flex-wrap overflow-hidden" *ngIf="tags && tags.length > 0">
         <app-tag *ngFor="let tag of tags">{{tag}}</app-tag>
