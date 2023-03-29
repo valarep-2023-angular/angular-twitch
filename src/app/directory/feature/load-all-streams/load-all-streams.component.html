@@ -11,7 +11,7 @@
     <app-stream-card *ngFor="let stream of streamsInFrench" [image]="stream.thumbnail_url | resize:440:248"
       [title]="stream.title" [streamer]="stream.user_name" [game]="stream.game_name" [tags]="stream.tags"
       [viewers]="stream.viewer_count | suffixNumber" [avatar]="stream.user.profile_image_url"
-      [link]="'/'+stream.user_login" />
+      [link]="'/'+stream.user_login" [linkGame]="'/directory/'+stream.game_id+'/streams'" />
 
   </div>
 
@@ -23,7 +23,9 @@
     class="grid grid-cols-1 gap-2 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5">
     <app-stream-card *ngFor="let stream of streams" [image]="stream.thumbnail_url | resize:440:248"
       [title]="stream.title" [streamer]="stream.user_name" [game]="stream.game_name" [tags]="stream.tags"
-      [viewers]="stream.viewer_count | suffixNumber" [avatar]="stream.user.profile_image_url"  [link]="'/'+stream.user_login" />
-  </div>
+      [viewers]="stream.viewer_count | suffixNumber" [avatar]="stream.user.profile_image_url"  [link]="'/'+stream.user_login" 
+      [linkGame]="'/directory/'+stream.game_id+'/streams'"/>
+      
+    </div>
 
 </div>

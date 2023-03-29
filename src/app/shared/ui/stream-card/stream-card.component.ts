@@ -20,6 +20,9 @@ export class StreamCardComponent {
   link!: string;
 
   @Input()
+  linkGame!: string;
+
+  @Input()
   streamer!: string;
 
   @Input()
