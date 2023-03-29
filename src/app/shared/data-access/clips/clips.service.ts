@@ -14,7 +14,7 @@ export class ClipsService {
 
   constructor(private http: HttpClient, private userService: UsersService) { }
 
-  getClipsByGamesId$(id: number): Observable<ClipDto[]> {
+  getClipsByGameId$(id: number): Observable<ClipDto[]> {
     return this.http.get<ClipDataDto>(`/clips?game_id=${id}`).pipe(
       map(response => response.data),
       mergeMap(clips => {

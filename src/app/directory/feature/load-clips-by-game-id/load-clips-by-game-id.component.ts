@@ -17,14 +17,12 @@ export class LoadClipsByGameIdComponent implements OnInit{
     followers: '150',
     tags: ['tag1', 'tag2']
   };
-  clipId = "0";
+  clipId = "ANY_CLIP_ID";
 
   clips$?: Observable<ClipDto[]>
-  constructor(private clipsService: ClipsService,private route: ActivatedRoute) {
-    this.route.params.subscribe(params => this.clipId = params["clipId"])
-  }
+  constructor(private clipsService: ClipsService,private route: ActivatedRoute) {}
   ngOnInit(): void {
-    this.clips$ = this.clipsService.getClipsByGamesId$(21779);
+    this.clips$ = this.clipsService.getClipsByGameId$(21779);
     this.route.params.pipe(
       switchMap(params => this.clipsService.getClipsById$(params["clipId"])
       ))}
