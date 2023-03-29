@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+
 @Component({
   selector: 'app-load-videos-by-game-id',
   templateUrl: './load-videos-by-game-id.component.html',
@@ -13,7 +14,7 @@ export class LoadVideosByGameIdComponent {
     followers: '150',
     tags: ['tag1', 'tag2']
   }
-  videos= [
+  videos = [
     {
       image: 'https://static-cdn.jtvnw.net/previews-ttv/live_user_meloniemac-440x248.jpg',
       title: 'Ura biggit harry [Hard/ Hufflepuff]',
