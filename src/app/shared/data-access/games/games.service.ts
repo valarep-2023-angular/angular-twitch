@@ -1,10 +1,10 @@
-import { map, Observable } from "rxjs";
-import { Injectable } from "@angular/core";
-import { HttpClient } from "@angular/common/http";
-import { Game } from "../../dto/game";
-import { TwitchResponseDto } from "../../../api/data-access/twitch-response.dto";
-import { GameDto } from "../../dto/game.dto";
-import { GameDataDto } from '../../dto/game-data.dto';
+import {map, Observable} from "rxjs";
+import {Injectable} from "@angular/core";
+import {HttpClient} from "@angular/common/http";
+import {Game} from "../../dto/game";
+import {TwitchResponseDto} from "../../../api/data-access/twitch-response.dto";
+import {GameDto} from "../../dto/game.dto";
+import {GameDataDto} from '../../dto/game-data.dto';
 
 @Injectable({
   providedIn: 'root'
@@ -17,15 +17,14 @@ export class GamesServiceService {
   getTopGames(): Observable<Game[]> {
     return this.http.get<TwitchResponseDto<GameDto>>('/games/top').pipe(
       map(response => response.data),
+      map(gameDtos => gameDtos.filter(gameDto => gameDto.igdb_id !== '')),
       map(gameDtos => gameDtos.map(gameDto => ({
         title: gameDto.name,
         image: gameDto.box_art_url,
         tags: gameDto.tags || [],
         subTitle: gameDto.subTitle,
         slug: gameDto.id,
-      })
-      )
-      )
+      })))
     )
   }
 
@@ -33,13 +32,13 @@ export class GamesServiceService {
     return this.http.get<TwitchResponseDto<GameDto>>('/games/top?first=50').pipe(
       map(response => response.data),
       map(gameDtos => gameDtos.map(gameDto => ({
-        title: gameDto.name,
-        image: gameDto.box_art_url,
-        tags: gameDto.tags || [],
-        subTitle: gameDto.subTitle,
-        slug: gameDto.id,
-      })
-      )
+            title: gameDto.name,
+            image: gameDto.box_art_url,
+            tags: gameDto.tags || [],
+            subTitle: gameDto.subTitle,
+            slug: gameDto.id,
+          })
+        )
       )
     )
   }
