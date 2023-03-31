@@ -32,6 +32,11 @@ export class MainHeaderComponent implements OnInit, OnDestroy {
     });
   }  
 
+  clearSearchBar(){
+    this.inputWritten = "";
+    console.log("inputWritten : ",this.inputWritten)
+  }
+
   onInput(e: any) {
     this.inputWritten=e.target.value;
     this.inputSubject$.next(this.inputWritten);
