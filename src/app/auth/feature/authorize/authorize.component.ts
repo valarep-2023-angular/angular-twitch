@@ -20,7 +20,7 @@ export class AuthorizeComponent implements OnInit, OnDestroy {
       if (urlParams) {
         const token = this.authService.extractTokenFromUrlParams(urlParams);
         this.authService.saveToken(token);
-        this.router.navigateByUrl('games').then(this.unsubscribe);
+        this.router.navigateByUrl('directory').then(this.unsubscribe);
       } else {
         this.authService.redirectToAuthenticationPage();
       }
