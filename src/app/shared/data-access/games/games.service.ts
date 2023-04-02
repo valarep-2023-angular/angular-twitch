@@ -1,4 +1,4 @@
-import {map, Observable} from "rxjs";
+import {map, Observable, take} from "rxjs";
 import {Injectable} from "@angular/core";
 import {HttpClient} from "@angular/common/http";
 import {Game} from "../../dto/game";
@@ -15,9 +15,10 @@ export class GamesServiceService {
   }
 
   getTopGames(): Observable<Game[]> {
-    return this.http.get<TwitchResponseDto<GameDto>>('/games/top').pipe(
+    return this.http.get<TwitchResponseDto<GameDto>>('/games/top?first=25').pipe(
       map(response => response.data),
       map(gameDtos => gameDtos.filter(gameDto => gameDto.igdb_id !== '')),
+      map(gameDtos => gameDtos.slice(0, 16)),
       map(gameDtos => gameDtos.map(gameDto => ({
         title: gameDto.name,
         image: gameDto.box_art_url,
@@ -25,21 +26,6 @@ export class GamesServiceService {
         subTitle: gameDto.subTitle,
         slug: gameDto.id,
       })))
-    )
-  }
-
-  getCategorie(): Observable<Game[]> {
-    return this.http.get<TwitchResponseDto<GameDto>>('/games/top?first=50').pipe(
-      map(response => response.data),
-      map(gameDtos => gameDtos.map(gameDto => ({
-            title: gameDto.name,
-            image: gameDto.box_art_url,
-            tags: gameDto.tags || [],
-            subTitle: gameDto.subTitle,
-            slug: gameDto.id,
-          })
-        )
-      )
     )
   }
 
