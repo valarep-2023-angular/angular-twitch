@@ -13,6 +13,7 @@ import {LoadVideosByGameIdComponent} from './feature/load-videos-by-game-id/load
 import {LoadClipsByGameIdComponent} from './feature/load-clips-by-game-id/load-clips-by-game-id.component';
 import {InfiniteScrollModule} from 'ngx-infinite-scroll';
 import {SharedModule} from "../shared/shared.module";
+import { LoadGameByIdComponent } from './feature/load-game-by-id/load-game-by-id.component';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import {SharedModule} from "../shared/shared.module";
     LoadStreamsByGameIdComponent,
     LoadVideosByGameIdComponent,
     LoadClipsByGameIdComponent,
+    LoadGameByIdComponent,
   ],
   imports: [
     CommonModule,

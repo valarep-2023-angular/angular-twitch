@@ -10,6 +10,7 @@ import {LoadCreativeStreamsComponent} from "./feature/load-creative-streams/load
 import {LoadMusicStreamsComponent} from "./feature/load-music-streams/load-music-streams.component";
 import {LoadGamingStreamsComponent} from "./feature/load-gaming-streams/load-gaming-streams.component";
 import {LoadClipsByGameIdComponent} from "./feature/load-clips-by-game-id/load-clips-by-game-id.component";
+import { LoadGameByIdComponent } from './feature/load-game-by-id/load-game-by-id.component';
 
 const routes: Routes = [
   {path: '', component: LoadCategoriesComponent},
@@ -18,7 +19,7 @@ const routes: Routes = [
   {path: 'gaming', component: LoadGamingStreamsComponent},
   {path: 'irl', component: LoadIrlStreamsComponent},
   {path: 'music', component: LoadMusicStreamsComponent},
-  {path: ':gameId', children:[
+  {path: ':gameId', component: LoadGameByIdComponent, children:[
   {path: 'streams', component: LoadStreamsByGameIdComponent},
   {path: 'videos', component: LoadVideosByGameIdComponent},
   {path: 'clips', component: LoadClipsByGameIdComponent},

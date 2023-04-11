@@ -21,7 +21,7 @@ export default {
     title: 'Ura biggit harry [Hard/ Hufflepuff]',
     avatar: 'https://static-cdn.jtvnw.net/jtv_user_pictures/1a9da63c-0934-452e-9360-13e2c4f23799-profile_image-50x50.png',
     streamer: 'MelonieMac',
-    duration: 120,
+    duration: '120',
     createdAt: '2 jours',
     views: 10000,
     author: 'EvyGames'

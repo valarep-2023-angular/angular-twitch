@@ -1,19 +1,7 @@
 <div infinite-scroll [infiniteScrollThrottle]="1000" [infiniteScrollDistance]="10" (scrolled)="onScroll()" class="px-6">
 
   <div class="mt-6 mb-3 group-aria-pressed:" *ngIf="(game$ | async) as game">
-    <app-game-details-card [image]="game.box_art_url | resize:144:192" [title]="game.name" />
-  </div>
-
-  <div class="border-b border-gray-700">
-    <nav class="-mb-px flex space-x-8 overflow-x-auto" aria-label="Tabs">
-      <a href="#"
-        class="border-indigo-400 text-indigo-400 whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium">Chaînes
-        live</a>
-      <a href="#" routerLink="/directory/21779/videos"
-        class="border-transparent text-gray-400 hover:border-gray-400 hover:text-gray-300 whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium">Vidéos</a>
-      <a href="#" [routerLink]="['/directory', gameId, 'clips']"
-        class="border-transparent text-gray-400 hover:border-gray-400 hover:text-gray-300 whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium">Clips</a>
-    </nav>
+    <app-game-details-card [image]="game.box_art_url | resize:144:192" [title]="game.name"/>
   </div>
 
   <h3 class="text-white text-xl font-medium py-4">Les chaînes en <span class="text-indigo-400">Français</span></h3>
@@ -34,6 +22,6 @@
       [title]="stream.title" [streamer]="stream.user_name" [game]="stream.game_name" [tags]="stream.tags"
       [viewers]="stream.viewer_count | suffixNumber" [avatar]="stream.user.profile_image_url"
       [routerLink]="['/',stream.user_login]" />
-  </div>
+  </div> 
 
 </div>
