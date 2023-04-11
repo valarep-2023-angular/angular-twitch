@@ -1,7 +1,7 @@
 const apiConfig = {
   clientId: '60tgqfuy4ig9qilavz20n3o2e7afje',
   authUrl: 'https://id.twitch.tv/oauth2/authorize',
-  redirectUrl: 'https://valarep-2023.netlify.app/auth/authorize',
+  redirectUrl: window.location.href + '/auth/authorize',
   baseUrl: 'https://api.twitch.tv/helix',
 };
 
