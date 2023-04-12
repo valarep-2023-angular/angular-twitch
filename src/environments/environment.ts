@@ -1,5 +1,5 @@
 const apiConfig = {
-  clientId: '60tgqfuy4ig9qilavz20n3o2e7afje',
+  clientId: 'routoe8zdnbg56b4jbnhkb7f1cjbng',
   authUrl: 'https://id.twitch.tv/oauth2/authorize',
   redirectUrl: 'https://angular-julian.netlify.app/auth/authorize',
   baseUrl: 'https://api.twitch.tv/helix',
