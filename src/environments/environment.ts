@@ -1,7 +1,7 @@
 const apiConfig = {
-  clientId: '60tgqfuy4ig9qilavz20n3o2e7afje',
+  clientId: 'routoe8zdnbg56b4jbnhkb7f1cjbng',
   authUrl: 'https://id.twitch.tv/oauth2/authorize',
-  redirectUrl: 'https://valarep-2023.netlify.app/auth/authorize',
+  redirectUrl: 'https://angular-julian.netlify.app/auth/authorize',
   baseUrl: 'https://api.twitch.tv/helix',
 };
 
@@ -13,9 +13,9 @@ export const environment = {
   production: true,
   api: {...apiConfig, ...oAuthConfig},
   twitch: {
-    streamPlayerUrl: 'https://player.twitch.tv/?parent=valarep-2023.netlify.app&channel=',
-    clipPlayerUrl: 'https://clips.twitch.tv/embed?parent=valarep-2023.netlify.app&clip=',
-    videoPlayerUrl: 'https://videos.twitch.tv/embed?parent=valarep-2023.netlify.app&video=',
-    chatUrl: 'https://www.twitch.tv/embed/[USERNAME]/chat?parent=valarep-2023.netlify.app',
+    streamPlayerUrl: 'https://player.twitch.tv/?parent=angular-julian.netlify.app&channel=',
+    clipPlayerUrl: 'https://clips.twitch.tv/embed?parent=angular-julian.netlify.app&clip=',
+    videoPlayerUrl: 'https://videos.twitch.tv/embed?parent=angular-julian.netlify.app&video=',
+    chatUrl: 'https://www.twitch.tv/embed/[USERNAME]/chat?parent=angular-julian.netlify.app',
   }
 };
